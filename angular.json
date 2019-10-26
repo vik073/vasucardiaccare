@@ -29,7 +29,11 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              
+          
+              "src/assets/animation/heartanimation.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {

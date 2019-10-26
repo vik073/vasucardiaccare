@@ -1,0 +1,54 @@
+.container{
+    background-color: #D92A2A;
+}
+
+.canvas{
+    background-color: #D92A2A;
+    display: flex;
+    position: relative;
+    width: 20%;
+    flex: 1;
+}
+.canvas-container{
+    display: flex;
+    flex-direction: column;
+}
+.touchhbar{
+    display: flex;
+    flex: 3;
+}
+.text{
+    flex: 1;
+    position: absolute;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.main-text{
+    display: flex;
+    font-size: 70px;
+    width: 50%;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+
+}
+.description-text{
+    display: flex;
+    font-size: 20px;
+    width: 40%;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    
+
+}
+.about-container{
+    height: 100px;
+}
