@@ -1,0 +1,36 @@
+.container{
+    background-color: white;
+    display: flex;
+    width: 98%;
+    max-height: 281px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.header{
+text-align: center;
+font-size: 16px;
+letter-spacing: 0;
+font-family: poppins;
+color: #D60F1B;
+text-transform: uppercase;
+opacity: 1;
+}
+.description{
+    width: 71%;
+    text-align: center;
+    font-size: 10px;
+
+}
+.btn{
+    text-align: center;
+    background-color: #D60F1B;
+    border-radius: 59px;
+    border: none;
+    color: white;
+    height: 28px;
+    width: 100px;
+}

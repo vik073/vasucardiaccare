@@ -1,0 +1,56 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: -webkit-fill-available;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #D92A2A;
+
+}
+.intro-content{
+display: flex;
+flex:1;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+
+}
+.header{
+text-align: left;
+font-weight: bold;
+ font-size: 268%;
+font-family: poppins;
+letter-spacing: 0;
+width: 50%;
+color: #FFFFFF;
+opacity: 1;
+
+
+}
+.description{
+    width: 50%;
+    justify-content: center;
+    font-family: poppins-regular;
+    font-size: 100%;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+
+
+}
+.procedure-card{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.div-card{
+    display: flex;
+    flex: 2;
+    font-family: poppins;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
