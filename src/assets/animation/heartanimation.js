@@ -125,8 +125,9 @@ function onMouseClick(e){
 }
 
 function render(a) {
-  requestAnimationFrame(render);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  requestAnimationFrame(render);
+  
   for (var i = 0; i < amount; i++) {
     particles[i].render();
   }
