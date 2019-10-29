@@ -32,7 +32,9 @@
             "scripts": [
               
           
-              "src/assets/animation/heartanimation.js"
+              "src/assets/animation/heartanimation.js",
+              "src/assets/animation/animation-2.js",
+              "src/assets/animation/slider.js"
             ],
             "es5BrowserSupport": true
           },

@@ -13,6 +13,7 @@ import { HealthyBlogComponent } from './modules/blog/Components/healthy-blog/hea
 import { BlogCardComponent } from './modules/blog/Components/blog-card/blog-card.component';
 import { ConsultationComponent } from './modules/consultation&test/components/consultation/consultation.component';
 import { ServicesCardComponent } from './modules/consultation&test/components/services-card/services-card.component';
+import { HeartAnimationComponent } from './modules/animations/heart-animation/heart-animation.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ServicesCardComponent } from './modules/consultation&test/components/se
     HealthyBlogComponent,
     BlogCardComponent,
     ConsultationComponent,
-    ServicesCardComponent
+    ServicesCardComponent,
+    HeartAnimationComponent
   ],
   imports: [
     BrowserModule,

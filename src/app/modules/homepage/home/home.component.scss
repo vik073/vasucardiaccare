@@ -16,6 +16,7 @@
 .touchhbar{
     display: flex;
     flex: 3;
+    flex-direction: column;
 }
 .text{
     flex: 1;
