@@ -1,4 +1,25 @@
-.container{
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+  @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
+  
+    @media screen and (min-width: $min-vw) {
+      @each $property in $properties {
+        #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+      }
+    }
+  
+    @media screen and (min-width: $max-vw) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
+  .container{
     background-color: #D92A2A;
 }
 
@@ -22,6 +43,7 @@
     flex: 1;
     position: absolute;
     z-index: 100;
+    top: 100px;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -32,9 +54,9 @@
 }
 .main-text{
     display: flex;
-    font-size: 70px;
-    width: 50%;
-    font-family: sans-serif;
+    @include fluid-type(font-size, 200px, 1800px, 40px, 100px);
+    width: 58%;
+    font-family: Poppins;
     color: white;
     text-align: center;
     font-weight: bolder;
@@ -42,9 +64,9 @@
 }
 .description-text{
     display: flex;
-    font-size: 20px;
-    width: 40%;
-    font-family: sans-serif;
+    @include fluid-type(font-size, 400px, 1300px, 10px, 20px);
+    width: 50%;
+    font-family: poppins-regular;
     color: white;
     text-align: center;
     
