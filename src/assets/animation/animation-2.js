@@ -45,7 +45,8 @@ var initParticleSlider = function(){
   (psScript.addEventListener
     ? psScript.addEventListener('load', init, false)
     : psScript.onload = init);
-  psScript.src = 'http://yourjavascript.com/30061111941/animation-slider.js';
+    '<script type="text/javascript"> //function </script>'
+  psScript.src = 'https://drive.google.com/uc?export=view&id=1hoRywHKIDS7f9awSY50irbOrRxkn9aUL';
 	psScript.setAttribute('type', 'text/javascript');
   document.body.appendChild(psScript);
 }
