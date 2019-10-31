@@ -85,10 +85,11 @@
     border-radius: 41px;
     box-shadow: 0px 4px 44px #8a585869;
     letter-spacing: 0;
+    background-color: #FFFFFF;
     color: #D92A2A;
-    width: 209px;
-    height: 38px;
-    font-size: 18px;
+    @include fluid-type(width, 200px, 1920px, 100px, 299px);
+    @include fluid-type(height, 200px, 1920px, 30px, 70px);
+    @include fluid-type(font-size, 400px, 1920px, 14px, 28px);
     text-align: center;
-    opacity: 1;
+    opacity: 0.87;
 }

@@ -12,11 +12,11 @@ var init = function(){
   
   var ps = new ParticleSlider({
     ptlGap: isMobile || isSmall ? 2 : 1,
-    ptlSize: isMobile || isSmall ? 2 : 1.5,
-    width: 1e9,
-    height: 1e9,
-    mouseForce: 200,
-    arrowPadding: 5,
+    ptlSize: isMobile || isSmall ? 2 : 2.05,
+    width: 2e9,
+    height: 3e9,
+    mouseForce: 220,
+    //arrowPadding: 5,
     
   });
     
@@ -35,9 +35,9 @@ var init = function(){
   // });
   
   
-  (window.addEventListener
-   ? window.addEventListener('click', function(){ps.init(true)}, false)
-   : window.onclick = function(){ps.init(true)});
+  // (window.addEventListener
+  //  ? window.addEventListener('click', function(){ps.init(true)}, false)
+  //  : window.onclick = function(){ps.init(true)});
 }
 
 var initParticleSlider = function(){

@@ -30,7 +30,7 @@
     background-color: #D92A2A;
     width: 100%;
     padding-top: 15px;
-    height: 56px;
+    @include fluid-type(height, 200px, 1920px, 40px,78px);
     z-index: 1000;
     position: fixed;
     opacity: 1;
@@ -38,6 +38,7 @@
     .logo{
         padding-left: 20px;
         display: flex;
+        @include fluid-type(height, 200px, 1920px, 40px,78px);
         margin-bottom: 10px;
         -webkit-box-flex: .5;
         flex: .5;
@@ -52,7 +53,7 @@
 
         .nav-option{
 
-                @include fluid-type(font-size, 200px, 1800px, 7px, 24px);
+                @include fluid-type(font-size, 200px, 1920px, 7px,28px);
 
 
             font-family: Helvetica;
