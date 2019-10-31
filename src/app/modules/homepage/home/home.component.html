@@ -9,15 +9,23 @@
 <div  id="canvas-container" class="canvas-container">
 <div class="touchhbar">
     <app-heart-animation></app-heart-animation>
-    <app-header></app-header>
+    
   <div class="text"> <div class="main-text">WE KEEP YOUR HEART IN SHAPE </div>
   <div class="description-text"> VCC is dedicated to making big impacts through prevention treatment and awareness about cardiac health.</div> 
+<div class="btn">
+  <button class="book-appointment">Book Appointment</button>
+</div>
 </div>
 </div>
 
-</div>
 </div>
 <app-about></app-about>
 
 <app-interventional-procedures></app-interventional-procedures>
+</div>
+<app-header id="header"></app-header>
+
+<section class="web_homePage" (scroll)="onWindowScroll($event);">  
+    <!-- rest of the html code goes here -->
+ </section>  
 

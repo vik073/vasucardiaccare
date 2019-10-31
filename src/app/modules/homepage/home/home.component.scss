@@ -21,6 +21,8 @@
   }
   .container{
     background-color: #D92A2A;
+    // height: 100%;
+    // width: 100%;
 }
 
 .canvas{
@@ -43,7 +45,7 @@
     flex: 1;
     position: absolute;
     z-index: 100;
-    top: 100px;
+    @include fluid-type(top, 200px, 1800px, 20px, 120px);
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -67,6 +69,8 @@
     @include fluid-type(font-size, 400px, 1300px, 10px, 20px);
     width: 50%;
     font-family: poppins-regular;
+    padding-top: 18px;
+    padding-bottom: 21px;
     color: white;
     text-align: center;
     
@@ -74,4 +78,17 @@
 }
 .about-container{
     height: 100px;
+}
+.book-appointment{
+    border: none;
+    padding: 8px;
+    border-radius: 41px;
+    box-shadow: 0px 4px 44px #8a585869;
+    letter-spacing: 0;
+    color: #D92A2A;
+    width: 209px;
+    height: 38px;
+    font-size: 18px;
+    text-align: center;
+    opacity: 1;
 }
