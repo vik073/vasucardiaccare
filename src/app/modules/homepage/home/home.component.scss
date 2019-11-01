@@ -45,7 +45,7 @@
     flex: 1;
     position: absolute;
     z-index: 100;
-    @include fluid-type(top, 200px, 1800px, 20px, 120px);
+    @include fluid-type(top, 600px, 1920px, 80px, 435px);
     justify-content: center;
     align-items: center;
     height: 100%;

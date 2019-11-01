@@ -11,12 +11,14 @@ var init = function(){
   var isSmall = window.innerWidth < 1000;
   
   var ps = new ParticleSlider({
-    ptlGap: isMobile || isSmall ? 2 : 1,
-    ptlSize: isMobile || isSmall ? 2 : 2.05,
+    ptlGap: isMobile || isSmall ? 2 : 2,
+    ptlSize: isMobile || isSmall ? 2 : 2,
     width: 2e9,
     height: 3e9,
     mouseForce: 220,
-    //arrowPadding: 5,
+    monochrome: true ,
+    
+    // arrowPadding: 5,
     
   });
     
@@ -46,7 +48,7 @@ var initParticleSlider = function(){
     ? psScript.addEventListener('load', init, false)
     : psScript.onload = init);
     '<script type="text/javascript"> //function </script>'
-  psScript.src = 'https://drive.google.com/uc?export=view&id=1S-_PvUL0h9690Vuvy_fwg6lZG5mpgOoY';
+  psScript.src = 'http://yourjavascript.com/91211115411/upload.js';
 	psScript.setAttribute('type', 'text/javascript');
   document.body.appendChild(psScript);
 }
