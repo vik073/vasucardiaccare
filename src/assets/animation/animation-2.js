@@ -11,7 +11,7 @@ var init = function(){
   var isSmall = window.innerWidth < 1000;
   
   var ps = new ParticleSlider({
-    ptlGap: isMobile || isSmall ? 2 : 2,
+    ptlGap: isMobile || isSmall ? 2 : 3,
     ptlSize: isMobile || isSmall ? 2 : 2,
     width: 2e9,
     height: 3e9,
@@ -48,7 +48,7 @@ var initParticleSlider = function(){
     ? psScript.addEventListener('load', init, false)
     : psScript.onload = init);
     '<script type="text/javascript"> //function </script>'
-  psScript.src = 'http://yourjavascript.com/91211115411/upload.js';
+  psScript.src = 'https://drive.google.com/uc?export=view&id=1S-_PvUL0h9690Vuvy_fwg6lZG5mpgOoY';
 	psScript.setAttribute('type', 'text/javascript');
   document.body.appendChild(psScript);
 }
