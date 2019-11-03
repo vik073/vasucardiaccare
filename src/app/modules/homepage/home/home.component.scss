@@ -45,10 +45,11 @@
     flex: 1;
     position: absolute;
     z-index: 100;
-    @include fluid-type(top, 600px, 1920px, 80px, 435px);
+    top: 310px;
+    // @include fluid-type(top, 600px, 1920px, 80px, 305px);
     justify-content: center;
     align-items: center;
-    height: 100%;
+    // height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -58,7 +59,7 @@
     display: flex;
     @include fluid-type(font-size, 200px, 1800px, 40px, 100px);
     width: 58%;
-    font-family: Poppins;
+    font-family: poppins-extrabold;
     color: white;
     text-align: center;
     font-weight: bolder;
@@ -66,15 +67,24 @@
 }
 .description-text{
     display: flex;
-    @include fluid-type(font-size, 400px, 1300px, 10px, 20px);
-    width: 50%;
-    font-family: poppins-regular;
+    @include fluid-type(font-size, 700px, 1920px, 15px, 30px);
+    font-family: poppins;
     padding-top: 18px;
     padding-bottom: 21px;
     color: white;
     text-align: center;
+    width: 55%;
+    height: 56px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+    font-family: poppins;
     
 
+}
+.sub-text{
+    text-shadow: 0px 0px 80px #d92a2a;
 }
 .about-container{
     height: 100px;
@@ -82,14 +92,15 @@
 .book-appointment{
     border: none;
     padding: 8px;
+    font-family: poppins-bold;
     border-radius: 41px;
-    box-shadow: 0px 4px 44px #8a585869;
+    box-shadow:  0px 0px 80px #d92a2a;
     letter-spacing: 0;
     background-color: #FFFFFF;
     color: #D92A2A;
     @include fluid-type(width, 200px, 1920px, 100px, 299px);
     @include fluid-type(height, 200px, 1920px, 30px, 70px);
-    @include fluid-type(font-size, 400px, 1920px, 14px, 28px);
+    @include fluid-type(font-size, 500px, 1920px, 9px, 26px);
     text-align: center;
     opacity: 0.87;
 }
