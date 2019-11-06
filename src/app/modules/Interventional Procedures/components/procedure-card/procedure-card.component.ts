@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProcedureCardComponent implements OnInit {
 
   @Input() cardData: any;
+  @Input() LoadAnimationCard: any;
   constructor() { }
 
   ngOnInit() {

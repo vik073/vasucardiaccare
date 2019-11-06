@@ -1,0 +1,11 @@
+<div class="container" >
+    <div class="intro-content">
+      <div class="header">Make an appointment</div>
+      <div class="description">
+          With an inherent emphasis on overall clinical excellence VCC strives for utmost patient satisfaction through its modern approach to healthcare.    </div>
+        </div>
+<div class="div-card" >
+  <app-procedure-card class="procedure-card" *ngFor="let item of BookingArray1 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-procedure-card>
+  </div>
+</div>
+

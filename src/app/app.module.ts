@@ -14,6 +14,7 @@ import { BlogCardComponent } from './modules/blog/Components/blog-card/blog-card
 import { ConsultationComponent } from './modules/consultation&test/components/consultation/consultation.component';
 import { ServicesCardComponent } from './modules/consultation&test/components/services-card/services-card.component';
 import { HeartAnimationComponent } from './modules/animations/heart-animation/heart-animation.component';
+import { MakeappointmentComponent } from './modules/Interventional Procedures/components/makeappointment/makeappointment.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { HeartAnimationComponent } from './modules/animations/heart-animation/he
     BlogCardComponent,
     ConsultationComponent,
     ServicesCardComponent,
-    HeartAnimationComponent
+    HeartAnimationComponent,
+    MakeappointmentComponent
   ],
   imports: [
     BrowserModule,

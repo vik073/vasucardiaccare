@@ -7,10 +7,13 @@ declare const myTest: any;
 })
 export class HomeComponent implements OnInit {
 
+  AnimatedCard = true;
+  ServiceCard = false;
   constructor() { }
 
   ngOnInit() {
     //myTest();
+    
   }
 
 }

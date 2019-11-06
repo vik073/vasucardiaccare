@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180.142" height="179.235" viewBox="0 0 180.142 179.235">
+  <defs>
+    <filter id="Ellipse_9502" x="51" y="81.235" width="29" height="29" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_9503" x="76" y="81.235" width="29" height="29" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_9504" x="101" y="81.235" width="29" height="29" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_32" x="33" y="43.235" width="113" height="42" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_4333" data-name="Group 4333" transform="translate(-390 -2619.765)">
+    <g id="Group_3675" data-name="Group 3675" transform="translate(-1503.771 3160.323)">
+      <g id="Group_3674" data-name="Group 3674" transform="translate(1893.771 -540.558)">
+        <path id="Path_3651" data-name="Path 3651" d="M1983.842-517.389c-30.024-45.036-90.071-18.677-90.071,30.38,0,40.614,82.565,118.18,90.071,125.686,7.506-7.506,90.071-85.072,90.071-126.043C2073.913-536.066,2013.866-562.425,1983.842-517.389Z" transform="translate(-1893.771 540.558)" fill="#e1251b" fill-rule="evenodd"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 390, 2619.76)" filter="url(#Ellipse_9502)">
+      <circle id="Ellipse_9502-2" data-name="Ellipse 9502" cx="5.5" cy="5.5" r="5.5" transform="translate(60 87.24)" fill="#fff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 390, 2619.76)" filter="url(#Ellipse_9503)">
+      <circle id="Ellipse_9503-2" data-name="Ellipse 9503" cx="5.5" cy="5.5" r="5.5" transform="translate(85 87.24)" fill="#fff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 390, 2619.76)" filter="url(#Ellipse_9504)">
+      <circle id="Ellipse_9504-2" data-name="Ellipse 9504" cx="5.5" cy="5.5" r="5.5" transform="translate(110 87.24)" fill="#fff"/>
+    </g>
+    <g id="Group_3682" data-name="Group 3682" transform="translate(202 -1182)">
+      <g transform="matrix(1, 0, 0, 1, 188, 3801.76)" filter="url(#Rectangle_32)">
+        <rect id="Rectangle_32-2" data-name="Rectangle 32" width="95" height="24" rx="12" transform="translate(42 49.24)" fill="#fff"/>
+      </g>
+      <text id="Hello_Doc_" data-name="Hello Doc !" transform="translate(221 3853)" fill="#d60f1b" font-size="14" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="20.82" y="15">Hello Doc !</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,4 +1,13 @@
-<div class="container">
+<div class="container" *ngIf="LoadAnimationCard">
+    
+        <img class="img" src={{cardData.imgsrc}}>
+    
+  <div class="header">{{cardData.title}}</div>
+  <div class="description">{{cardData.description}}</div>
+  <div class="btn"><button class="btn" (click) = "creadtedb(cardData)">{{cardData.option}}</button></div>
+</div>
+
+<div  class="container" *ngIf="!LoadAnimationCard">
   <div class="header">{{cardData.title}}</div>
   <div class="description">{{cardData.description}}</div>
   <div class="btn"><button class="btn" (click) = "creadtedb(cardData)">{{cardData.option}}</button></div>
