@@ -1,26 +1,39 @@
 .container{
     display: flex;
-    width: 100%;
+    
     height: -webkit-fill-available;
     flex-direction: column;
     justify-content: space-between;
     background-color: #D92A2A;
 
 }
+.container1{
+    display: flex;
+    padding: 0px 14%;
+    height: -webkit-fill-available;
+    flex-direction: column;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    justify-content: space-between;
+    background-color: #D92A2A;
+
+}
+
 .intro-content{
 display: flex;
-flex:3.5;
+flex:1.5;
 flex-direction: column;
 justify-content: space-evenly;
-align-items: center;
 
 }
 .intro-content1{
     display: flex;
     flex:0.5;
+    padding: 0px 14%;
+    padding: 0 14%;
+    
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
     
     }
 .header{
