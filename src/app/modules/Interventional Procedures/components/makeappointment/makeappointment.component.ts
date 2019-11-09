@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MakeappointmentComponent implements OnInit {
 
 
-  LoadAnimationCArd = true;
+  LoadAnimationCArd = 'animation-card';
   BookingArray1 = [
     { imgsrc : "../../../../../assets/images/Group 4338.svg" ,title: "Online appointment", description: 'Measure your blood circulation' , option:'Book Now'},
     { imgsrc : "../../../../../assets/images/Group 4337.svg" ,title: "Emergency case", description: 'Prevent health issues with early diagnosis' , option:'Call Us'},

@@ -1,3 +1,11 @@
-<p>
-  blog-card works!
-</p>
+<div class="container" *ngIf="LoadAnimationCard">
+    
+  <div class="header"><div class="title"> {{cardData.title}}</div>
+<div class="title-detail">{{cardData.titledetail}}</div> </div>
+  <img class="img" src={{cardData.imgsrc}}>
+
+
+<div class="description">{{cardData.description}}</div>
+</div>
+
+

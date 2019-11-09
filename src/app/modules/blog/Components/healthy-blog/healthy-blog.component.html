@@ -1,3 +1,15 @@
-<p>
-  healthy-blog works!
-</p>
+<div class="container" >
+  <div class="intro-content">
+    <div class="header">Get healthy</div>
+    <div class="description">
+      With an inherent emphasis on overall clinical excellence VCC strives for utmost patient satisfaction through its modern approach to healthcare.   </div>
+    </div>
+    <div class="card-data">
+<div class="div-card" >
+<app-blog-card class="procedure-card" *ngFor="let item of BlogArray1 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-blog-card>
+</div>
+<div class="div-card" >
+  <app-blog-card class="procedure-card" *ngFor="let item of BlogArray2 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-blog-card>
+   </div>
+  </div>
+</div>

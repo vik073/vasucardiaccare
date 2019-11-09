@@ -28,7 +28,7 @@ justify-content: space-evenly;
 }
 .intro-content1{
     display: flex;
-    flex:0.5;
+    flex:0.3;
     padding: 0px 14%;
     padding: 0 14%;
     
@@ -43,6 +43,9 @@ font-weight: bold;
 font-family: poppins;
 letter-spacing: 0;
 width: 50%;
+display: flex;
+align-items: flex-end;
+flex: 1;
 color: #FFFFFF;
 opacity: 1;
 
@@ -54,11 +57,18 @@ opacity: 1;
     justify-content: center;
     font-family: poppins-regular;
     font-size: 100%;
+    display: flex;
+flex: 1;
+align-items: center;
     letter-spacing: 0;
     color: #FFFFFF;
     opacity: 1;
 
 
+}
+.white-tab{
+    height: 25px;
+    background-color: #FFFFFF;
 }
 .procedure-card{
     display: flex;
@@ -70,7 +80,7 @@ opacity: 1;
 }
 .div-card{
     display: flex;
-    flex: 1;
+    flex: 0.5;
     font-family: poppins;
     flex-wrap: wrap;
     flex-direction: row;

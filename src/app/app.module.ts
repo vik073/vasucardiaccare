@@ -15,12 +15,17 @@ import { ConsultationComponent } from './modules/consultation&test/components/co
 import { ServicesCardComponent } from './modules/consultation&test/components/services-card/services-card.component';
 import { HeartAnimationComponent } from './modules/animations/heart-animation/heart-animation.component';
 import { MakeappointmentComponent } from './modules/Interventional Procedures/components/makeappointment/makeappointment.component';
+import { AddressComponent } from './modules/address/address/address.component';
+import { AgmCoreModule } from '@agm/core';
+import { FooterComponent } from './shared/Footer/footer.component';
+import { ServicesComponent } from './modules/Services-provided/services/services.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    FooterComponent,
     HeaderComponent,
     AboutComponent,
     InterventionalProceduresComponent,
@@ -30,12 +35,19 @@ import { MakeappointmentComponent } from './modules/Interventional Procedures/co
     ConsultationComponent,
     ServicesCardComponent,
     HeartAnimationComponent,
-    MakeappointmentComponent
+    MakeappointmentComponent,
+    AddressComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      // please get your own API key here:
+      // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
+      apiKey: 'AIzaSyC2Niewwi7sSyD6F9oEziR9Hm-vOwb0z4g'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

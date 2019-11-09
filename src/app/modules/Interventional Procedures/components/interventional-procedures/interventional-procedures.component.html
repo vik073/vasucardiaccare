@@ -8,6 +8,7 @@
   <app-procedure-card class="procedure-card" *ngFor="let item of MyArrayType " [cardData]="item" [LoadAnimationCard] = "LoadServiceCard" ></app-procedure-card>
 </div>
 </div>
+<div class="white-tab" *ngIf="!AnimationCard"></div>
 
 <div class="container1" *ngIf="AnimationCard" >
   <div class="intro-content">
