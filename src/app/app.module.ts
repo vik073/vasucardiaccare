@@ -20,7 +20,6 @@ import { AgmCoreModule } from '@agm/core';
 import { FooterComponent } from './shared/Footer/footer.component';
 import { ServicesComponent } from './modules/Services-provided/services/services.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

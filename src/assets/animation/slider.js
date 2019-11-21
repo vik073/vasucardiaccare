@@ -1,15 +1,519 @@
-function ParticleSlider(a)
-{var b=this;b.sliderId="particle-slider",b.color="#fff",b.hoverColor="#88f",b.width=0,b.height=20,b.ptlGap=0,b.ptlSize=1,b.slideDelay=10,b.arrowPadding=10,b.showArrowControls=!0,b.onNextSlide=null,b.onWidthChange=null,b.onHeightChange=null,b.onSizeChange=null,b.monochrome=!1,b.mouseForce=1e4,b.restless=!0,b.imgs=[];
-if(a){
-    var c=["color","hoverColor","width","height","ptlGap","ptlSize","slideDelay","arrowPadding","sliderId","showArrowControls","onNextSlide","monochrome","mouseForce","restless","imgs","onSizeChange","onWidthChange","onHeightChange"];
-    for(var d=0,e=c.length;d<e;d++) a[c[d]]&&(b[c[d]]=a[c[d]])}b.$container=b.$("#"+b.sliderId),b.$$children=b.$container.childNodes,b.$controlsContainer=b.$(".controls"),b.$$slides=b.$(".slide",b.$(".slides").childNodes,!0),b.$controlLeft=null,b.$controlRight=null,b.$canv=b.$(".draw"),b.$srcCanv=document.createElement("canvas"),b.$srcCanv.style.display="none",b.$container.appendChild(b.$srcCanv),b.$prevCanv=document.createElement("canvas"),b.$prevCanv.style.display="none",b.$container.appendChild(b.$prevCanv),b.$nextCanv=document.createElement("canvas"),b.$nextCanv.style.display="none",b.$container.appendChild(b.$nextCanv),b.$overlay=document.createElement("p"),b.$container.appendChild(b.$overlay),b.imgControlPrev=null,b.imgControlNext=null,b.$$slides.length<=1&&(b.showArrowControls=!1),b.$controlsContainer&&b.$controlsContainer.childNodes&&b.showArrowControls==!0?(b.$controlLeft=b.$(".left",b.$controlsContainer.childNodes),b.$controlRight=b.$(".right",b.$controlsContainer.childNodes),b.imgControlPrev=new Image,b.imgControlNext=new Image,b.imgControlPrev.onload=function(){b.$prevCanv.height=this.height,b.$prevCanv.width=this.width,b.loadingStep()},b.imgControlNext.onload=function(){b.$nextCanv.height=this.height,b.$nextCanv.width=this.width,b.loadingStep()},b.imgControlPrev.src=b.$controlLeft.getAttribute("data-src"),b.imgControlNext.src=b.$controlRight.getAttribute("data-src")):b.showArrowControls=!1,b.width<=0&&(b.width=b.$container.clientWidth),b.height<=0&&(b.height=b.$container.clientHeight),b.mouseDownRegion=0,b.colorArr=b.parseColor(b.color),b.hoverColorArr=b.parseColor(b.hoverColor),b.mx=-1,b.my=-1,b.swipeOffset=0,b.cw=b.getCw(),b.ch=b.getCh(),b.frame=0,b.nextSlideTimer=!1,b.currImg=0,b.lastImg=0,b.imagesLoaded=0,b.pxlBuffer={first:null},b.recycleBuffer={first:null},b.ctx=b.$canv.getContext("2d"),
-    b.srcCtx=b.$srcCanv.getContext("2d"),
-    b.prevCtx=b.$prevCanv.getContext("2d"),
-    b.nextCtx=b.$nextCanv.getContext("2d"),
-    b.$canv.width=b.cw,b.$canv.height=b.ch,
-    b.shuffle= function(){var a,b;for(var c=0,d=this.length;c<d;c++)b=Math.floor(Math.random()*d),a=this[c],this[c]=this[b],this[b]=a},Array.prototype.shuffle=b.shuffle,
-    onmouseout=function(){b.mx=-1,b.my=-1,b.mouseDownRegion=0},
-    onmousemove=function(a){function c(a){var c=0,d=0,e=typeof a=="string"?b.$(a):a;if(e){c=e.offsetLeft,d=e.offsetTop;var f=document.getElementsByTagName("body")[0];while(e.offsetParent&&e!=f)c+=e.offsetParent.offsetLeft,d+=e.offsetParent.offsetTop,e=e.offsetParent}this.x=c,this.y=d}var d=new c(b.$container);b.mx=a.clientX-d.x+document.body.scrollLeft+document.documentElement.scrollLeft,b.my=a.clientY-d.y+document.body.scrollTop+document.documentElement.scrollTop},
-    onmousedown=function(){if(b.imgs.length>1){var a=0;b.mx>=0&&b.mx<b.arrowPadding*2+b.$prevCanv.width?a=-1:b.mx>0&&b.mx>b.cw-(b.arrowPadding*2+b.$nextCanv.width)&&(a=1),b.mouseDownRegion=a}},
-    onmouseup=function(){if(b.imgs.length>1){var a="";b.mx>=0&&b.mx<b.arrowPadding*2+b.$prevCanv.width?a=-1:b.mx>0&&b.mx>b.cw-(b.arrowPadding*2+b.$nextCanv.width)&&(a=1),a!=0&&b.mouseDownRegion!=0&&(a!=b.mouseDownRegion&&(a*=-1),b.nextSlideTimer&&clearTimeout(b.nextSlideTimer),b.nextSlide(a)),b.mouseDownRegion=0}};if(b.imgs.length==0)for(var d=0,e=b.$$slides.length;d<e;d++){var f=new Image;b.imgs.push(f),f.src=b.$$slides[d].getAttribute("data-src")}b.imgs.length>0&&(b.imgs[0].onload=function(){b.loadingStep()}),b.requestAnimationFrame(function(){b.nextFrame()})}var psParticle=function(a){this.ps=a,this.ttl=null,this.color=a.colorArr,this.next=null,this.prev=null,this.gravityX=0,this.gravityY=0,this.x=Math.random()*a.cw,this.y=Math.random()*a.ch,this.velocityX=Math.random()*10-5,this.velocityY=Math.random()*10-5};psParticle.prototype.move=function(){var a=this.ps,b=this;if(this.ttl!=null&&this.ttl--<=0)a.swapList(b,a.pxlBuffer,a.recycleBuffer),this.ttl=null;else{var c=this.gravityX+a.swipeOffset-this.x,d=this.gravityY-this.y,e=Math.sqrt(Math.pow(c,2)+Math.pow(d,2)),f=Math.atan2(d,c),g=e*.01;a.restless==!0?g+=Math.random()*.1-.05:g<.01&&(this.x=this.gravityX+.25,this.y=this.gravityY+.25);var h=0,i=0;if(a.mx>=0&&a.mouseForce){var j=this.x-a.mx,k=this.y-a.my;h=Math.min(a.mouseForce/(Math.pow(j,2)+Math.pow(k,2)),a.mouseForce),i=Math.atan2(k,j),typeof this.color=="function"&&(i+=Math.PI,h*=.001+Math.random()*.1-.05)}else h=0,i=0;this.velocityX+=g*Math.cos(f)+h*Math.cos(i),this.velocityY+=g*Math.sin(f)+h*Math.sin(i),this.velocityX*=.92,this.velocityY*=.92,this.x+=this.velocityX,this.y+=this.velocityY}},ParticleSlider.prototype.Particle=psParticle,ParticleSlider.prototype.swapList=function(a,b,c){var d=this;a==null?a=new d.Particle(d):b.first==a?a.next!=null?(a.next.prev=null,b.first=a.next):b.first=null:a.next==null?a.prev.next=null:(a.prev.next=a.next,a.next.prev=a.prev),c.first==null?(c.first=a,a.prev=null,a.next=null):(a.next=c.first,c.first.prev=a,c.first=a,a.prev=null)},ParticleSlider.prototype.parseColor=function(a){var b,a=a.replace(" ","");if(b=/^#([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})/.exec(a))b=[parseInt(b[1],16),parseInt(b[2],16),parseInt(b[3],16)];else if(b=/^#([\da-fA-F])([\da-fA-F])([\da-fA-F])/.exec(a))b=[parseInt(b[1],16)*17,parseInt(b[2],16)*17,parseInt(b[3],16)*17];else if(b=/^rgba\(([\d]+),([\d]+),([\d]+),([\d]+|[\d]*.[\d]+)\)/.exec(a))b=[+b[1],+b[2],+b[3],+b[4]];else if(b=/^rgb\(([\d]+),([\d]+),([\d]+)\)/.exec(a))b=[+b[1],+b[2],+b[3]];else return null;isNaN(b[3])&&(b[3]=1),b[3]*=255;return b},ParticleSlider.prototype.loadingStep=function(){var a=this;a.imagesLoaded++;if(a.imagesLoaded>=3||a.showArrowControls==!1)a.resize(),a.slideDelay>0&&(a.nextSlideTimer=setTimeout(function(){a.nextSlide()},1e3*a.slideDelay))},ParticleSlider.prototype.$=function(a,b,c){var d=this;if(a[0]=="."){var e=a.substr(1);b||(b=d.$$children);var f=[];for(var g=0,h=b.length;g<h;g++)b[g].className&&b[g].className==e&&f.push(b[g]);return f.length==0?null:f.length==1&&!c?f[0]:f}return document.getElementById(a.substr(1))},ParticleSlider.prototype.nextFrame=function(){var a=this;a.mouseDownRegion==1&&a.mx<a.cw/2||a.mouseDownRegion==-1&&a.mx>a.cw/2?a.swipeOffset=a.mx-a.cw/2:a.swipeOffset=0;var b=a.pxlBuffer.first,c=null;while(b!=null)c=b.next,b.move(),b=c;a.drawParticles();if(a.frame++%25==0&&(a.cw!=a.getCw()||a.ch!=a.getCh())){var d=a.getCh(),e=a.getCw();a.ch!=e&&typeof a.onWidthChange=="function"&&a.onWidthChange(a,e),a.ch!=d&&typeof a.onHeightChange=="function"&&a.onHeightChange(a,d),typeof a.onSizeChange=="function"&&a.onSizeChange(a,e,d),a.resize()}setTimeout(function(){a.requestAnimationFrame(function(){a.nextFrame()})},15)},ParticleSlider.prototype.nextSlide=function(a){var b=this;b.nextSlideTimer!=null&&b.imgs.length>1?(b.currImg=(b.currImg+b.imgs.length+(a?a:1))%b.imgs.length,b.resize(),b.slideDelay>0&&(b.nextSlideTimer=setTimeout(function(){b.nextSlide()},1e3*b.slideDelay))):b.slideDelay>0&&(b.nextSlideTimer=setTimeout(function(){b.nextSlide()},1e3*b.slideDelay)),typeof b.onNextSlide=="function"&&b.onNextSlide(b.currImg)},ParticleSlider.prototype.drawParticles=function(){var a=this,b=a.ctx.createImageData(a.cw,a.ch),c=b.data,d,e,f,g,h,i,j=a.pxlBuffer.first;while(j!=null){e=~~j.x,f=~~j.y;for(g=e;g<e+a.ptlSize&&g>=0&&g<a.cw;g++)for(h=f;h<f+a.ptlSize&&h>=0&&h<a.ch;h++)d=(h*b.width+g)*4,i=typeof j.color=="function"?j.color():j.color,c[d+0]=i[0],c[d+1]=i[1],c[d+2]=i[2],c[d+3]=i[3];j=j.next}b.data=c,a.ctx.putImageData(b,0,0)},ParticleSlider.prototype.getPixelFromImageData=function(a,b,c){var d=this,e=[];for(var f=0;f<a.width;f+=d.ptlGap+1)for(var g=0;g<a.height;g+=d.ptlGap+1)i=(g*a.width+f)*4,a.data[i+3]>0&&e.push({x:b+f,y:c+g,color:d.monochrome==!0?[d.colorArr[0],d.colorArr[1],d.colorArr[2],d.colorArr[3]]:[a.data[i],a.data[i+1],a.data[i+2],a.data[i+3]]});return e},ParticleSlider.prototype.init=function(a){var b=this;if(b.imgs.length>0){b.$srcCanv.width=b.imgs[b.currImg].width,b.$srcCanv.height=b.imgs[b.currImg].height,b.srcCtx.clearRect(0,0,b.$srcCanv.width,b.$srcCanv.height),b.srcCtx.drawImage(b.imgs[b.currImg],0,0);var c=b.getPixelFromImageData(b.srcCtx.getImageData(0,0,b.$srcCanv.width,b.$srcCanv.height),~~(b.cw/2-b.$srcCanv.width/2),~~(b.ch/2-b.$srcCanv.height/2));if(b.showArrowControls==!0){b.prevCtx.clearRect(0,0,b.$prevCanv.width,b.$prevCanv.height),b.prevCtx.drawImage(b.imgControlPrev,0,0);var d=b.getPixelFromImageData(b.prevCtx.getImageData(0,0,b.$prevCanv.width,b.$prevCanv.height),b.arrowPadding,~~(b.ch/2-b.$prevCanv.height/2));for(var e=0,f=d.length;e<f;e++)d[e].color=function(){return b.mx>=0&&b.mx<b.arrowPadding*2+b.$prevCanv.width?b.hoverColorArr:b.colorArr},c.push(d[e]);b.nextCtx.clearRect(0,0,b.$nextCanv.width,b.$nextCanv.height),b.nextCtx.drawImage(b.imgControlNext,0,0);var g=b.getPixelFromImageData(b.nextCtx.getImageData(0,0,b.$nextCanv.width,b.$nextCanv.height),b.cw-b.arrowPadding-b.$nextCanv.width,~~(b.ch/2-b.$nextCanv.height/2));for(var e=0,f=g.length;e<f;e++)g[e].color=function(){return b.mx>0&&b.mx>b.cw-(b.arrowPadding*2+b.$nextCanv.width)?b.hoverColorArr:b.colorArr},c.push(g[e])}if(b.currImg!=b.lastImg||a==!0)c.shuffle(),b.lastImg=b.currImg;var h=b.pxlBuffer.first;for(var e=0,f=c.length;e<f;e++){var i=null;h!=null?(i=h,h=h.next):(b.swapList(b.recycleBuffer.first,b.recycleBuffer,b.pxlBuffer),i=b.pxlBuffer.first),i.gravityX=c[e].x,i.gravityY=c[e].y,i.color=c[e].color}while(h!=null)h.ttl=~~(Math.random()*10),h.gravityY=~~(b.ch*Math.random()),h.gravityX=~~(b.cw*Math.random()),h=h.next;b.$overlay.innerHTML=b.$$slides[b.currImg].innerHTML}},ParticleSlider.prototype.getCw=function(){var a=this;return Math.min(document.body.clientWidth,a.width,a.$container.clientWidth)},ParticleSlider.prototype.getCh=function(){var a=this;return Math.min(document.body.clientHeight,a.height,a.$container.clientHeight)},ParticleSlider.prototype.resize=function(){var a=this;a.cw=a.getCw(),a.ch=a.getCh(),a.$canv.width=a.cw,a.$canv.height=a.ch,a.init(!0)},ParticleSlider.prototype.setColor=function(a){var b=this;b.colorArr=b.parseColor(a)},ParticleSlider.prototype.setHoverColor=function(a){var b=this;b.hoverColorArr=b.parseColor(a)},ParticleSlider.prototype.requestAnimationFrame=function(a){var b=this,c=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(a){window.setTimeout(a,1e3/60)};c(a)}
+  /*!
+ * rbgShiftSlider :  little plugin to create slides with rgba glitch transition
+ * (c) 2019 Hadrien Mongouachon
+ * MIT Licensed.
+ *
+ * Author URI: http://hmongouachon.com
+ * Plugin URI: https://github.com/hmongouachon/GlitchrbgShiftSlider
+
+ * Version: 1.0.0
+ */
 ;
+(function() {
+
+    window.rbgShiftSlider = function(options) {
+
+        ///////////////////////////////    
+
+        //  OPTIONS
+
+        /////////////////////////////// 
+
+        options = options || {};
+        options.slideImages = options.hasOwnProperty('slideImages') ? options.slideImages : [];
+        options.stageWidth = options.hasOwnProperty('stageWidth') ? options.stageWidth : 1920;
+        options.stageHeight = options.hasOwnProperty('stageHeight') ? options.stageHeight : 1080;
+        options.displacementImage = options.hasOwnProperty('displacementImage') ? options.displacementImage : '';
+        options.fullScreen = options.hasOwnProperty('fullScreen') ? options.fullScreen : true;
+        options.transitionDuration = options.hasOwnProperty('transitionDuration') ? options.transitionDuration : 0.25;
+        options.transitionGhostDuration = options.hasOwnProperty('transitionGhostDuration') ? options.transitionGhostDuration : 0.25;
+        options.transitionFilterIntensity = options.hasOwnProperty('transitionFilterIntensity') ? options.transitionFilterIntensity : 350;
+        options.transitioSpriteIntensity = options.hasOwnProperty('transitioSpriteIntensity') ? options.transitioSpriteIntensity : 2;
+        options.mouseDispIntensity = options.hasOwnProperty('mouseDispIntensity') ? options.mouseDispIntensity : 3;
+        options.nav = options.hasOwnProperty('nav') ? options.nav : true;
+        options.navElement = options.hasOwnProperty('navElement') ? options.navElement : '.scene-nav';
+        options.interactive = options.hasOwnProperty('interactive') ? options.interactive : true;
+        options.autoPlay = options.hasOwnProperty('autoPlay') ? options.autoPlay : true;
+        options.autoPlaySpeed = options.hasOwnProperty('autoPlaySpeed') ? options.autoPlaySpeed : 3000;
+
+        ///////////////////////////////    
+
+        //  METHODS
+
+        // create 3 containers, set rgb colors with filterMatrix
+        // each container will have the same background img, same filters and displacement img
+        // for transition between slides, a fake object named "ghostEl" will be animate with easing by gsap
+        // the x value of this object will be use to create transition effect and fake user gesture for slide transition
+
+        /////////////////////////////// 
+
+        ///////////////////////////////    
+
+        //  VARS
+
+        ///////////////////////////////
+
+        var canvas = document.getElementById("rbgShiftSlider");
+
+        // remove pixi message in console
+        PIXI.utils.skipHello();
+        var stage = new PIXI.Container();
+        var renderer = PIXI.autoDetectRenderer(options.stageWidth, options.stageHeight, {
+            transparent: true
+        }); // transparent: true
+
+        var render;
+        var slidesContainer = new PIXI.Container();
+
+        var bgs = [],
+            texture_bg = [],
+            containers = [],
+            channelsContainer = [],
+            displacementFilters = [],
+            displacementSprites = [];
+
+        var redChannelFilter, greenChannelFilter, blueChannelFilter;
+        var containerRed, containerGreen, containerBlue;
+
+        const ghostEl = {
+            x: 0,
+            y: 0,
+        };
+
+        var posx = 0,
+            posy = 0;
+        var node_xp = 0,
+            node_yp = 0;
+
+        var rafId_gestureMove, rafId_transition;
+        var baseTimeline;
+
+        // slide index
+        var currentIndex = 0;
+
+        var isPlaying = false;
+        
+        // autoplay
+        var interval, autoplay;
+
+        ///////////////////////////////    
+
+        //  Build pixi scene
+
+        ///////////////////////////////
+
+        function build_scene() {
+
+            // append render to canvas
+            canvas.appendChild(renderer.view);
+
+            // Add children containers to the stage = canvas 
+            stage.addChild(slidesContainer);
+
+            // Fit renderer to the screen
+            if (options.fullScreen === true) {
+                renderer.view.style.objectFit = 'cover';
+                renderer.view.style.width = '100%';
+                renderer.view.style.height = '100%';
+                renderer.view.style.top = '50%';
+                renderer.view.style.left = '50%';
+                renderer.view.style.webkitTransform = 'translate( -50%, -50% ) scale(1.2)';
+                renderer.view.style.transform = 'translate( -50%, -50% ) scale(1.2)';
+            } else {
+                renderer.view.style.maxWidth = '100%';
+                renderer.view.style.top = '50%';
+                renderer.view.style.left = '50%';
+                renderer.view.style.webkitTransform = 'translate( -50%, -50% )';
+                renderer.view.style.transform = 'translate( -50%, -50% )';
+            }
+
+            render = new PIXI.ticker.Ticker();
+            render.autoStart = true;
+            render.add(function(delta) {
+                renderer.render(stage);
+            });
+
+            slidesContainer.interactive = true;
+
+        }
+
+        ///////////////////////////////    
+
+        //  Build rgb containers
+
+        ///////////////////////////////
+        function build_RGBcontainers() {
+
+            redChannelFilter = new PIXI.filters.ColorMatrixFilter();
+            redChannelFilter.matrix = [
+                1, 0, 0, 0, 0,
+                0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0,
+                0, 0, 0, 1, 0
+            ];
+
+            greenChannelFilter = new PIXI.filters.ColorMatrixFilter();
+            greenChannelFilter.matrix = [
+                0, 0, 0, 0, 0,
+                0, 1, 0, 0, 0,
+                0, 0, 0, 0, 0,
+                0, 0, 0, 1, 0
+            ];
+
+            blueChannelFilter = new PIXI.filters.ColorMatrixFilter();
+            blueChannelFilter.matrix = [
+                0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0,
+                0, 0, 1, 0, 0,
+                0, 0, 0, 1, 0
+            ];
+
+            channelsContainer.push(redChannelFilter, greenChannelFilter, blueChannelFilter);
+
+            // CONTAINERS 
+            containerRed = new PIXI.Container();
+            containerRed.position.x = 0;
+            containerGreen = new PIXI.Container();
+            containerGreen.position.x = 0;
+            containerBlue = new PIXI.Container();
+            containerBlue.position.x = 0;
+
+            containers.push(containerRed, containerGreen, containerBlue);
+
+            // set texture for each background (used later for slide transition)
+            for (var i = 0; i < options.slideImages.length; ++i) {
+                texture_bg[i] = new PIXI.Texture.fromImage(options.slideImages[i]);
+            }
+
+            // set displacement filter and displacement sprite for each container
+            for (var i = 0, len = containers.length; i < len; i++) {
+
+                slidesContainer.addChild(containers[i]);
+                texture = new PIXI.Texture.fromImage(options.displacementImage);
+
+                // push sprites & filters to array
+                displacementSprites.push(this.PIXI.Sprite(texture));
+                displacementFilters.push(this.PIXI.filters.DisplacementFilter(displacementSprites[i]));
+
+                // set first image texture background and push to array
+                var bg = new PIXI.Sprite(texture_bg[0]); //new PIXI.Sprite(texture2);
+                bgs.push(bg);
+                bgs[i].width = renderer.view.width;
+                bgs[i].height = renderer.view.height;
+                bgs[i].anchor.set(0.5)
+                bgs[i].x = renderer.view.width / 2;
+                bgs[i].y = renderer.view.height / 2;
+                bgs[i].alpha = 0;
+
+                // add bg array + displacement sprites array to container 
+                containers[i].addChild(displacementSprites[i], bgs[i]);
+
+                // addchannel container filter array + displacement filter array to container 
+                containers[i].filters = [displacementFilters[i], channelsContainer[i]];
+
+                // init x y value 
+                displacementFilters[i].scale.x = 0;
+                displacementFilters[i].scale.y = 0;
+
+                // set autofit
+                displacementFilters[i].autoFit = true;
+
+            }
+
+            // add different anchor value to each displacementSprite
+            displacementSprites[0].anchor.set(0.0);
+            displacementSprites[1].anchor.set(0.5);
+            displacementSprites[2].anchor.set(0.3);
+
+            // add blend mode
+            // containers[0].filters[1].blendMode = PIXI.BLEND_MODES.ADD;
+            containers[1].filters[1].blendMode = PIXI.BLEND_MODES.ADD;
+            containers[2].filters[1].blendMode = PIXI.BLEND_MODES.ADD;
+
+        }
+
+        ///////////////////////////////    
+
+        //  Next slide transition
+
+        ///////////////////////////////
+        function next_slide(next) {
+
+            // init ghost x value
+            TweenMax.set(ghostEl, {
+                x: 0,
+                ease: Power0.easeOut,
+
+            });
+
+            // init basetimeline
+            baseTimeline = new TimelineMax({
+                onStart: function() {
+
+                    isPlaying = true;
+
+                    // fake user gesture from left to right
+                    TweenMax
+                        .to(ghostEl, options.transitionGhostDuration , {
+                            x: screen.width,
+                            ease: Power0.easeOut,
+                        })
+                },
+
+                onComplete: function() {
+
+                    // update current index
+                    currentIndex = next;
+
+                    isPlaying = false;
+
+                    if (options.interactive === true) {
+                        // init mouse gesture
+                        gestureEffect();
+                    }
+                },
+
+                onUpdate: function() {
+                    // make transition displacement effect
+                    node_xp += ((ghostEl.x - node_xp) / 3);
+                    node_yp += ((ghostEl.x - node_yp) / 3);
+
+                    for (var i = 0, len = containers.length; i < len; i++) {
+                        displacementFilters[i].scale.x = Math.atan(node_xp - (displacementSprites[i].x)) * (baseTimeline.progress() * options.transitionFilterIntensity);
+                        displacementSprites[i].position.x = node_yp * (baseTimeline.progress() * options.transitionSpriteIntensity);
+                    }
+
+                    // console.log(ghostEl.x)
+
+                }
+
+            });
+
+            // baseTimeline.clear();
+
+            // if (baseTimeline.isActive()) {
+            //     return;
+            // }
+
+            baseTimeline
+                // hide all 3 containers backgrounds 
+                .to([bgs[0], bgs[1], bgs[2]], options.transitionDuration, {
+                    alpha: 0,
+                    ease: Power2.easeOut
+                }, options.transitionDuration)
+
+                // add fn for container bg texture update
+                .add(updateTextureBgs, options.transitionDuration);
+
+            function updateTextureBgs() {
+                for (var i = 0; i < options.slideImages.length; ++i) {
+                    if (i == next) {
+                        for (var j = 0, len = containers.length; j < len; j++) {
+
+                            // update texture
+                            bgs[j].texture = texture_bg[i];
+
+                            // show background with new texture
+                            baseTimeline
+                                .to(bgs[j], options.transitionDuration, {
+                                    alpha: 1,
+                                    ease: Power2.easeOut
+                                }, options.transitionDuration);
+
+                        }
+
+                    }
+                }
+
+            }
+        };
+
+        ///////////////////////////////    
+
+        //  gesture effect 
+
+        ///////////////////////////////
+
+        function gestureEffect() {
+
+            // re init animation
+            cancelAnimationFrame(rafId_transition);
+
+            // make sure basetimeline is not running
+            if (baseTimeline.isActive()) {
+                return;
+            }
+
+            // reinit x/y value for sprites and filters
+            for (var i = 0, len = containers.length; i < len; i++) {
+
+                displacementSprites[i].x = 0;
+                displacementSprites[i].y = 0;
+
+                displacementFilters[i].scale.x = 0;
+                displacementFilters[i].scale.y = 0;
+            }
+
+            // add mouse / touch event
+            slidesContainer
+                .on('mousemove', onPointerMove)
+                .on('touchmove', onPointerMove);
+
+            function onPointerMove(eventData) {
+
+                // get mouse value
+                posx = eventData.data.global.x;
+                posy = eventData.data.global.y;
+
+            }
+
+            // use raf for smooth sprites / filters animation
+            ticker();
+
+            function ticker() {
+
+                rafId_gestureMove = requestAnimationFrame(ticker);
+
+                // make sure transition is done
+                if (ghostEl.x >= screen.width) {
+
+                    // get new mouse positions with dumping intensity ( between [1-10] : 1 is faster)
+                    node_xp += ((posx - node_xp) / options.mouseDispIntensity);
+                    node_yp += ((posy - node_yp) / options.mouseDispIntensity);
+
+                    for (var i = 0, len = containers.length; i < len; i++) {
+
+                        // update disp scale x / y values
+                        displacementFilters[i].scale.x = (node_xp - (displacementSprites[i].x));
+                        displacementFilters[i].scale.y = (node_yp - (displacementSprites[i].y));
+
+                        // update sprite x / y values
+                        displacementSprites[i].position.x = node_xp;
+                        displacementSprites[i].position.y = node_yp;
+
+                    }
+
+                } else {
+                    cancelAnimationFrame(rafId_gestureMove);
+                }
+
+            }
+        };
+        
+
+        ///////////////////////////////    
+
+        //  navigation
+
+        ///////////////////////////////
+
+        if(options.nav === true) {
+
+          var nav = document.querySelectorAll(options.navElement);
+
+            for (var i = 0; i < nav.length; i++) {
+
+                var navItem = nav[i];
+
+                navItem.onclick = function(event) {
+
+                    // Make sure the previous transition has ended
+                    if (isPlaying) {
+                        return false;
+                    }
+
+                    if (this.getAttribute('data-nav') === 'next') {
+
+                        if (currentIndex >= 0 && currentIndex < options.slideImages.length - 1) {
+                            next_slide(currentIndex + 1);
+                        } else {
+                            next_slide(0);
+                        }
+                        if(options.autoPlay === true) {
+                          // re init autoplay
+                          clearInterval(interval);
+                          autoplay();
+                        }
+                    } else {
+                        if (currentIndex > 0 && currentIndex < options.slideImages.length) {
+                            next_slide(currentIndex - 1);
+                        } else {
+                            next_slide(options.slideImages.length - 1);
+                        }
+
+                        if(options.autoPlay === true) {
+                          // re init autoplay
+                          clearInterval(interval);
+                          autoplay();
+                        }
+                    }
+                    return false;
+                }
+
+            }
+        }
+
+
+        ///////////////////////////////    
+
+        //  autoplay
+
+        ///////////////////////////////
+
+        function autoplay(){
+            interval = setInterval(function() {
+
+                // if (isPlaying) {
+                //         return false;
+                //     }
+
+                currentIndex = currentIndex + 1;
+
+                if (currentIndex === options.slideImages.length) {
+                    currentIndex = 0;
+                    next_slide(currentIndex);
+                } else {
+                    next_slide(currentIndex);
+                }
+
+                // // clear after x seconds
+                // if (Date.now() - started > 15000) {
+                //   // pause it
+                //   // clearInterval(interval);
+                // } 
+                // else {
+                //   // the thing to do every 100ms
+                // }
+
+
+            }, options.autoPlaySpeed); // default 3000ms
+        };
+
+
+        ///////////////////////////////    
+
+        //  init slider
+
+        ///////////////////////////////
+
+        function init_slider() {
+            build_scene();
+            build_RGBcontainers();
+
+            if (options.autoPlay === true) {
+
+                var started = Date.now();
+                currentIndex = 0;
+                next_slide(currentIndex);
+                autoplay();
+
+            } else {
+                next_slide(0);
+            }
+        };
+        
+        // let's go
+        init_slider();
+    };
+
+})();

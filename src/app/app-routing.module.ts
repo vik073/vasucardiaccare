@@ -1,20 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HeaderComponent } from './shared/Header/header.component';
 import { HomeComponent } from './modules/homepage/home/home.component';
-import { AboutComponent } from './modules/about/Components/about/about.component';
-import { InterventionalProceduresComponent } from './modules/Interventional Procedures/components/interventional-procedures/interventional-procedures.component';
-
+import { ConsultationComponent } from './modules/consultation&test/components/consultation/consultation.component';
 const routes: Routes = [
-  // {
-  //   path: 'dashboard',
-  //   loadChildren: './modules/site-list/site-list.module#SiteListModule'
-  // },
-  // { path: 'login', component: SignInComponent },
-  // { path: 'signin', component: AuthComponent },
+
   {
     path: '',
-    // redirectTo: '/dashboard/list/active',
     component: HomeComponent,
     pathMatch: 'full',
   }
