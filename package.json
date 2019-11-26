@@ -11,6 +11,9 @@
     "heroku-postbuild": "ng build --prod"
   },
   "private": true,
+  "browser": {
+    "path": false
+  },
   "dependencies": {
     "@agm/core": "^1.0.0",
     "@angular/animations": "~7.2.0",
