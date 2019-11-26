@@ -8,12 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "ng build --prod",
+    "postinstall": "node patch.js"
   },
   "private": true,
-  "browser": {
-    "path": false
-  },
+
   "dependencies": {
     "@agm/core": "^1.0.0",
     "@angular/animations": "~7.2.0",
