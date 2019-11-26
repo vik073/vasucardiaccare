@@ -31,7 +31,7 @@
             ],
             "scripts": [
               
-              "src/patch.js",
+              "patch.js",
               "src/assets/animation/heartanimation.js",
               "src/assets/animation/animation-2.js",
               "node_modules/pixi.js/dist/pixi.min.js"
