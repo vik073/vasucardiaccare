@@ -18,14 +18,14 @@ export class InterventionalProceduresComponent implements OnInit {
 ];
 
 animationsArray = [
-  { imgsrc : "../../../../../assets/images/Group 4333.svg" ,title: "OPD Consultation", description: 'Consult award-winning Cardiologists' , option:'consult'},
-  { imgsrc : "../../../../../assets/images/Group 4334.svg" ,title: "Master Cardiac Check-up", description: 'Consult award-winning Cardiologists' , option:'consult'},
-  { imgsrc : "../../../../../assets/images/Group 4335.svg" ,title: "2D ECHO", description: 'Consult award-winning Cardiologists' , option:'consult'},
+  {  img: false ,imgsrc : "../../../../../assets/images/OPD consultation.mp4" ,title: "OPD Consultation", description: 'Consult award-winning Cardiologists' , option:'Consult'},
+  { img: false ,imgsrc : "../../../../../assets/images/2D echo final 1.mp4" ,title: "Master Cardiac Check-up", description: 'Consult award-winning Cardiologists' , option:'Consult'},
+  {  img: true , imgsrc : "../../../../../assets/images/TMH-final-10.gif" ,title: "2D ECHO", description: 'Consult award-winning Cardiologists' , option:'Consult'},
 ]
 animationsArray2 = [
-  { imgsrc : "../../../../../assets/images/Group 4336.svg" ,title: "TMT Treadmill", description: 'Consult award-winning Cardiologists' , option:'consult'},
-  { imgsrc : "../../../../../assets/images/Group 4337.svg" ,title: "X-RAY", description: 'Consult award-winning Cardiologists' , option:'consult'},
-  { imgsrc : "../../../../../assets/images/Group 4338.svg" ,title: "ECG", description: 'Consult award-winning Cardiologists' , option:'consult'},
+  { img: false ,imgsrc : "../../../../../assets/images/2D echo final 1.mp4" ,title: "TMT Treadmill", description: 'Consult award-winning Cardiologists' , option:'Consult'},
+  {  img: false ,imgsrc : "../../../../../assets/images/OPD consultation.mp4" ,title: "X-RAY", description: 'Consult award-winning Cardiologists' , option:'Consult'},
+  {  img: false ,imgsrc : "../../../../../assets/images/ECG final.mp4" ,title: "ECG", description: 'Prevent health issues with early diagnosis' , option:'Consult'},
  
 ];
 

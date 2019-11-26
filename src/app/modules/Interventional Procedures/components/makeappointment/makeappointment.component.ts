@@ -10,9 +10,9 @@ export class MakeappointmentComponent implements OnInit {
 
   LoadAnimationCArd = 'animation-card';
   BookingArray1 = [
-    { imgsrc : "../../../../../assets/images/Group 4338.svg" ,title: "Online appointment", description: 'Measure your blood circulation' , option:'Book Now'},
-    { imgsrc : "../../../../../assets/images/Group 4337.svg" ,title: "Emergency case", description: 'Prevent health issues with early diagnosis' , option:'Call Us'},
-    { imgsrc : "../../../../../assets/images/Group 4336.svg" ,title: "Our doctors", description: 'Prevent health issues with early diagnosis' , option:'Doctors'},
+    { img: true , imgsrc : "../../../../../assets/images/TMH-final-10.gif" ,title: "Online appointment", description: 'Measure your blood circulation' , option:'Book Now'},
+    { img: true , imgsrc : "../../../../../assets/images/Group 4337.svg" ,title: "Emergency case", description: 'Prevent health issues with early diagnosis' , option:'Call Us'},
+    { img: false , imgsrc : "../../../../../assets/images/OPD consultation.mp4" ,title: "Our doctors", description: 'Prevent health issues with early diagnosis' , option:'Doctors'},
   ];
   constructor() { }
 

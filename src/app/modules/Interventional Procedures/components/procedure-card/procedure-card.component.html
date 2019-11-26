@@ -1,6 +1,11 @@
 <div class="container" *ngIf="LoadAnimationCard =='animation-card'">
     
-        <img class="img" src={{cardData.imgsrc}}>
+       <img   *ngIf="img" class="img" src={{cardData.imgsrc}}>
+       <video  *ngIf="!img" width="270"  class="img" autoplay loop >
+          <source src="{{cardData.imgsrc}}" type="video/mp4">
+          
+        </video>
+        
     
   <div class="header">{{cardData.title}}</div>
   <div class="description">{{cardData.description}}</div>
@@ -16,6 +21,7 @@
     
   <img class="img" src={{cardData.imgsrc}}>
 
+  
 <div class="header">{{cardData.title}}</div>
 <div class="description">{{cardData.description}}</div>
 </div>

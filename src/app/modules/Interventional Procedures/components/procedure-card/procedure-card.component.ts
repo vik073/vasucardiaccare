@@ -9,9 +9,11 @@ export class ProcedureCardComponent implements OnInit {
 
   @Input() cardData: any;
   @Input() LoadAnimationCard: any;
+  img: any;
   constructor() { }
 
   ngOnInit() {
+    this.img = this.cardData.img;
   }
 
   creadtedb( obj){

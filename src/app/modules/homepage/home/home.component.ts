@@ -24,7 +24,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
+    // myTest();
+
+      
   
     var bgs = [];
     var texture_bg = [];
@@ -100,6 +102,9 @@ export class HomeComponent implements OnInit {
   app.renderer.view.style.display = "block";
   app.renderer.view.style.width = '100%';
 
+  // app.renderer.view.style.top = '321%';
+  // app.renderer.view.style.left = '50%';
+  
   
   //Add the canvas that Pixi automatically created for you to the HTML document
   data.appendChild(app.view);
@@ -255,7 +260,7 @@ export class HomeComponent implements OnInit {
                     gsap.TweenMax
                         .to(ghostEl, options.transitionDuration , {
                             x: screen.width,
-                            ease: gsap.Linear.easeOut,
+                            ease: gsap.Power0.easeOut,
                         })
                 },
   
@@ -389,6 +394,14 @@ export class HomeComponent implements OnInit {
                }
            };
       }
+    }
+
+     hello(e){
+        debugger
+        
+            let el = document.getElementById('hell');
+            el.scrollIntoView();
+          
     }
   }
   

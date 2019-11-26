@@ -12,4 +12,5 @@ export class HeartAnimationComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }

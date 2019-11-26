@@ -10,7 +10,6 @@ export class AppComponent {
   title = 'VasuCardiacCare';
   
   onclick(){
-    debugger
-    myTest();
+    // myTest();
   }
 }
