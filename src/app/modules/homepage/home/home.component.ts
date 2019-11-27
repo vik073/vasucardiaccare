@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
   import * as PIXI from 'pixi.js';
   import * as gsap  from 'gsap';
-  import { PixiPlugin } from "gsap/PixiPlugin";
-  PixiPlugin.registerPIXI(PIXI);
+
 declare const myTest: any;
 @Component({
   selector: 'app-home',
