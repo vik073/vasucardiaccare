@@ -33,8 +33,7 @@
               
               
               "src/assets/animation/heartanimation.js",
-              "src/assets/animation/animation-2.js",
-              "node_modules/pixi.js/dist/pixi.min.js"
+              "src/assets/animation/animation-2.js"
             ],
             "es5BrowserSupport": true
           },
