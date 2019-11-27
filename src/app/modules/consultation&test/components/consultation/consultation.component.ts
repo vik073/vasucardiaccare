@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as PIXI from 'pixi.js';
-import * as gsap  from 'gsap';
 
 
 @Component({
