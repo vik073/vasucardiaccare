@@ -1,3 +1,6 @@
+@import '../../../../../mixin.scss';
+@import '../../../../../common.scss ';
+
 .container{
     display: flex;
     flex-direction: row;
@@ -40,7 +43,7 @@ flex: 1;
         text-align: left;
         font-weight: bolder;
         font-family:  poppins-extrabold;
-        font-size: 40px;
+        @include fluid-type(font-size, 200px, 1200px, 20px, 40px);
         letter-spacing: 0;
         color: #D92A2A;
         opacity: 1;
@@ -48,8 +51,7 @@ flex: 1;
     .description{
         justify-content: flex-start;
         font-family: poppins-regular;
-        width: 70%;
-        font-size: 19px;
+        @include fluid-type(font-size, 200px, 1200px, 10px, 20px);
         letter-spacing: 0;
         color: #000000;
         opacity: 1;

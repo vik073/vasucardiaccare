@@ -18,7 +18,7 @@
 
 .header{
 text-align: center;
-font-size: 16px;
+@include fluid-type(font-size, 300px, 1200px, 10px, 16px);
 letter-spacing: 0;
 margin-top:-10px;
 font-family: poppins-bold;
@@ -46,7 +46,8 @@ opacity: 1;
     width: 120px;
 }
 .img{
-  width: 45%;
+  
+  @include fluid-type(width, 400px, 1800px, 30%, 40%);
   display: flex;
   margin-top:-10px;
   align-items: center;

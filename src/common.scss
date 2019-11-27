@@ -1,0 +1,56 @@
+@import './mixin.scss';
+
+.container{
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-between); 
+    padding: 0px 14%;
+    @include fluid-type(height, 200px, 1800px, 200px, 900px);
+}
+
+.header{
+    text-align: left;
+    font-weight: bold;
+    @include fluid-type(font-size, 200px, 1200px, 20px, 43px);
+    font-family: poppins;
+    letter-spacing: 0;
+    width: 40%;
+    color: #D92A2A;
+    opacity: 1;
+    }
+
+    .red-header{
+        @include flexbox;
+        text-align: left;
+        font-weight: bold;
+        @include fluid-type(font-size, 200px, 1200px, 20px, 43px);
+        font-family: poppins;
+        letter-spacing: 0;
+        width: 50%;
+        @include align-items(flex-end);
+        @include flex(1);
+        color: #FFFFFF;
+        opacity: 1;
+        }
+
+        .red-description{
+            @include flexbox;
+            @include flex-direction(column);
+            @include justify-content(center); 
+            width: 75%;
+            font-family: poppins-regular;
+            margin-top: 10px;
+            line-height: 24px;
+            @include fluid-type(font-size, 200px, 1200px, 10px, 20px);
+            margin-bottom: 50px;
+            @include flex(0.5);
+            @include align-items(center);
+            letter-spacing: 0;
+            color: #FFFFFF;
+            opacity: 1;
+        
+        }
+
+        .no-margin{
+            margin: 0;
+        }

@@ -1,95 +1,49 @@
+@import '../../../../../mixin.scss';
+@import '../../../../../common.scss';
+
 .container{
-    display: flex;
-    
-    // height: -webkit-fill-available;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-between); 
     background-color: #D92A2A;
 
 }
-.container1{
-    display: flex;
+.million-heart-container{
     padding: 0px 14%;
-    
-    flex-direction: column;
     margin-bottom: 5%;
     margin-top: 5%;
-    justify-content: space-between;
-    background-color: #D92A2A;
-
 }
 
 .intro-content{
-display: flex;
-flex:1.5;
-flex-direction: column;
-justify-content: space-evenly;
-
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-evenly);
+    @include flex(3);
 }
-.intro-content1{
-    display: flex;
-    flex:0.3;
-    padding: 0px 14%;
-    padding: 0 14%;
-    
-    flex-direction: column;
-    justify-content: space-evenly;
-    
-    }
-.header{
-text-align: left;
-font-weight: bold;
- font-size: 268%;
-font-family: poppins;
-letter-spacing: 0;
-width: 50%;
-display: flex;
-align-items: flex-end;
-flex: 1;
-color: #FFFFFF;
-opacity: 1;
-
-
+.width-wide{
+    width: 137%;
+    margin-left: -19%;;
 }
 
-.description{
-    width: 75%;
-    justify-content: center;
-    font-family: poppins-regular;
-    font-size: 100%;
-    display: flex;
-    margin-top: 20px;
-    line-height: 24px;
-    font-size: 20px;
-    margin-bottom: 50px;
-    flex: .5;
-    align-items: center;
-    letter-spacing: 0;
-    color: #FFFFFF;
-    opacity: 1;
-
-
-}
 .white-tab{
     height: 25px;
     background-color: #FFFFFF;
 }
 .procedure-card{
-    display: flex;
-    flex:1;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    @include flexbox;
+    @include flex-direction(row);
+    @include flex(1);
+    @include justify-content(space-around);
+    @include flex-wrap(wrap);
 
 }
 .div-card{
-    display: flex;
-    height: 305px;
-    //flex: 3.5;
+    @include flexbox;
+    @include flex(3.5);
     font-family: poppins-medium;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
     padding-bottom: 5px;
 }
 

@@ -12,12 +12,11 @@ var init = function(){
   
   var ps = new ParticleSlider({
     ptlGap: isMobile || isSmall ? 2 : 2,
-    ptlSize: isMobile || isSmall ? 2:3,
+    ptlSize: isMobile || isSmall ? 2:3.5,
     width: 2e9,
     height: 3e9,
-    mouseForce: 100,
+    mouseForce: 120,
     monochrome: true ,
-    ttl :20,
     
     arrowPadding: 5,
     
