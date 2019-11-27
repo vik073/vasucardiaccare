@@ -11,11 +11,11 @@ var init = function(){
   var isSmall = window.innerWidth < 1000;
   
   var ps = new ParticleSlider({
-    ptlGap: isMobile || isSmall ? 2 : 4,
-    ptlSize: isMobile || isSmall ? 6:8,
+    ptlGap: isMobile || isSmall ? 2 : 2,
+    ptlSize: isMobile || isSmall ? 2:3,
     width: 2e9,
     height: 3e9,
-    mouseForce: 200,
+    mouseForce: 100,
     monochrome: true ,
     ttl :20,
     
