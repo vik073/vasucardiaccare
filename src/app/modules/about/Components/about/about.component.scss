@@ -51,7 +51,7 @@ flex: 1;
     .description{
         justify-content: flex-start;
         font-family: poppins-regular;
-        @include fluid-type(font-size, 200px, 1200px, 10px, 20px);
+        @include fluid-type(font-size, 200px, 1200px, 5px, 20px);
         letter-spacing: 0;
         color: #000000;
         opacity: 1;
