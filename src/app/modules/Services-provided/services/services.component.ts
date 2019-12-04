@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewfinderService } from 'src/app/shared/viewfinder.service';
 
 @Component({
   selector: 'app-services',
@@ -15,9 +16,15 @@ export class ServicesComponent implements OnInit {
     { imgsrc : "../../../../../assets/images/Group 3664.svg" ,title: "AMBIENCE", description: 'An environment specially designed to inspirit a premium & pleasant experience'},
 
   ];
-  constructor() { }
+  mobileview: unknown;
+  constructor( private service : ViewfinderService) { }
 
   ngOnInit() {
+    this.service.checkWidth()
+    this.service.isMobile.subscribe( x =>{
+
+      this.mobileview = x;
+    });
   }
 
 }

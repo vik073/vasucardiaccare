@@ -1,3 +1,52 @@
-.empty{
-    height: 50px;
+@import '../../../mixin.scss';
+@import '../../../common.scss';
+
+  .container{
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background-color: #D92A2A;
+    @include fluid-type(height, 400px, 1920px, 200px,78px);
+    z-index: 1000;
+    opacity: 1;
+
+    
+    .right-bar{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex: 1;
+        flex-direction: row;
+
+        .nav-option{
+
+                @include fluid-type(font-size, 200px, 1920px, 7px,28px);
+
+
+            font-family: poppins;
+            letter-spacing: 0;
+            font-weight: 100;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+    }
+
+}
+.ad-bar{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content1{
+    font-family: poppins-regular;
+    font-size: 14px;
+    color:  rgb(240, 240, 240);
+    text-align: center;
+}
+.content{
+    width: 31%;
+    text-align: center;
 }

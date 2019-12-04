@@ -7,6 +7,7 @@
     font-family: poppins-regular;
     src: url(./assets/fonts/Poppins/Poppins-Regular.ttf) format("opentype");
   }  
+  @import "~ng-pick-datetime/assets/style/picker.min.css";
   @font-face {
     font-family: poppins-bold;
     src: url(./assets/fonts/Poppins/Poppins-Bold.ttf)format("opentype");

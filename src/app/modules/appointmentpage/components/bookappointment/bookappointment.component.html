@@ -1,0 +1,72 @@
+<div class="main-container">
+    <app-header class="set-header"></app-header>
+
+<div class="container background" >
+    
+  <div class="intro-content">
+    <div class="header">Book an appointment</div>
+    <div class="description">
+      Fill in the form below to request an appointment with us and our representative will get in touch with you shortly.</div>
+      <div class="description">
+        If you are having an emergency, please call 102 or our emergency unit at +91 9347 830 894 | 0877 -2272666 immediately.  
+      </div>
+  
+      <div class="service-list">
+  <div class="heading"> SELECT SERVICE </div>
+  <div class="Service-cards"> 
+    <div class="Service-card">OPD Consultation</div>
+    <div class="Service-card">Dental Care</div>
+    <div class="Service-card">Master Cardiac Check-up</div>
+    <div class="Service-card">Lab Test</div>
+    <div class="Service-card">Home Care Services</div>
+    <div class="Service-card">Other Services</div>
+  </div>
+</div>
+
+<div class="heading"> SELECT DATE & TIME </div>
+<div class="date-picker">
+  
+  
+  <owl-date-time-inline class="position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl"  [pickerType]="'calendar'"  [(ngModel)]="selectedMoment" ></owl-date-time-inline>
+
+  <div class="time-panel">
+  <div class="black-header">TIME</div>
+  <div class="time-selector">
+  <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>
+</div>
+</div>
+</div>
+<div class="heading"> Patient Details </div>
+
+<div class="input-form">
+    <!-- <input  [(ngModel)]="fullName" id="fullName" name="fullName" placeholder="Full NAme">
+    <input  [(ngModel)]="mobileNumber" id="mobileNumber" name="mobileNumber" placeholder="Phone Number">
+    <input  [(ngModel)]="age" id="age" name="age" placeholder="Age"> -->
+
+    <form [formGroup]="profileForm" class="profile-form" (ngSubmit)="onSubmit()"> 
+  
+      
+          <input class="text-box" type="text" formControlName="fullName" placeholder="Full Name" required>
+          
+        
+          <input  class="text-box" type="text" formControlName="mobileNumber" placeholder="Phone Number" required>
+        
+            <input  class="text-box" type="text" formControlName="age" placeholder="Age" required>
+            <!-- <div class="submit-btn"><button class="btn " type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
+
+       -->
+      
+
+      
+      <!-- <button type="submit" [disabled]="!profileForm.valid">Submit</button> -->
+      <div class="submit-btn"><button class="btn" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
+    </form>
+  </div>
+
+  
+  </div>
+  <app-address class="address-bar"></app-address>
+</div>
+</div>
+ 
+

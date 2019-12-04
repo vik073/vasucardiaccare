@@ -1,0 +1,32 @@
+<div class="container background">
+
+  <div class="red-header">CONTACT US</div>
+  <div class="input-form">
+      <form [formGroup]="profileForm" class="profile-form" (ngSubmit)="onSubmit()"> 
+    
+        <div class="input-data">
+            <input class="text-box" type="text" formControlName="fullName" placeholder="Full Name" required>
+            
+          
+            <input  class="text-box" type="text" formControlName="mobileNumber" placeholder="Phone Number" required>
+          
+              <input  class="text-box" type="text" formControlName="age" placeholder="Age" required>
+              <!-- <div class="submit-btn"><button class="btn " type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
+  
+         -->
+
+        <!-- <button type="submit" [disabled]="!profileForm.valid">Submit</button> -->
+      </div>
+      </form>
+      <div class="submit-btn">
+          <button class="btn-red" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Confirm</button>
+      </div>
+    </div>
+
+  <div class="red-header">Could you be at risk? Try our risk assessment
+
+  </div>
+  <div class="submit-btn">
+      <button class="btn-red" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Book</button>
+  </div>
+</div>

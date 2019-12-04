@@ -8,9 +8,20 @@
     background-color: #D92A2A;
 
 }
+.inter-header{
+    align-items: center;
+}
 .million-heart-container{
     padding: 0px 14%;
     margin-bottom: 5%;
+    height: auto;
+    margin-top: 5%;
+}
+
+.million-heart-container-mobile{
+    padding: 0px 5%;
+    margin-bottom: 5%;
+    height: auto;
     margin-top: 5%;
 }
 
@@ -18,7 +29,7 @@
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(space-evenly);
-    @include flex(3);
+    @include flex(0.8);
 }
 .width-wide{
     width: 137%;
@@ -37,9 +48,45 @@
     @include flex-wrap(wrap);
 
 }
+// @media screen and (max-width: 1000px) {
+//     .procedure-card {
+//         min-width: 200px;
+
+//     }
+//   }
+
+//   @media screen and (max-width: 800px) {
+//     .div-card{
+//         background: green;
+//         display: none;
+//     }
+    
+//   }
+//   @media screen and (max-width: 800px) {
+//     .mobile-view {
+//         // min-width: 150px;
+//         display:inline-block;
+//         overflow: scroll;
+//     }
+//     .div-card{
+//         display: none;
+//     }
+//   }
+
+.desktop-view{
+
+
+}
+
+
+
+.mobile-view::-webkit-scrollbar { 
+    display: none; 
+} 
+
 .div-card{
     @include flexbox;
-    @include flex(3.5);
+    @include flex(0.9);
     font-family: poppins-medium;
     @include flex-wrap(wrap);
     @include flex-direction(row);

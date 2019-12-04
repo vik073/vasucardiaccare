@@ -1,25 +1,37 @@
-<div class="container" *ngIf="!AnimationCard">
+<div [ngClass]="!mobileview?'container':'mobile-container'" *ngIf="!AnimationCard">
   <div class=" intro-content ">
-    <div class="red-header">Interventional Procedures</div>
+    <div class="red-header inter-header">Interventional Procedures</div>
     <div class="red-description">
         With an inherent emphasis on overall clinical excellence VCC strives for utmost patient satisfaction through its modern approach to healthcare.  </div>
   </div>
-        <div class="div-card width-wide">
+        <div *ngIf="!mobileview" class="div-card width-wide">
   <app-procedure-card class="procedure-card" *ngFor="let item of MyArrayType " [cardData]="item" [LoadAnimationCard] = "LoadServiceCard" ></app-procedure-card>
 </div>
+<div  *ngIf="mobileview" class="mobile-view">
+    <app-mobilecard  *ngFor="let item of MyArrayType " [cardData]="item" [LoadAnimationCard] = "LoadServiceCard" ></app-mobilecard>
+  </div>
 </div>
 <div class="white-tab" *ngIf="!AnimationCard"></div>
 
-<div class=" container million-heart-container" *ngIf="AnimationCard" >
+<div class=" container " [ngClass]="!mobileview? 'million-heart-container':'million-heart-container-mobile'" *ngIf="AnimationCard" >
   <div class="intro-content">
     <div class="red-header">Healing  <br> millions of hearts</div>
     <div class="red-description">
         With an inherent emphasis on overall clinical excellence VCC strives for utmost patient satisfaction through its modern approach to healthcare.    </div>
   </div>
-        <div class="div-card no-margin" >
+  <div class="scrollable">
+  <div  *ngIf="!mobileview"  class="div-card no-margin " >
   <app-procedure-card class="procedure-card" *ngFor="let item of animationsArray " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-procedure-card>
 </div>
-<div class="div-card" >
+<div *ngIf="!mobileview"  class="div-card " >
 <app-procedure-card class="procedure-card" *ngFor="let item of animationsArray2 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-procedure-card>
 </div>
+</div>
+<div *ngIf="mobileview"  class="mobile-view">
+    <app-mobilecard class="mobile-card" *ngFor="let item of mobileViewanimationsArray " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-mobilecard>
+  </div>
+  
+
+
+
 </div>

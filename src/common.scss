@@ -4,30 +4,49 @@
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(space-between); 
-    padding: 0px 14%;
-    @include fluid-type(height, 200px, 1800px, 500px, 900px);
+    padding: 5% 14%;
+    height: 100vh;
+    //@include fluid-type(height, 300px, 1920px, 468px, 900px);
 }
+.mobile-container{
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-between); 
+    padding: 5% 5%;
+    background-color: #D92A2A;
+    height: 100vh
+    // @include fluid-type(height, 200px, 1920px, 568px, 1080px);
+}
+.mobile-view::-webkit-scrollbar { 
+    display: none; 
+} 
 
 .header{
     text-align: left;
-    font-weight: bold;
     @include fluid-type(font-size, 200px, 1200px, 20px, 43px);
-    font-family: poppins;
+    font-family: poppins-bold;
     letter-spacing: 0;
     width: 40%;
     color: #D92A2A;
     opacity: 1;
     }
 
+    .mobile-view {
+        display: flex;
+        max-width: 20em;
+        flex: 0 0 auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+    }
+
     .red-header{
         @include flexbox;
         text-align: left;
-        font-weight: bold;
         @include fluid-type(font-size, 200px, 1200px, 20px, 43px);
-        font-family: poppins;
+        font-family: poppins-bold;
         letter-spacing: 0;
         width: 50%;
-        @include align-items(flex-end);
         @include flex(1);
         color: #FFFFFF;
         opacity: 1;

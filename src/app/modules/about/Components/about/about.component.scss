@@ -5,8 +5,6 @@
     display: flex;
     flex-direction: row;
     background-color: #F1F1F1;
-
-    height: 550px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
@@ -22,7 +20,7 @@ background-color:#F1F1F1;
 flex: 1;
 }
 .img{
-    width: 80%;
+    @include fluid-type(width, 200px, 1920px, 100px, 650px);
     margin-left: 35px;
 }
 
@@ -33,17 +31,19 @@ flex: 1;
     justify-content: space-evenly;
     align-items: flex-start;
     background-color: #F1F1F1;
-    height: 70%;
-    line-height: 23px;
+    // line-height: 23px;
+    @include fluid-type(line-height, 300px, 1920px, 1.4, 2);
+    // line-height: 1.4;
     flex: 1;
-    padding-top: 100px;
 
     .heading{
         flex: 1;
         text-align: left;
         font-weight: bolder;
-        font-family:  poppins-extrabold;
-        @include fluid-type(font-size, 200px, 1200px, 20px, 40px);
+        display: flex;
+        align-items: center;
+        font-family:  poppins-bold;
+        @include fluid-type(font-size, 300px, 1920px, 25px, 48px);
         letter-spacing: 0;
         color: #D92A2A;
         opacity: 1;
@@ -51,12 +51,11 @@ flex: 1;
     .description{
         justify-content: flex-start;
         font-family: poppins-regular;
-        @include fluid-type(font-size, 200px, 1200px, 5px, 20px);
+        @include fluid-type(font-size, 300px, 1920px, 10px, 25px);
         letter-spacing: 0;
         color: #000000;
         opacity: 1;
-        width: 70%;
-        flex: 6;
+        flex: 2;
 
     }
 }

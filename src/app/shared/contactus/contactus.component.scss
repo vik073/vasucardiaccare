@@ -1,0 +1,46 @@
+@import '../../../mixin.scss';
+@import '../../../common.scss';
+
+.background {
+    background-color: #D92A2A;
+}
+.input-form{
+    @include flexbox;
+    @include flex-direction(column);
+    @include flex(1);
+
+}
+.profile-form{
+    @include flexbox;
+    @include flex-direction(row);
+    @include flex(1);
+    margin-bottom: 30px;
+    width: 90%;
+    @include justify-content(space-between)
+
+}
+.text-box{
+    border-style: none;
+    background: #D92A2A;
+    height: 20px;
+    outline: none;
+    font-size: 16px;
+    color: #F1F1F1;
+    border-bottom: 1px solid #F1F1F1;
+}
+.input-data{
+    
+}
+
+.address-bar{
+    width: 139%;
+    margin-left: -19.5%;
+}
+
+.submit-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 14%;
+}

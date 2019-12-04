@@ -19,7 +19,13 @@ import { AddressComponent } from './modules/address/address/address.component';
 import { AgmCoreModule } from '@agm/core';
 import { FooterComponent } from './shared/Footer/footer.component';
 import { ServicesComponent } from './modules/Services-provided/services/services.component';
-
+import { BookappointmentComponent } from './modules/appointmentpage/components/bookappointment/bookappointment.component';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TimepickerComponent } from './modules/appointmentpage/components/timepicker/timepicker.component';
+import { OwlFormFieldModule, OwlInputModule } from 'owl-ng';
+import { MobilecardComponent } from './modules/Interventional Procedures/components/mobilecard/mobilecard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,11 +42,20 @@ import { ServicesComponent } from './modules/Services-provided/services/services
     HeartAnimationComponent,
     MakeappointmentComponent,
     AddressComponent,
-    ServicesComponent
+    ServicesComponent,
+    BookappointmentComponent,
+    TimepickerComponent,
+    MobilecardComponent
   ],
   imports: [
     BrowserModule,
     SharedModule,
+    OwlDateTimeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    OwlFormFieldModule, OwlInputModule,
+    BrowserAnimationsModule,
+    OwlNativeDateTimeModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       // please get your own API key here:

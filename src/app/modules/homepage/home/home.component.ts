@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewfinderService } from 'src/app/shared/viewfinder.service';
  
 
 declare const myTest: any;
@@ -9,14 +10,17 @@ declare const myTest: any;
 })
 export class HomeComponent implements OnInit {
 
-  
- 
-
   AnimatedCard = true;
   ServiceCard = false;
-  constructor() { }
+  mobileview: unknown;
+  constructor( private service: ViewfinderService) { }
 
 ngOnInit(){
+  this.service.checkWidth()
+    this.service.isMobile.subscribe( x =>{
+
+      this.mobileview = x;
+    });
     
 }
 
