@@ -3,13 +3,12 @@
 
 .background{
     background-color:white;
-    height: auto;
-    padding: 5% 14%;
+    
 }
 .intro-content{
     @include flexbox;
     @include flex-direction(column);
-    @include flex(0.8);
+    @include flex(1);
     @include justify-content(center);
     @include flex-wrap(wrap);
 }
@@ -71,11 +70,11 @@
     display: none; 
 } 
 
-.mobile-view {
-    display: flex;
-    flex: 0 0 auto;
-    overflow-x: auto;
-    overflow-y: hidden;
-    flex-wrap: nowrap;
-}
+// .mobile-view {
+//     display: flex;
+//     flex: 0 0 auto;
+//     overflow-x: auto;
+//     overflow-y: hidden;
+//     flex-wrap: nowrap;
+// }
 

@@ -5,8 +5,13 @@
     @include flex-direction(column);
     @include justify-content(space-between); 
     padding: 5% 14%;
-    height: 100vh;
+    @include fluid-type(height, 300px, 1920px, 100vh, 100vh);
+    //height: auto;
     //@include fluid-type(height, 300px, 1920px, 468px, 900px);
+}
+
+.padder{
+    padding: 5% 14%;
 }
 .mobile-container{
     @include flexbox;
@@ -14,26 +19,28 @@
     @include justify-content(space-between); 
     padding: 5% 5%;
     background-color: #D92A2A;
-    height: 100vh
-    // @include fluid-type(height, 200px, 1920px, 568px, 1080px);
+    height: auto;
+    // @include fluid-type(height, 200px, 1920px, 568px, 1080px)
 }
 .mobile-view::-webkit-scrollbar { 
     display: none; 
 } 
 
 .header{
-    text-align: left;
-    @include fluid-type(font-size, 200px, 1200px, 20px, 43px);
-    font-family: poppins-bold;
-    letter-spacing: 0;
-    width: 40%;
-    color: #D92A2A;
-    opacity: 1;
-    }
+     @include flexbox;
+        text-align: left;
+        @include fluid-type(font-size, 300px, 1920px, 30px, 67px);
+        font-family: poppins-bold;
+        letter-spacing: 0;
+        @include fluid-type(width, 300px, 1620px, 100%, 40%);
+        color: #D92A2A;
+        opacity: 1;
+        }
+    
 
     .mobile-view {
         display: flex;
-        max-width: 20em;
+        // max-width: 20em;
         flex: 0 0 auto;
         overflow-x: auto;
         overflow-y: hidden;
@@ -43,10 +50,11 @@
     .red-header{
         @include flexbox;
         text-align: left;
-        @include fluid-type(font-size, 200px, 1200px, 20px, 43px);
+        @include fluid-type(font-size, 300px, 1920px, 30px, 67px);
         font-family: poppins-bold;
+        @include align-items(center);
         letter-spacing: 0;
-        width: 50%;
+        width: 60%;
         @include flex(1);
         color: #FFFFFF;
         opacity: 1;
@@ -59,16 +67,33 @@
             width: 75%;
             font-family: poppins-regular;
             margin-top: 10px;
-            line-height: 24px;
-            @include fluid-type(font-size, 200px, 1200px, 10px, 20px);
+            @include fluid-type(font-size, 300px, 1920px, 16px, 26px);
+            @include fluid-type(line-height, 300px, 1920px, 16px, 38px);
             margin-bottom: 50px;
             @include flex(0.5);
-            @include align-items(center);
+
             letter-spacing: 0;
             color: #FFFFFF;
             opacity: 1;
         
         }
+
+        .black-description{
+            @include flexbox;
+            @include flex-direction(column);
+            @include justify-content(center); 
+            width: 75%;
+            font-family: poppins-regular;
+            margin-top: 10px;
+            @include fluid-type(font-size, 300px, 1920px, 16px, 26px);
+            @include fluid-type(line-height, 300px, 1920px, 16px, 38px);
+            margin-bottom: 50px;
+            @include flex(0.2); 
+            letter-spacing: 0;
+            color: black;
+            opacity: 1;
+        
+        } 
 
         .no-margin{
             margin: 0;
@@ -79,9 +104,23 @@
             background-color: #D60F1B;
             border-radius: 59px;
             border: none;
-            @include fluid-type(font-size, 300px, 1200px, 10px, 20px);
-            @include fluid-type(height, 300px, 1200px, 10px, 37px);
-            @include fluid-type(width, 300px, 1200px, 60px, 120px);
+            @include fluid-type(font-size, 300px, 1920px, 15px, 28px);
+            @include fluid-type(height, 300px, 1920px, 18px, 50px);
+            @include fluid-type(width, 300px, 1920px, 60px, 160px);
             color: white;
             
+        }
+
+        .text-box{
+            border-style: none;
+            background: #D92A2A;
+            outline: none;
+            margin-inline-end: 4%;
+            margin-bottom: 20px;
+            @include fluid-type(height, 300px, 1920px, 16px, 36px);
+            @include fluid-type(font-size, 300px, 1920px, 15px, 26px);
+            //font-size: 16px;
+            padding-bottom: 10px;
+            color: #F1F1F1;
+            border-bottom: 1px solid #F1F1F1;
         }

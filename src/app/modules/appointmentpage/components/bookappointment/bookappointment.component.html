@@ -3,7 +3,7 @@
 
 <div class="container background" >
     
-  <div class="intro-content">
+  <div  id="bookapointment" class="intro-content">
     <div class="header">Book an appointment</div>
     <div class="description">
       Fill in the form below to request an appointment with us and our representative will get in touch with you shortly.</div>
@@ -13,13 +13,8 @@
   
       <div class="service-list">
   <div class="heading"> SELECT SERVICE </div>
-  <div class="Service-cards"> 
-    <div class="Service-card">OPD Consultation</div>
-    <div class="Service-card">Dental Care</div>
-    <div class="Service-card">Master Cardiac Check-up</div>
-    <div class="Service-card">Lab Test</div>
-    <div class="Service-card">Home Care Services</div>
-    <div class="Service-card">Other Services</div>
+  <div class="Service-cards" > 
+    <div class="Service-card"  *ngFor= " let item of serviceArray let j = index;"  (click)="setService(j)"[ngClass]="{'highlight': selectedIndexj === j}">{{item}}</div>
   </div>
 </div>
 
@@ -27,13 +22,18 @@
 <div class="date-picker">
   
   
-  <owl-date-time-inline class="position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl"  [pickerType]="'calendar'"  [(ngModel)]="selectedMoment" ></owl-date-time-inline>
+  <owl-date-time-inline class=" header-bl, position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl" [min]="min"  
+  
+  [pickerType]="'calendar'"  [(ngModel)]="dateTimeRange" ></owl-date-time-inline>
 
   <div class="time-panel">
   <div class="black-header">TIME</div>
-  <div class="time-selector">
-  <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>
+  <div class="time-selector" *ngIf="dateTimeRange>0">
+  <app-timepicker class="timing-set " *ngFor= " let item of timeArray1 let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>
 </div>
+<!-- <div class="time-selector" >
+  <app-timepicker class="timing-set " *ngFor= " let item of timeArray1 let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>
+</div> -->
 </div>
 </div>
 <div class="heading"> Patient Details </div>
@@ -52,13 +52,7 @@
           <input  class="text-box" type="text" formControlName="mobileNumber" placeholder="Phone Number" required>
         
             <input  class="text-box" type="text" formControlName="age" placeholder="Age" required>
-            <!-- <div class="submit-btn"><button class="btn " type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
-
-       -->
-      
-
-      
-      <!-- <button type="submit" [disabled]="!profileForm.valid">Submit</button> -->
+         
       <div class="submit-btn"><button class="btn" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
     </form>
   </div>

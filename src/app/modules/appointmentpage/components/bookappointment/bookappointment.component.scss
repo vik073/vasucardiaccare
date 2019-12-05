@@ -21,7 +21,7 @@
     margin-top: 14px;
     @include justify-content(center);
     font-family: poppins-regular;
-    @include fluid-type(font-size, 200px, 1200px, 10px, 16px);
+    @include fluid-type(font-size, 200px, 1920px, 10px, 24px);
     letter-spacing: 0;
     color: #D92A2A;
     opacity: 1;
@@ -52,8 +52,10 @@
     @include align-items(center);
     @include justify-content(center);
     font-family: poppins-regular;
-    font-size: 14px;
-    height: 40px;
+    @include fluid-type(font-size, 300px, 1920px, 14px, 20px);
+    @include fluid-type(height, 200px, 1920px, 40px, 70px);
+    @include fluid-type(width, 300px, 1920px, 60px, 320px);
+
     color: #D92A2A;
     margin-top: 1%;
     margin-bottom: 2%;
@@ -63,7 +65,7 @@
 }
 .heading{
     font-family: poppins-bold;
-    font-size: 20px;
+    @include fluid-type(font-size, 300px, 1920px, 15px, 30px);
     margin-top: 6%;
     height: 40px;
     margin-bottom: .5%;
@@ -130,20 +132,19 @@
     @include align-items(center);
     // @include justify-content(center);
     font-family: poppins-regular;
-    font-size: 14px;
-    height: 40px;
+    @include fluid-type(font-size, 300px, 1920px, 12px, 22px);
     color: #D92A2A;
     flex-direction: row;
     /* height: 100px; */
 }
 .time-panel{
     display: flex;
-    width: 50%;
+    @include fluid-type(width, 300px, 1920px, 232px, 780px);
     flex-wrap: wrap;
-background-color: white;
+    background-color: white;
     flex-direction: column;
     /* height: 100px; */
-    flex: 0.7;
+    flex: 0.9;
 }
 
 .input-form{
@@ -162,15 +163,14 @@ background-color: white;
 
 }
 .text-box{
-    border-style: none;
+    
     background: #F1F1F1;
-    height: 20px;
-    outline: none;
-    font-size: 16px;
+   color: #D92A2A;
+   margin-top: 22px;
     border-bottom: 1px solid #D92A2A;
 }
 ::placeholder {
-    color: #D92A2A;;
+    color: #D1D1D1;;
     opacity: 1; /* Firefox */
   }
   
@@ -210,9 +210,12 @@ background-color: white;
 .header-bl::ng-deep.owl-dt-calendar-control{
     background: black;
     color: #FFFFFF;
+    height: 50px;
 }
+
 .header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
-    width: 100%;
+    @include fluid-type(width, 300px, 1920px, 232px, 580px);
+    @include fluid-type(height, 300px, 1920px, 232px, 510px);
     background: transparent;
     position: unset;
 }

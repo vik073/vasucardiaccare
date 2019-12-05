@@ -24,10 +24,10 @@ export class ViewfinderService {
 
   public checkWidth() {
       var width = window.innerWidth;
-      if (width <= 468) {
+      if (width <= 700) {
           this.screenWidth = 'sm';
           this.isMobile.next(true);
-      } else if (width > 468 && width <= 992) {
+      } else if (width > 700 && width <= 992) {
           this.screenWidth = 'md';
           this.isMobile.next(false);
       } else {

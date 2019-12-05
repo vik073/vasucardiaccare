@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-<div  [ngClass]="!mobileview?'container':'mobile-container'">
+<div id="home" [ngClass]="!mobileview?'container':'mobile-container'">
 
 <div  id="canvas-container" class="canvas-container">
 <div class="touchhbar">
@@ -15,24 +15,24 @@
   <div class="description-text"> <div class="sub-text">VCC is dedicated to making big impacts through prevention </div>
     <div class="sub-text"> treatment and awareness about cardiac health. </div></div> 
 <div class="btn">
-  <button class="book-appointment">Book Appointment</button>
+  <button  [routerLink]="['/bookappointment']" class="book-appointment">Book Appointment</button>
 </div>
 </div>
 </div>
 
 </div>
-<app-about></app-about>
-<app-interventional-procedures [AnimationCard]="AnimatedCard"></app-interventional-procedures>
-<app-services (click)="hello($event)" (scroll)="hello($event)"></app-services>
-<div   (focus)="hello($event)" (scroll)="hello($event)"  id="rbgShiftSlider"></div>
+<app-about id="about"></app-about>
+<app-interventional-procedures [AnimationCard]="AnimatedCard" [mobileview]="mobileview"></app-interventional-procedures>
+<app-services id="services" ></app-services>
+<!-- <div   (focus)="hello($event)" (scroll)="hello($event)"  id="rbgShiftSlider"></div> -->
 <app-consultation></app-consultation>
-<app-makeappointment ></app-makeappointment>
-<app-interventional-procedures [AnimationCard]="ServiceCard"></app-interventional-procedures>
-<app-contactus></app-contactus>
+<app-makeappointment id="apointment" ></app-makeappointment>
+<app-interventional-procedures [AnimationCard]="ServiceCard" [mobileview]="mobileview"></app-interventional-procedures>
+<app-contactus id="contact_us"></app-contactus>
 <app-address></app-address>
 <!--<app-healthy-blog></app-healthy-blog> -->
 <!--<app-footer class="footer"></app-footer>-->
-<!-- <app-header id="header"></app-header> -->
+<app-header id="header" (valueClick)="getvalue($event)" ></app-header>
 </div>
 
 

@@ -41,7 +41,8 @@ mobileViewanimationsArray = [
 ];
 
 @Input() AnimationCard: string;
-mobileview:any;
+@Input() mobileview: string;
+// mobileview:any;
   constructor( private service: ViewfinderService) {
     // this.service.isMobile.subscribe( x => {
 
@@ -50,11 +51,11 @@ mobileview:any;
    }
 
   ngOnInit() {
-    this.service.checkWidth()
-    this.service.isMobile.subscribe( x =>{
+    // this.service.checkWidth()
+    // this.service.isMobile.subscribe( x =>{
 
-      this.mobileview = x;
-    });
+    //   this.mobileview = x;
+    // });
     
   }
 

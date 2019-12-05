@@ -1,12 +1,13 @@
 <div class=" background" [ngClass]="!mobileview?'container':'mobile-container'" >
     <div class="intro-content">
-      <div [ngClass]="!mobileview?'header':'mobile-header'">Make an appointment</div>
+      <div [ngClass]="!mobileview?'header':'header'">Make an appointment</div>
       <div  [ngClass]="!mobileview?'black-description':'mobile-description'">
           Get instant access to world-class cardiac care.
           </div>
           <div  [ngClass]="!mobileview?'description':'mobile-description'">
               If you are having an emergency, please call 102 or our emergency unit at +91 9347 830 894 | 0877 -2272666 immediately.
               </div>
+    </div>
          <div *ngIf="!mobileview" class="div-card" >
   <app-procedure-card class="procedure-card" *ngFor="let item of BookingArray1 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-procedure-card>
   </div>

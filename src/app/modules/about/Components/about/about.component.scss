@@ -32,7 +32,7 @@ flex: 1;
     align-items: flex-start;
     background-color: #F1F1F1;
     // line-height: 23px;
-    @include fluid-type(line-height, 300px, 1920px, 1.4, 2);
+    @include fluid-type(line-height, 300px, 1920px, 1.4, 1.5);
     // line-height: 1.4;
     flex: 1;
 
@@ -51,8 +51,9 @@ flex: 1;
     .description{
         justify-content: flex-start;
         font-family: poppins-regular;
-        width: 60%;
-        @include fluid-type(font-size, 300px, 1920px, 10px, 30px);
+        
+        @include fluid-type(width, 300px, 1920px, 80%, 60%);
+        @include fluid-type(font-size, 300px, 1920px, 12px, 26px);
         letter-spacing: 0;
         color: #000000;
         opacity: 1;

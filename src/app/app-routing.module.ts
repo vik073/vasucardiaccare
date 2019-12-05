@@ -12,6 +12,11 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'home',
+    component: HomeComponent,
+    pathMatch: 'full',
+  },
+  {
     path: 'contactus',
     component: ContactusComponent,
     pathMatch: 'full',

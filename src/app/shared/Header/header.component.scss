@@ -6,7 +6,8 @@
     @each $property in $properties {
       #{$property}: $min-value;
     }
-  
+
+   
     @media screen and (min-width: $min-vw) {
       @each $property in $properties {
         #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
@@ -56,7 +57,7 @@
 
                 @include fluid-type(font-size, 200px, 1920px, 7px,28px);
 
-
+text-decoration: none;
             font-family: Helvetica;
             letter-spacing: 0;
             font-weight: 100;
