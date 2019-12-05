@@ -4,14 +4,14 @@
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(space-between); 
-    padding: 5% 14%;
+    padding: 5% 11%;
     @include fluid-type(height, 300px, 1920px, 100vh, 100vh);
     //height: auto;
     //@include fluid-type(height, 300px, 1920px, 468px, 900px);
 }
 
 .padder{
-    padding: 5% 14%;
+    padding: 5% 11%;
 }
 .mobile-container{
     @include flexbox;

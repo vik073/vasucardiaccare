@@ -5,11 +5,12 @@
     background-color: #fbfbfb;
     display: flex;
     width: 98%;
-    margin: 1px;
+    margin: 5px;
     margin-left: 5px;
     padding: 5px;
     box-shadow: 0px 0px 6px #00000029;
-    @include fluid-type(max-height, 300px, 1900px, 100px, 350px);
+    @include fluid-type(height, 300px, 1900px, 80px, 420px);
+    @include fluid-type(width, 300px, 1900px, 80px, 420px);
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -38,8 +39,16 @@ opacity: 1;
     align-items: center;
     color: #000000;
     justify-content: center;
-    @include fluid-type(font-size, 300px, 1920px, 5px, 18px);
+    @include fluid-type(font-size, 300px, 1920px, 5px, 14px);
 
+
+}
+.num-4{
+  padding: 15px;
+  line-height: 1.5;
+  @include fluid-type(height, 300px, 1900px, 80px, 420px);
+  @include fluid-type(width, 300px, 1900px, 80px, 320px);
+  
 
 }
 .img{

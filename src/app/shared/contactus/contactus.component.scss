@@ -13,15 +13,7 @@
 .lineheight{
     line-height: 1.2;
 }
-// .profile-form{
-//     @include flexbox;
-//     @include flex-direction(row);
-//     @include flex(1);
-//     margin-bottom: 30px;
-//     width: 90%;
-//     @include justify-content(space-between)
 
-// }
 .line{
     width: 100%;
 }
@@ -54,6 +46,8 @@
 }
 .input-data{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     
 }
 
