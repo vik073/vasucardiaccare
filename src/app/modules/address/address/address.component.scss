@@ -6,11 +6,9 @@
     flex-direction: row;
     background-color: #D92A2A;
 
-    height: 550px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
-    padding: 15px;
 
 }
 .img-animation{
@@ -31,8 +29,6 @@ flex: 1;
     -webkit-box-pack: space-evenly;
     justify-content: space-evenly;
     -webkit-box-align: center;
-    height: 70%;
-    margin: 7%;
     line-height: 23px;
     -webkit-box-flex: 1;
     flex: 1;
@@ -41,10 +37,10 @@ flex: 1;
     .heading{
         flex: 1;
         text-align: left;
-        font-weight: bolder;
         font-family:  poppins-extrabold;
-        font-size: 40px;
+        @include fluid-type(font-size, 300px, 1920px, 22px, 70px);
         width: 70%;
+        align-items: center;
         letter-spacing: 0;
         color: #F1F1F1;
         opacity: 1;
@@ -53,17 +49,19 @@ flex: 1;
         justify-content: flex-start;
         font-family: poppins-regular;
         width: 70%;
-        font-size: 19px;
+        line-height: 2;
+        @include fluid-type(font-size, 300px, 1920px, 16px, 28px);
         letter-spacing: 0;
         color: #F1F1F1;
         opacity: 1;
-        flex: 6;
+        flex: 1;
 
     }
 }
 .map-area{
-    width: 95%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    
 }
 .footer{
     background: #D92A2A;

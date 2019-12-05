@@ -43,7 +43,7 @@ flex: 1;
         display: flex;
         align-items: center;
         font-family:  poppins-bold;
-        @include fluid-type(font-size, 300px, 1920px, 25px, 48px);
+        @include fluid-type(font-size, 300px, 1920px, 25px, 70px);
         letter-spacing: 0;
         color: #D92A2A;
         opacity: 1;
@@ -51,7 +51,8 @@ flex: 1;
     .description{
         justify-content: flex-start;
         font-family: poppins-regular;
-        @include fluid-type(font-size, 300px, 1920px, 10px, 25px);
+        width: 60%;
+        @include fluid-type(font-size, 300px, 1920px, 10px, 30px);
         letter-spacing: 0;
         color: #000000;
         opacity: 1;

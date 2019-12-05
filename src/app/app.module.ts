@@ -26,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TimepickerComponent } from './modules/appointmentpage/components/timepicker/timepicker.component';
 import { OwlFormFieldModule, OwlInputModule } from 'owl-ng';
 import { MobilecardComponent } from './modules/Interventional Procedures/components/mobilecard/mobilecard.component';
+import { ContactusComponent } from './shared/contactus/contactus.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { MobilecardComponent } from './modules/Interventional Procedures/compone
     ServicesComponent,
     BookappointmentComponent,
     TimepickerComponent,
-    MobilecardComponent
+    MobilecardComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@
     display: flex;
     padding: 0px 14%;
   background: url("../../../../assets/images/frontiers1a.jpg");
-  background-size: 100%  100%;
+//   background-size: 100vw  90vh;
   // background-image: "../../../../assets/images/frontiers1a.jpg";
    background-repeat: no-repeat;
    //background: transparent;
@@ -37,22 +37,21 @@ display: flex;
 flex:2;
 z-index: 1;
 flex-direction: column;
-justify-content: space-evenly;
+justify-content: center;
 // align-items: center;
 
 }
 
-.description{
-    width: 50%;
-    justify-content: center;
-    font-family: poppins-regular;
-    font-size: 100%;
-    letter-spacing: 0;
-    color: #D92A2A;
-    opacity: 1;
+// .description{
+//     width: 50%;
+//     justify-content: center;
+//     font-family: poppins-regular;
+//     letter-spacing: 0;
+//     color: #D92A2A;
+//     opacity: 1;
 
 
-}
+// }
 .procedure-card{
     display: flex;
     flex:1;

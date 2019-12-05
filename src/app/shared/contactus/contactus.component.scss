@@ -10,25 +10,50 @@
     @include flex(1);
 
 }
-.profile-form{
-    @include flexbox;
-    @include flex-direction(row);
-    @include flex(1);
-    margin-bottom: 30px;
-    width: 90%;
-    @include justify-content(space-between)
-
+.lineheight{
+    line-height: 1.2;
 }
+// .profile-form{
+//     @include flexbox;
+//     @include flex-direction(row);
+//     @include flex(1);
+//     margin-bottom: 30px;
+//     width: 90%;
+//     @include justify-content(space-between)
+
+// }
+.line{
+    width: 100%;
+}
+
+::placeholder {
+    color: #F1F1F1;;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #F1F1F1;;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #F1F1F1;;
+  }
+
 .text-box{
     border-style: none;
     background: #D92A2A;
-    height: 20px;
     outline: none;
-    font-size: 16px;
+    margin-inline-end: 4%;
+    margin-bottom: 20px;
+    @include fluid-type(height, 300px, 1920px, 16px, 36px);
+    @include fluid-type(font-size, 300px, 1920px, 15px, 26px);
+    //font-size: 16px;
+    padding-bottom: 10px;
     color: #F1F1F1;
     border-bottom: 1px solid #F1F1F1;
 }
 .input-data{
+    width: 100%;
     
 }
 
@@ -40,7 +65,17 @@
 .submit-btn{
     width: 100%;
     display: flex;
-    justify-content: center;
     margin-top: 3%;
-    margin-bottom: 14%;
+    margin-bottom: 6%;
+}
+.btn-red{
+        text-align: center;
+        background-color: #F1F1F1;
+        border-radius: 50px;
+        border: none;
+        @include fluid-type(font-size, 300px, 1920px, 16px, 38px);
+        @include fluid-type(height, 300px, 1920px, 20px, 67px);
+        @include fluid-type(width, 300px, 1920px, 70px, 218px);
+        color: #D92A2A;
+
 }

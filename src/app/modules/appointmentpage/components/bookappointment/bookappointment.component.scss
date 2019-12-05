@@ -167,14 +167,26 @@ background-color: white;
     height: 20px;
     outline: none;
     font-size: 16px;
-    color: grey;
     border-bottom: 1px solid #D92A2A;
 }
+::placeholder {
+    color: #D92A2A;;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #D92A2A;;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #D92A2A;;
+  }
 
 .address-bar{
     width: 139%;
     margin-left: -19.5%;
 }
+
 
 .submit-btn{
     width: 100%;

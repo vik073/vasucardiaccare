@@ -6,7 +6,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [ ContactusComponent],
+  declarations: [ ],
   imports: [
     CommonModule,
     FormsModule,

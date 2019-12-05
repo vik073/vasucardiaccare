@@ -3,11 +3,13 @@
 
 .background{
     background-color:white;
+    height: auto;
+    padding: 5% 14%;
 }
 .intro-content{
     @include flexbox;
     @include flex-direction(column);
-    @include flex(1);
+    @include flex(0.8);
     @include justify-content(center);
     @include flex-wrap(wrap);
 }
@@ -38,7 +40,9 @@
     width: 75%;
     margin-top: 14px;
     @include justify-content(center);
+    flex: 0.5;
     font-family: poppins-regular;
+    line-height: 2;
     @include fluid-type(font-size, 600px, 1920px, 14px, 25px);
     letter-spacing: 0;
     margin-bottom: 2%;
@@ -57,7 +61,8 @@
     @include flexbox;
     @include flex-direction(row);
     margin-top: 5%;
-    @include justify-content(flex-start);
+    @include flex(1);
+    @include justify-content(space-between);
     @include flex-wrap(wrap);
     font-family: poppins;
     
