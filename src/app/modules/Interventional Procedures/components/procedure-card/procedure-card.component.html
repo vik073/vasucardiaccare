@@ -12,12 +12,14 @@
   <div class="btn"><button [routerLink]="['/bookappointment']" class="btn" (click) = "creadtedb(cardData)">{{cardData.option}}</button></div>
 </div>
 
-<div  class="container" *ngIf="LoadAnimationCard =='interventual-card'">
+<div  class="container , num-4" *ngIf="LoadAnimationCard =='interventual-card'">
   <div class="div-header">{{cardData.title}}</div>
+  
   <div class="div-description">{{cardData.description}}</div>
   <div class="btn"><button class="btn" (click) = "creadtedb(cardData)">{{cardData.option}}</button></div>
+
 </div>
-<div class="container"  *ngIf="LoadAnimationCard =='service-card'" [ngStyle]="{'background' : 'transparent', 'box-shadow': 'none' }">
+<div class="container , num-4"  *ngIf="LoadAnimationCard =='service-card'" [ngStyle]="{'background' : 'transparent', 'box-shadow': 'none' }">
     
   <img class="img" src={{cardData.imgsrc}}>
 

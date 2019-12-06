@@ -1,11 +1,11 @@
 @import '../../../../../mixin.scss';
+@import '../../../../../common.scss';
 .container{
-    display: flex;
-    @include fluid-type(min-height, 300px, 1800px, 400px, 900px);
-    padding: 0px 14%;
-    height: -webkit-fill-available;
-    flex-direction: column;
-    justify-content: space-between;
+
+   
+    padding: 5% 11%;
+    height: auto;
+ 
     background-color:white;
 
 }
@@ -21,18 +21,18 @@ justify-content: space-evenly;
     display: flex;
     flex-direction: column;
 }
-.header{
-text-align: left;
-font-weight: bold;
- font-size: 268%;
-font-family: poppins;
-letter-spacing: 0;
-width: 50%;
-color: #D92A2A;
-opacity: 1;
+// .header{
+// text-align: left;
+// font-weight: bold;
+//  font-size: 268%;
+// font-family: poppins;
+// letter-spacing: 0;
+// width: 50%;
+// color: #D92A2A;
+// opacity: 1;
 
 
-}
+// }
 .description{
     width: 50%;
     justify-content: center;

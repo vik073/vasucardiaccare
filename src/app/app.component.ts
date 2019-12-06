@@ -38,10 +38,10 @@ export class AppComponent implements OnInit {
     debugger
     this.viewfinder.checkWidth();
     var width = window.innerWidth;
-      if (width <= 700) {
+      if (width <= 780) {
           
           this.viewfinder.isMobile.next(true);
-      } else if (width > 700 && width <= 992) {
+      } else if (width > 780 && width <= 992) {
           
         this.viewfinder.isMobile.next(false);
       } else {

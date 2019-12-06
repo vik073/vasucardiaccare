@@ -5,7 +5,7 @@
     display: flex;
     width: 98%;
     margin: 5px;
-    max-height: 281px;
+
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -16,6 +16,7 @@
 .header{
 text-align: left;
 font-size: 16px;
+margin-bottom: 10px;
 display: flex;
 flex-direction: row;
 letter-spacing: 0;
@@ -27,6 +28,7 @@ opacity: 1;
 .description{
     width: 71%;
     color: #000000;
+    margin-top: 10px;
     text-align: left;
     @include fluid-type(font-size, 300px, 1800px, 5px, 15px);
 
@@ -34,8 +36,8 @@ opacity: 1;
 }
 
 .img{
-  width: 85%;
-  max-height: 75%;
+  @include fluid-type(height, 300px, 1900px, 80px, 320px);
+  @include fluid-type(width, 300px, 1900px, 80px, 520px);
   display: flex;
   align-items: center;
 }
