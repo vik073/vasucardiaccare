@@ -1,9 +1,9 @@
-<div class="container">
+<div  [ngClass]="!mobileview?'container':'col-d'">
   <div class="img-animation">
     <img class="img" src="../../../../../assets/images/about-image.jpg">
   </div>
-  <div class="content">
-    <div class="heading"> About</div>
+  <div class="content" [ngClass]="!mobileview?'':'mobile-content'">
+    <div class="heading" [ngClass]="!mobileview?'':'mobile-red-header'"> About</div>
     <div class="description">VCC comprises of an esteemed and dedicated team medical professionals who are have been successful in reaching the highest standards of excellence in the provision of specialized health care.<br> <br> With a mission to transform the nation into a conscious community empowered to lead healthier lifestyles and make mindful choices, we foster innovative medical care & preventive health services through our patient-centred approach.</div>
   </div>
 </div>

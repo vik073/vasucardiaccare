@@ -1,6 +1,6 @@
 <div [ngClass]="!mobileview?'container':' mobile-container'"  class="div--conatiner" >
-  <div class="intro-content">
-    <div class="header">Advancing the <br> Frontiers of healthcare
+  <div [ngClass]="!mobileview?'intro-content':'mobile-intro-content'">
+    <div class="header" [ngClass]="!mobileview?'':'mobile-red-header'">Advancing <br> the  Frontiers of <br>healthcare
     </div>
     <div class="black-description">
       With an inherent emphasis on overall clinical excellence VCC strives for utmost patient satisfaction through its modern approach to healthcare. </div>

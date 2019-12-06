@@ -4,18 +4,19 @@
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(space-between); 
-    padding: 5% 11%;
+    padding: 5% 8%;
     @include fluid-type(height, 300px, 1920px, 100vh, 100vh);
     //height: auto;
     //@include fluid-type(height, 300px, 1920px, 468px, 900px);
 }
 
 .padder{
-    padding: 5% 11%;
+    padding: 5% 8%;
 }
 .mobile-container{
     @include flexbox;
     @include flex-direction(column);
+    align-items: center;
     @include justify-content(space-between); 
     padding: 5% 5%;
     background-color: #D92A2A;
@@ -42,6 +43,8 @@
         display: flex;
         // max-width: 20em;
         flex: 0 0 auto;
+        height: 300px;
+        width: 300px;
         overflow-x: auto;
         overflow-y: hidden;
         flex-wrap: nowrap;
@@ -54,7 +57,6 @@
         font-family: poppins-bold;
         @include align-items(center);
         letter-spacing: 0;
-        width: 60%;
         @include flex(1);
         color: #FFFFFF;
         opacity: 1;
@@ -123,4 +125,18 @@
             padding-bottom: 10px;
             color: #F1F1F1;
             border-bottom: 1px solid #F1F1F1;
+        }
+
+        .mobile-intro-content{
+            @include flexbox;
+            align-items: center;
+            text-align: center;
+            @include flex-direction(column);
+            @include justify-content(space-evenly);
+            @include flex(0.8);
+        }
+        .mobile-red-header{
+            width: auto;
+            line-height: 1.3;
+            text-align: center;
         }

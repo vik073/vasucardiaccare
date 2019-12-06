@@ -13,6 +13,8 @@ export class InterventionalProceduresComponent implements OnInit {
   MyArrayType = [
     {title: "PTCA (Angioplasty)", description: 'Angioplasty is a minimally invasive procedure done to treat blocks in the coronary arteries, restoring blood circulation to the heart muscles. The procedure treats pain caused by blocks and minimizes the risk of heart attacks. The procedure involves local anaesthesia and usually a 24-hour hospital admission. Most patients are able to resume work and daily activities one week after their discharge.' , option:'consult'},
     {title: "DEVICE CLOSURE", description: 'Device Closure is a treatment that involves closing a defect or opening in the membrane between the two chambers of the heart with a special device through catheterization. The procedure typically takes 1-2 hours under anaesthesia and is an outpatient surgery.' , option:'consult'},
+  ]
+  MyArrayType1 = [
     {title: "Pacemaker Implantation", description: 'A surgical procedure that involves the surgical insertion of a device to regularize heart rates through electrical pulses. Patients typically resume normal physical activities soon after surgery, but it is advised to avoid strenuous activity for about 6 weeks. The hospital discharge varies from same day to 48 hours post-surgery.' , option:'consult'},
     {title: "PMBV/PTMC", description: 'Percutaneous Balloon Mitral Valvuloplasty is a method to treat Mitral Stenosis. The procedure involves dilating the mitral valve through the insertion of a catheter with a balloon tip which helps widen the narrow valve. Immediate post-procedure care involves having to lie down flat for a few hours and close monitoring of the patient. Typically, an overnight hospital stay is recommended.' , option:'consult'},
    

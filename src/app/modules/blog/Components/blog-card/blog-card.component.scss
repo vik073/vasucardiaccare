@@ -13,6 +13,25 @@
 
 }
 
+.mobile-container{
+  background-color: #fbfbfb;
+  display: flex;
+  width: 245px;
+  height: 245px;
+  margin: 1px;
+  margin-left: 5px;
+  padding: 5px;
+  box-shadow: 0px 0px 6px #00000029;
+  // @include fluid-type(max-height, 300px, 1000px, 100px, 235px);
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
 .header{
 text-align: left;
 font-size: 16px;

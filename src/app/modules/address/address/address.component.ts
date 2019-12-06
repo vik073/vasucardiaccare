@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MouseEvent } from '@agm/core';
+import { ViewfinderService } from 'src/app/shared/viewfinder.service';
 
 @Component({
   selector: 'app-address',
@@ -8,16 +9,23 @@ import { MouseEvent } from '@agm/core';
 })
 export class AddressComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-    
-  }
   zoom: number = 8;
   
   // initial center position for the map
   lat: number = 13.642068;
   lng: number = 79.420204;
+  @Input() mobileview;
+  constructor(private service: ViewfinderService) { }
+
+  ngOnInit() {
+    this.service.checkWidth()
+    this.service.isMobile.subscribe( x =>{
+
+      this.mobileview = x;
+    });
+  }
+    
+  
 
 
   clickedMarker(label: string, index: number) {

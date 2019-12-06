@@ -10,7 +10,19 @@
     flex-direction: row;
     height: auto;
     background-color: #F1F1F1;
-    padding: 5% 11%;
+    padding: 5% 8%;
+
+}
+.col-d{
+    display: flex;
+    flex-direction: row;
+    background-color: #F1F1F1;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    height: auto;
+    background-color: #F1F1F1;
+    padding: 5% 8%;
 
 }
 .img-animation{
@@ -61,4 +73,10 @@ flex: 1;
         flex: 2;
 
     }
+}
+.mobile-content{
+    align-items: center;
+    justify-content: space-around;
+
+
 }

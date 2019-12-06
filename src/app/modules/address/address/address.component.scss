@@ -11,6 +11,16 @@
     flex-direction: row;
 
 }
+.col-d{
+    display: flex;
+    flex-direction: row;
+    background-color: #D92A2A;
+    padding-right: 3%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+
+}
 .img-animation{
 display: flex;
 justify-content: center;

@@ -1,4 +1,4 @@
-<div class="container" *ngIf="LoadAnimationCard">
+<div class=""  [ngClass]="!mobileview?'container':'mobile-container'" *ngIf="LoadAnimationCard">
     
   <div class="header"><div class="title"> {{cardData.title}}</div>
 <div class="title-detail">{{cardData.titledetail}}</div> </div>

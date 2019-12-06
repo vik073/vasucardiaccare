@@ -13,6 +13,8 @@
     box-shadow: 0px 0px 6px #00000029;
     // @include fluid-type(max-height, 300px, 1000px, 100px, 235px);
     flex-direction: column;
+    height: 300px;
+    width: 300px;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -21,7 +23,7 @@
 
 .header{
 text-align: center;
-@include fluid-type(font-size, 300px, 700px, 14px, 16px);
+@include fluid-type(font-size, 300px, 800px, 14px, 16px);
 letter-spacing: 0;
 width: 100%;
 margin-top:-10px;
@@ -35,13 +37,14 @@ opacity: 1;
     margin-top: -10px;
     font-family: poppins-regular;
     text-align: center;
-    @include fluid-type(font-size, 300px, 700px, 10px, 12px);
+    @include fluid-type(font-size, 300px, 800px, 12px, 12px);
 
 
 }
 .img{
   
-  @include fluid-type(width, 300px, 700px, 45%, 70%);
+  @include fluid-type(width, 300px, 700px, 45%, 65%);
+  @include fluid-type(height, 300px, 700px, 45%, 65%);
   display: flex;
   align-items: center;
 }

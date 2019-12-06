@@ -3,6 +3,8 @@
 
 .background {
     background-color: #D92A2A;
+    height: auto;
+    height: 68vh;
 }
 .input-form{
     @include flexbox;
@@ -46,7 +48,8 @@
 }
 .input-data{
     width: 100%;
-    display: flex;
+    @include flexbox;
+    flex-wrap: wrap;
     justify-content: space-between;
     
 }

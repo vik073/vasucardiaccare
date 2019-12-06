@@ -10,14 +10,18 @@
     height: auto;
 
 }
+
 .inter-header{
     align-items: center;
 }
 .million-heart-container{
-    padding: 0px 11%;
+    padding: 0px 8%;
     margin-bottom: 5%;
     height: auto;
     margin-top: 5%;
+}
+.flex{
+    display: flex;
 }
 
 
@@ -35,6 +39,8 @@
     @include justify-content(space-evenly);
     @include flex(0.8);
 }
+
+
 .width-wide{
     width: 137%;
     margin-left: -19%;;
@@ -53,35 +59,7 @@
     
 
 }
-// @media screen and (max-width: 1000px) {
-//     .procedure-card {
-//         min-width: 200px;
 
-//     }
-//   }
-
-//   @media screen and (max-width: 800px) {
-//     .div-card{
-//         background: green;
-//         display: none;
-//     }
-    
-//   }
-//   @media screen and (max-width: 800px) {
-//     .mobile-view {
-//         // min-width: 150px;
-//         display:inline-block;
-//         overflow: scroll;
-//     }
-//     .div-card{
-//         display: none;
-//     }
-//   }
-
-.desktop-view{
-
-
-}
 
 
 

@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-<div id="home" [ngClass]="!mobileview?'container':'mobile-container'">
+<div id="home" >
 
 <div  id="canvas-container" class="canvas-container">
 <div class="touchhbar">
@@ -28,9 +28,9 @@
 <app-consultation></app-consultation>
 <app-makeappointment id="apointment" ></app-makeappointment>
 <app-interventional-procedures [AnimationCard]="ServiceCard" [mobileview]="mobileview"></app-interventional-procedures>
-<app-healthy-blog></app-healthy-blog>
+<app-healthy-blog [mobileview]="mobileview"></app-healthy-blog>
 <app-contactus id="contact_us"></app-contactus>
-<app-address></app-address>
+<app-address [mobileview]="mobileview" ></app-address>
 
 <!--<app-footer class="footer"></app-footer>-->
 <app-header id="header" (valueClick)="getvalue($event)" ></app-header>
