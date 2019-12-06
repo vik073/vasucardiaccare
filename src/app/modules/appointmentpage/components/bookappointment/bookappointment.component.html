@@ -28,8 +28,8 @@
 
   <div class="time-panel">
   <div class="black-header">TIME</div>
-  <div class="time-selector" *ngIf="dateTimeRange>0">
-  <app-timepicker class="timing-set " *ngFor= " let item of timeArray1 let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>
+  <div class="time-selector" >
+  <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>
 </div>
 <!-- <div class="time-selector" >
   <app-timepicker class="timing-set " *ngFor= " let item of timeArray1 let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>

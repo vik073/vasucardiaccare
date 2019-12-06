@@ -4,8 +4,9 @@
 .container{
     display: flex;
     padding: 5% 11%;
-  background: url("../../../../assets/images/frontiers12.jpg");
-  background-position: center;
+    background-size: cover;
+    
+  //@include fluid-type(background-position-x, 300px, 1920px, -55px, 0px);
   opacity: 0.9;
 //   background-size: 100vw  90vh;
   // background-image: "../../../../assets/images/frontiers1a.jpg";
@@ -22,7 +23,7 @@
 
 }
 .div--conatiner{
-  background: url("../../../../assets/images/frontiers1a.jpg");
+  background: url("../../../../assets/frontiers1.jpg");
   background-repeat: no-repeat;
   background-color:white;
   height: auto;
