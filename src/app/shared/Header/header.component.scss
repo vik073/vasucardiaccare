@@ -31,7 +31,7 @@
     top: 0px;
     background-color: #D92A2A;
     padding: 1.3% 0px;
-    @include fluid-type(width, 400px, 1920px, 400px,1920px);
+    width: 100%;
     @include fluid-type(height, 400px, 1920px, 50px,78px);
     z-index: 1000;
     position: fixed;
