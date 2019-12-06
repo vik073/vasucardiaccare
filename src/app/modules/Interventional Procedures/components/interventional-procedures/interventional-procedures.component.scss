@@ -3,6 +3,7 @@
 
 .container{
     @include flexbox;
+    height: auto;
     @include flex-direction(column);
     @include justify-content(space-between); 
     background-color: #D92A2A;
