@@ -2,32 +2,33 @@
     <app-header class="set-header"></app-header>
 
 <div class="container background" >
-    
-  <div  id="bookapointment" class="intro-content">
+  
+  <div  id="bookapointment"  [ngClass]="!mobileview?'intro-content':'mobile-intro-content'">
     <div class="header mobile-red-header" *ngIf="mobileview">Book an <br> appointment</div>
     <div class="header" *ngIf="!mobileview" >Book an  appointment</div>
-    <div class="description">
+    <div  [ngClass]="!mobileview?'description':'mobile-description'">
       Fill in the form below to request an appointment with us and our representative will get in touch with you shortly.</div>
-      <div class="description">
+      <div [ngClass]="!mobileview?'description':'mobile-description'">
         If you are having an emergency, please call 102 or our emergency unit at +91 9347 830 894 | 0877 -2272666 immediately.  
       </div>
   
-      <div class="service-list" >
-  <div class="heading"> SELECT SERVICE </div>
-  <div   [ngClass]="!mobileview?'Service-cards':'mobile-card'" > 
-    <div class="Service-card"  *ngFor= " let item of serviceArray let j = index;"  (click)="setService(j)"[ngClass]="{'highlight': selectedIndexj === j}">{{item}}</div>
+      <div [ngClass]="!mobileview?'service-list':'mobile-service-list full-width'" >
+  <div class="heading" > SELECT SERVICE </div>
+  <div   [ngClass]="!mobileview?'Service-cards':'mobile-card full-width' " > 
+    <div  [ngClass]="!mobileview?'Service-card':'mobile-Service-card full-width' " *ngFor= " let item of serviceArray let j = index;"  (click)="setService(j)"[ngClass]="{'highlight': selectedIndexj === j}">{{item}}</div>
   </div>
 </div>
+  </div>
 
-<div class="heading"> SELECT DATE & TIME </div>
+<div class="heading" [ngClass]="!mobileview?'':'center-header'"> SELECT DATE & TIME </div>
 <div class="date-picker" [ngClass]="!mobileview?'desktop-card':'mobile-card'">
   
   
-  <owl-date-time-inline class=" header-bl, position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl" [min]="min"  
+  <owl-date-time-inline [ngClass]="!mobileview?'':'center-header'" class=" header-bl, position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl" [min]="min"  
   
   [pickerType]="'calendar'"  [(ngModel)]="dateTimeRange" ></owl-date-time-inline>
 
-  <div class="time-panel">
+  <div class="time-panel" [ngClass]="!mobileview?'':'center-header'">
   <div class="black-header">TIME</div>
   <div class="time-selector" >
   <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>
@@ -37,7 +38,7 @@
 </div> -->
 </div>
 </div>
-<div class="heading"> Patient Details </div>
+<div class="heading" [ngClass]="!mobileview?'':'center-header'"> Patient Details </div>
 
 <div class="input-form">
     <!-- <input  [(ngModel)]="fullName" id="fullName" name="fullName" placeholder="Full NAme">
@@ -54,11 +55,8 @@
         
             <input  class="text-box" type="text" formControlName="age" placeholder="Age" required>
          
-      <div class="submit-btn"><button class="btn" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
+      <div class="submit-btn"><button class="btn" [ngClass]="(profileForm.valid)?'enabled mobile-btn':'disabled mobile-btn'" type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
     </form>
-  </div>
-
-  
   </div>
   <app-address class="address-bar" [mobileview]="mobileview"></app-address>
 </div>

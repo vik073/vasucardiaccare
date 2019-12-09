@@ -36,7 +36,6 @@
     border-style: none;
     background: #D92A2A;
     outline: none;
-    width: 70%;
     margin-bottom: 20px;
     @include fluid-type(height, 300px, 1920px, 16px, 36px);
     @include fluid-type(font-size, 300px, 1920px, 15px, 28px);
@@ -45,10 +44,15 @@
     color: #F1F1F1;
     border-bottom: 1px solid #F1F1F1;
 }
+.mobile-input{
+    flex-direction: column;
+    width: 70%;
+}
 .input-data{
     width: 100%;
     font-size: 1em;
     @include flexbox;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     

@@ -4,7 +4,7 @@
   <div class="input-form">
       <form [formGroup]="profileForm"  (ngSubmit)="onSubmit()"> 
     
-        <div class="input-data" [ngClass]="!mobileview?'':'align-center'">
+        <div class="input-data" [ngClass]="!mobileview?'':'align-center mobile-input'">
             <input class="text-box" type="text" formControlName="fullName" placeholder="Full Name" required>
             
           

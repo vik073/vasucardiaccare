@@ -7,6 +7,21 @@
 }
 
 .intro-content{
+    background-position-y: 13px;
+    background-position-x: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: auto;
+    margin-right: -8%;
+   background-image: url("../../../../../assets/images/bookappointment(1).svg");
+    @include flexbox;
+    @include flex-direction(column);
+    @include flex(2);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+} 
+.mobile-intro-content{
+    height: auto;
     @include flexbox;
     @include flex-direction(column);
     @include flex(2);
@@ -18,7 +33,7 @@
 }
 
 .description{
-    // width: 55%;
+    width: 55%;
     margin-top: 14px;
     @include justify-content(center);
     font-family: poppins-regular;
@@ -26,6 +41,24 @@
     letter-spacing: 0;
     color: #D92A2A;
     opacity: 1;
+}
+.mobile-description{
+    margin-top: 14px;
+    @include justify-content(center);
+    font-family: poppins-regular;
+    @include fluid-type(font-size, 200px, 1920px, 10px, 24px);
+    letter-spacing: 0;
+    color: #D92A2A;
+    opacity: 1;
+}
+.full-width{
+    width: 100%;
+}
+.mobile-service-list{
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 .date-picker{
     margin-top: 20px;
@@ -38,6 +71,8 @@
 
 }
 .mobile-card{
+    width: 100%;
+    align-items: center;
     flex-direction: column;
 
 }
@@ -49,18 +84,19 @@
     @include flexbox;
     @include flex-direction(row);
     @include flex(2);
-    // width: 50%;
+     width: 50%;
     @include justify-content(space-between);
     @include flex-wrap(wrap);
 }
 
 .Service-card {
     @include flexbox;
-    // width: 40%;
+     width: 40%;
+     height: 50px;
     @include align-items(center);
     @include justify-content(center);
-    font-family: poppins-regular;
-    @include fluid-type(font-size, 300px, 1920px, 14px, 20px);
+    font-family: poppins;
+    @include fluid-type(font-size, 600px, 1920px, 12px, 16px);
     //@include fluid-type(height, 200px, 1920px, 40px, 70px);
    // @include fluid-type(width, 300px, 1920px, 60px, 320px);
 
@@ -71,9 +107,34 @@
     background: #FFFFFF;
     
 }
+
+.center-header{
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+}
+.mobile-Service-card{
+    @include flexbox;
+     width: 100%;
+     border-radius: 20px;
+     height: 50px;
+    @include align-items(center);
+    @include justify-content(center);
+    font-family: poppins;
+    font-size: 18px;
+    //@include fluid-type(height, 200px, 1920px, 40px, 70px);
+   // @include fluid-type(width, 300px, 1920px, 60px, 320px);
+
+    color: #D92A2A;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    //@include flex(1);
+    background: #FFFFFF;
+
+}
 .heading{
     font-family: poppins-bold;
-    @include fluid-type(font-size, 300px, 1920px, 15px, 30px);
+    @include fluid-type(font-size, 700px, 1920px, 25px, 30px);
     margin-top: 6%;
     height: 40px;
     margin-bottom: .5%;
