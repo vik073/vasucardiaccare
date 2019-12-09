@@ -4,6 +4,7 @@ import { Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { DateTimeAdapter } from 'ng-pick-datetime';
 import { formatDate } from '@angular/common';
+import { ViewfinderService } from 'src/app/shared/viewfinder.service';
 
 @Component({
   selector: 'app-bookappointment',
@@ -43,11 +44,19 @@ export class BookappointmentComponent implements OnInit  {
       public t = formatDate(new Date(), 'yyyy,MM,dd,hh,mm', 'en');
     
   profileForm: FormGroup;
-  constructor( private fb: FormBuilder ) { 
+  mobileview: unknown;
+  constructor( private fb: FormBuilder, private service: ViewfinderService ) { 
 
   }
 
   ngOnInit() {
+    this.service.checkWidth()
+    this.service.isMobile.subscribe( x =>{
+
+      this.mobileview = x;
+    });
+
+
     var t = formatDate(new Date(), 'yyyy,MM,dd,hh,mm', 'en');
     
     console.log(this.min);

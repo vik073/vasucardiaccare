@@ -5,6 +5,7 @@
     background-color:#F1F1F1;
     height: auto;
 }
+
 .intro-content{
     @include flexbox;
     @include flex-direction(column);
@@ -17,7 +18,7 @@
 }
 
 .description{
-    width: 55%;
+    // width: 55%;
     margin-top: 14px;
     @include justify-content(center);
     font-family: poppins-regular;
@@ -36,25 +37,32 @@
     @include flex-wrap(wrap);
 
 }
+.mobile-card{
+    flex-direction: column;
+
+}
+.desktop-card{
+    flex-direction: row;
+}
 
 .Service-cards {
     @include flexbox;
     @include flex-direction(row);
     @include flex(2);
-    width: 50%;
+    // width: 50%;
     @include justify-content(space-between);
     @include flex-wrap(wrap);
 }
 
 .Service-card {
     @include flexbox;
-    width: 40%;
+    // width: 40%;
     @include align-items(center);
     @include justify-content(center);
     font-family: poppins-regular;
     @include fluid-type(font-size, 300px, 1920px, 14px, 20px);
-    @include fluid-type(height, 200px, 1920px, 40px, 70px);
-    @include fluid-type(width, 300px, 1920px, 60px, 320px);
+    //@include fluid-type(height, 200px, 1920px, 40px, 70px);
+   // @include fluid-type(width, 300px, 1920px, 60px, 320px);
 
     color: #D92A2A;
     margin-top: 1%;
@@ -82,9 +90,7 @@
      @include flex-direction(row);
      
 }
-.enabled{
 
-}
 .disabled{
     background: grey;
 }
@@ -117,8 +123,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: hidden;
-    flex-direction: row;
-    width: 90%;
+    
     /* height: 100px; */
 
 }

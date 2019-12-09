@@ -1,25 +1,21 @@
-<div class="container" *ngIf="LoadAnimationCard =='animation-card'">
+<div class="card-container padding-style" *ngIf="LoadAnimationCard =='animation-card'">
     
-       <img   *ngIf="img" class="img" src={{cardData.imgsrc}}>
-       <!-- <video  *ngIf="!img"  class="img" autoplay loop >
-          <source src="{{cardData.imgsrc}}" type="video/mp4">
-          
-        </video> -->
-        
+       <img   *ngIf="img" class="img padding-style" src={{cardData.imgsrc}}>
+             
     
-  <div class="div-header">{{cardData.title}}</div>
-  <div class="div-description">{{cardData.description}}</div>
-  <div class="btn"><button [routerLink]="['/bookappointment']" class="btn" (click) = "creadtedb(cardData)">{{cardData.option}}</button></div>
+  <div class="div-header padding-style">{{cardData.title}}</div>
+  <div class="div-description padding-style">{{cardData.description}}</div>
+  <div class="btn "><button [routerLink]="['/bookappointment']" class="btn" (click) = "creadtedb(cardData)">{{cardData.option}}</button></div>
 </div>
 
-<div  class="container , num-4" *ngIf="LoadAnimationCard =='interventual-card'">
-  <div class="div-header">{{cardData.title}}</div>
+<div  class="card-container , padding-style, int-card" *ngIf="LoadAnimationCard =='interventual-card'">
+  <div class="div-header padding-style ">{{cardData.title}}</div>
   
-  <div class="div-description">{{cardData.description}}</div>
+  <div class="div-description padding-style">{{cardData.description}}</div>
   <div class="btn"><button class="btn" (click) = "creadtedb(cardData)">{{cardData.option}}</button></div>
 
 </div>
-<div class="container , num-4"  *ngIf="LoadAnimationCard =='service-card'" [ngStyle]="{'background' : 'transparent', 'box-shadow': 'none' }">
+<div class="card-container , num-4"  *ngIf="LoadAnimationCard =='service-card'" [ngStyle]="{'background' : 'transparent', 'box-shadow': 'none' }">
     
   <img class="img" src={{cardData.imgsrc}}>
 

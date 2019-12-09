@@ -1,44 +1,29 @@
 @import '../../../../../mixin.scss';
 @import '../../../../../common.scss';
 
-.container{
-    @include flexbox;
-    height: auto;
-    @include flex-direction(column);
-    @include justify-content(space-between); 
+.interventional-container-background{ 
     background-color: #D92A2A;
-    height: auto;
 
+}
+.center-content{
+    justify-content: center;
+}
+
+.interventional-small-container{
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-evenly);
+    @include flex(0.7);
 }
 
 .inter-header{
     align-items: center;
 }
-.million-heart-container{
-    padding: 0px 8%;
-    margin-bottom: 5%;
-    height: auto;
-    margin-top: 5%;
-}
+
 .flex{
     display: flex;
 }
 
-
-
-.million-heart-container-mobile{
-    // padding: 0px 5%;
-    margin-bottom: 5%;
-    height: auto;
-    margin-top: 5%;
-}
-
-.intro-content{
-    @include flexbox;
-    @include flex-direction(column);
-    @include justify-content(space-evenly);
-    @include flex(0.8);
-}
 
 
 .width-wide{
@@ -58,6 +43,11 @@
     @include flex-wrap(wrap);
     
 
+}
+.proc-card{
+    display: flex;
+    flex: 1;
+   
 }
 
 

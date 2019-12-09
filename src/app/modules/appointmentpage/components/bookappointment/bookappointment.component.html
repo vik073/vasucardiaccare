@@ -4,22 +4,23 @@
 <div class="container background" >
     
   <div  id="bookapointment" class="intro-content">
-    <div class="header">Book an appointment</div>
+    <div class="header mobile-red-header" *ngIf="mobileview">Book an <br> appointment</div>
+    <div class="header" *ngIf="!mobileview" >Book an  appointment</div>
     <div class="description">
       Fill in the form below to request an appointment with us and our representative will get in touch with you shortly.</div>
       <div class="description">
         If you are having an emergency, please call 102 or our emergency unit at +91 9347 830 894 | 0877 -2272666 immediately.  
       </div>
   
-      <div class="service-list">
+      <div class="service-list" >
   <div class="heading"> SELECT SERVICE </div>
-  <div class="Service-cards" > 
+  <div   [ngClass]="!mobileview?'Service-cards':'mobile-card'" > 
     <div class="Service-card"  *ngFor= " let item of serviceArray let j = index;"  (click)="setService(j)"[ngClass]="{'highlight': selectedIndexj === j}">{{item}}</div>
   </div>
 </div>
 
 <div class="heading"> SELECT DATE & TIME </div>
-<div class="date-picker">
+<div class="date-picker" [ngClass]="!mobileview?'desktop-card':'mobile-card'">
   
   
   <owl-date-time-inline class=" header-bl, position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl" [min]="min"  
@@ -59,7 +60,7 @@
 
   
   </div>
-  <app-address class="address-bar"></app-address>
+  <app-address class="address-bar" [mobileview]="mobileview"></app-address>
 </div>
 </div>
  

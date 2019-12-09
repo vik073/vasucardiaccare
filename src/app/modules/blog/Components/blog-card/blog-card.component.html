@@ -1,11 +1,11 @@
 <div class=""  [ngClass]="!mobileview?'container':'mobile-container'" *ngIf="LoadAnimationCard">
     
-  <div class="header"><div class="title"> {{cardData.title}}</div>
-<div class="title-detail">{{cardData.titledetail}}</div> </div>
+  <div class="header" [ngClass]="!mobileview?'':'text-align'"><div class="title"> {{cardData.title}}</div>
+<div class="title-detail" [ngClass]="!mobileview?'':'text-align'">{{cardData.titledetail}}</div> </div>
   <img class="img" src={{cardData.imgsrc}}>
 
 
-<div class="description">{{cardData.description}}</div>
+<div class="description" [ngClass]="!mobileview?'':'text-align'">{{cardData.description}}</div>
 </div>
 
 

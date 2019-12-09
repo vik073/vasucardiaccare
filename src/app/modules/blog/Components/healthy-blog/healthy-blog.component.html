@@ -1,7 +1,7 @@
 <div  class="container" [ngClass]="!mobileview?'container':'mobile-container'" >
   <div class="intro-content" [ngClass]="!mobileview?'':'mobile-intro-content'">
     <div class="header" [ngClass]="!mobileview?'':'mobile-red-header'">Get healthy</div>
-    <div class="black-description">
+    <div class="black description">
         8 in 10 cases of premature heart disease and stroke cases are preventable through healthy lifestyle behaviours. Learn more about how to live a healthier lifestyle. You’ll find help here. </div>
     </div>
     <div class="card-data">
@@ -12,7 +12,7 @@
   <app-blog-card class="procedure-card" *ngFor="let item of BlogArray2 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-blog-card>
    </div>
    <div *ngIf="mobileview" class="mobile-view">
-      <app-blog-card   *ngFor="let item of BlogArray" [cardData]="item" [LoadAnimationCard] = "LoadAnimationCArd" ></app-blog-card>
+      <app-blog-card   *ngFor="let item of BlogArray" [cardData]="item" [mobileview] = "mobileview" [LoadAnimationCard] = "LoadAnimationCArd" ></app-blog-card>
     </div>
   </div>
 </div>

@@ -10,9 +10,6 @@
     //@include fluid-type(height, 300px, 1920px, 468px, 900px);
 }
 
-.padder{
-    padding: 5% 8%;
-}
 .mobile-container{
     @include flexbox;
     @include flex-direction(column);
@@ -23,76 +20,100 @@
     height: auto;
     // @include fluid-type(height, 200px, 1920px, 568px, 1080px)
 }
+
+
+.padder{
+    padding: 5% 8%;
+} 
+
 .mobile-view::-webkit-scrollbar { 
     display: none; 
 } 
 
+.intro-content{
+    display: flex;
+    flex:2;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobile-intro-content{
+    @include flexbox;
+    align-items: center;
+    text-align: center;
+    @include flex-direction(column);
+    @include justify-content(space-evenly);
+    @include flex(0.8);
+}
+
 .header{
-     @include flexbox;
-        text-align: left;
-        @include fluid-type(font-size, 300px, 1920px, 30px, 67px);
-        font-family: poppins-bold;
-        letter-spacing: 0;
-        @include fluid-type(width, 300px, 1620px, 100%, 40%);
-        color: #D92A2A;
-        opacity: 1;
-        }
-    
+    @include flexbox;
+    @include flex(1);
+    text-align: left;
+    @include fluid-type(font-size, 300px, 1920px, 25px, 70px);
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+    font-family: poppins-bold;
+    letter-spacing: 0;
+    @include align-items(center);
+    letter-spacing: 0;
+    color: #D92A2A;
+    opacity: 1;
+}
+
+.mobile-red-header{
+    width: auto;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.black{
+    color: black;
+    @include flex(0.2);
+}
+.div-card{
+    @include flexbox;
+    @include flex(0.9);
+    font-family: poppins-medium;
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    padding-bottom: 5px;
+}
+
+  
 
     .mobile-view {
         display: flex;
         // max-width: 20em;
         flex: 0 0 auto;
-        height: 300px;
-        width: 300px;
+        height: 20em;
+        width: 20em;
         overflow-x: auto;
         overflow-y: hidden;
         flex-wrap: nowrap;
     }
 
-    .red-header{
-        @include flexbox;
-        text-align: left;
-        @include fluid-type(font-size, 300px, 1920px, 30px, 67px);
-        font-family: poppins-bold;
-        @include align-items(center);
-        letter-spacing: 0;
-        @include flex(1);
-        color: #FFFFFF;
-        opacity: 1;
-        }
+   
 
-        .red-description{
-            @include flexbox;
-            @include flex-direction(column);
-            @include justify-content(center); 
-            width: 75%;
-            font-family: poppins-regular;
-            margin-top: 10px;
-            @include fluid-type(font-size, 300px, 1920px, 16px, 26px);
-            @include fluid-type(line-height, 300px, 1920px, 16px, 38px);
-            margin-bottom: 50px;
-            @include flex(0.5);
-
-            letter-spacing: 0;
+        .white{
             color: #FFFFFF;
-            opacity: 1;
-        
+
         }
 
-        .black-description{
+        .description{
             @include flexbox;
             @include flex-direction(column);
             @include justify-content(center); 
             width: 75%;
             font-family: poppins-regular;
             margin-top: 10px;
-            @include fluid-type(font-size, 300px, 1920px, 16px, 26px);
-            @include fluid-type(line-height, 300px, 1920px, 16px, 38px);
-            margin-bottom: 50px;
-            @include flex(0.2); 
+            line-height: 1.4;
+            font-size: 1.1em;
+            margin-bottom: 1em;  
             letter-spacing: 0;
-            color: black;
             opacity: 1;
         
         } 
@@ -106,7 +127,7 @@
             background-color: #D60F1B;
             border-radius: 59px;
             border: none;
-            @include fluid-type(font-size, 300px, 1920px, 15px, 28px);
+            font-size: 1.1rem;
             @include fluid-type(height, 300px, 1920px, 18px, 50px);
             @include fluid-type(width, 300px, 1920px, 60px, 160px);
             color: white;
@@ -127,16 +148,10 @@
             border-bottom: 1px solid #F1F1F1;
         }
 
-        .mobile-intro-content{
-            @include flexbox;
-            align-items: center;
-            text-align: center;
-            @include flex-direction(column);
-            @include justify-content(space-evenly);
-            @include flex(0.8);
-        }
-        .mobile-red-header{
-            width: auto;
-            line-height: 1.3;
-            text-align: center;
+       
+        
+
+        .padding-style{
+            padding-bottom: 10px;
+            padding-top: 10px;
         }

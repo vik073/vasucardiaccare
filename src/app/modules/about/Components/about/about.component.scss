@@ -34,7 +34,6 @@ flex: 1;
 }
 .img{
     @include fluid-type(width, 200px, 1920px, 100px, 650px);
-    margin-left: 35px;
 }
 
 .content{

@@ -1,8 +1,7 @@
 @import '../../../../mixin.scss';
 @import '../../../../common.scss';
 
-.container{
-    display: flex;
+.service-container-background{
     padding: 5% 8%;
     background-size: cover;
     
@@ -10,15 +9,10 @@
   opacity: 0.9;
 //   background-size: 100vw  90vh;
   // background-image: "../../../../assets/images/frontiers1a.jpg";
-   background-repeat: no-repeat;
    //background: transparent;
 //    position: absolute;
    z-index: 1;
    background-position-x: center;
-   height: -webkit-fill-available;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color:white;
     
 
 }
@@ -29,39 +23,8 @@
   height: auto;
 
 }
-// @media screen and (max-width: 1000px) {
-//     .container {
-//       background-color: green;
-
-//     }
-//   }
-
-//   @media screen and (max-width: 600px) {
-//     .container {
-//       background-color: red;
-      
-//     }
-//   }
-.intro-content{
-display: flex;
-flex:2;
-z-index: 1;
-flex-direction: column;
-justify-content: center;
-// align-items: center;
-
-}
-
-// .description{
-//     width: 50%;
-//     justify-content: center;
-//     font-family: poppins-regular;
-//     letter-spacing: 0;
-//     color: #D92A2A;
-//     opacity: 1;
 
 
-// }
 .procedure-card{
     display: flex;
     flex:1;

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ViewfinderService } from 'src/app/shared/viewfinder.service';
 
 @Component({
   selector: 'app-blog-card',
@@ -9,9 +10,11 @@ export class BlogCardComponent implements OnInit {
 
   @Input() cardData: any;
   @Input() LoadAnimationCard: any;
-  constructor() { }
+  @Input() mobileview: any;
+  constructor(private service: ViewfinderService) { }
 
   ngOnInit() {
+   
   }
 
 }
