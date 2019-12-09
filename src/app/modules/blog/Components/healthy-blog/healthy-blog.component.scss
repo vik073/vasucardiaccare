@@ -1,14 +1,13 @@
 @import '../../../../../mixin.scss';
 @import '../../../../../common.scss';
-.container{
 
-   
+.healthy-blog-container{
     padding: 5% 8%;
     height: auto;
- 
     background-color:white;
 
 }
+
 .intro-content{
 display: flex;
 flex:2;
@@ -21,29 +20,18 @@ justify-content: space-evenly;
     display: flex;
     flex-direction: column;
 }
-// .header{
-// text-align: left;
-// font-weight: bold;
-//  font-size: 268%;
-// font-family: poppins;
-// letter-spacing: 0;
-// width: 50%;
-// color: #D92A2A;
-// opacity: 1;
+
+// .description{
+//     width: 50%;
+//     justify-content: center;
+//     font-family: poppins-regular;
+//     font-size: 100%;
+//     letter-spacing: 0;
+//     color: #000000;
+//     opacity: 1;
 
 
 // }
-.description{
-    width: 50%;
-    justify-content: center;
-    font-family: poppins-regular;
-    font-size: 100%;
-    letter-spacing: 0;
-    color: #000000;
-    opacity: 1;
-
-
-}
 .procedure-card{
     display: flex;
     flex:1;
@@ -52,12 +40,12 @@ justify-content: space-evenly;
     flex-wrap: wrap;
 
 }
-.div-card{
-    display: flex;
-    flex: 2;
-    font-family: poppins;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-}
+// .div-card{
+//     display: flex;
+//     flex: 2;
+//     font-family: poppins;
+//     flex-wrap: wrap;
+//     flex-direction: row;
+//     justify-content: flex-start;
+// }
 

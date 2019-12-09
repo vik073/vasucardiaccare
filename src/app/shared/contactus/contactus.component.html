@@ -1,16 +1,16 @@
-<div class="container background">
+<div class="container background" [ngClass]="!mobileview?'container':' mobile-container'">
 
-  <div class="header white ">CONTACT US</div>
+  <div class="header white " [ngClass]="!mobileview?'':'mobile-red-header'">CONTACT US :</div>
   <div class="input-form">
       <form [formGroup]="profileForm"  (ngSubmit)="onSubmit()"> 
     
-        <div class="input-data">
+        <div class="input-data" [ngClass]="!mobileview?'':'align-center'">
             <input class="text-box" type="text" formControlName="fullName" placeholder="Full Name" required>
             
           
             <input  class="text-box" type="text" formControlName="mobileNumber" placeholder="Phone Number" required>
           
-           <!-- <input  class="text-box" type="text" formControlName="age" placeholder="Age" required> -->
+           <input  class="text-box" type="text" formControlName="age" placeholder="Age" required>
               <!-- <div class="submit-btn"><button class="btn " type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
   
          -->
@@ -18,8 +18,8 @@
 
         <!-- <button type="submit" [disabled]="!profileForm.valid">Submit</button> -->
       </div>
-      <div class="submit-btn">
-        <button class="btn-red" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Confirm</button>
+      <div class="submit-btn" [ngClass]="!mobileview?'':'align-center'">
+        <button class="mobile-btn-red" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Confirm</button>
     </div>
       </form>
       
@@ -28,8 +28,8 @@
   <div class="header white lineheight">Could you be at risk? <br> Try our risk assessment
 
   </div>
-  <div class="submit-btn">
-      <button class="btn-red" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Book</button>
+  <div class="submit-btn"  [ngClass]="!mobileview?'':'align-center'">
+      <button class="mobile-btn-red" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Book Appointment</button>
   </div>
   <hr class="line">
 </div>

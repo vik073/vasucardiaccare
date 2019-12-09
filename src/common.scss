@@ -77,37 +77,50 @@
     @include flexbox;
     @include flex(0.9);
     font-family: poppins-medium;
+    margin-top: 5%;
     @include flex-wrap(wrap);
     @include flex-direction(row);
     @include justify-content(flex-start);
     padding-bottom: 5px;
 }
 
-  
+// .div-card{
+//     @include flexbox;
+//     @include flex-direction(row);
+//     margin-top: 5%;
+//     @include flex(2);
+//     @include justify-content(space-between);
+//     @include flex-wrap(wrap);
+//     font-family: poppins;
+// }
 
-    .mobile-view {
-        display: flex;
-        // max-width: 20em;
-        flex: 0 0 auto;
-        height: 20em;
-        width: 20em;
-        overflow-x: auto;
-        overflow-y: hidden;
-        flex-wrap: nowrap;
-    }
+.mobile-view {
+    display: flex;
+    flex: 0 0 auto;
+    height: 20em;
+    width: 20em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
 
-   
+.white {
+       color: #FFFFFF;
+}
 
-        .white{
-            color: #FFFFFF;
+.red {
+    color: #D92A2A;
+}
 
-        }
+.full-width{
+    justify-content: center;
+    width: 100%;
+}
 
         .description{
             @include flexbox;
             @include flex-direction(column);
             @include justify-content(center); 
-            width: 75%;
             font-family: poppins-regular;
             margin-top: 10px;
             line-height: 1.4;
@@ -142,7 +155,6 @@
             margin-bottom: 20px;
             @include fluid-type(height, 300px, 1920px, 16px, 36px);
             @include fluid-type(font-size, 300px, 1920px, 15px, 26px);
-            //font-size: 16px;
             padding-bottom: 10px;
             color: #F1F1F1;
             border-bottom: 1px solid #F1F1F1;
@@ -155,3 +167,18 @@
             padding-bottom: 10px;
             padding-top: 10px;
         }
+
+        .mobile-btn-red{
+            text-align: center;
+            background-color: #F1F1F1;
+            border-radius: 50px;
+            border: none;
+            @include fluid-type(font-size, 400px, 1920px, 1.5em, 2.5em);
+            width: auto;
+            padding-left: 1em;
+            padding-right: 1em;
+            @include fluid-type(height, 400px, 1920px, 2em, 4em);
+            // @include fluid-type(width, 400px, 1920px, 6em, 14em);
+            color: #D92A2A;
+    
+    }        

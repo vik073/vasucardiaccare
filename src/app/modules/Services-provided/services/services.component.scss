@@ -7,23 +7,17 @@
     
   //@include fluid-type(background-position-x, 300px, 1920px, -55px, 0px);
   opacity: 0.9;
-//   background-size: 100vw  90vh;
+  //background-size: 100vw  90vh;
   // background-image: "../../../../assets/images/frontiers1a.jpg";
-   //background: transparent;
-//    position: absolute;
+  //background: transparent;
+  //position: absolute;
    z-index: 1;
    background-position-x: center;
-    
-
+   background: url("../../../../assets/frontiers1.jpg");
+   background-repeat: no-repeat;
+   background-color:white;
+   height: auto;
 }
-.div--conatiner{
-  background: url("../../../../assets/frontiers1.jpg");
-  background-repeat: no-repeat;
-  background-color:white;
-  height: auto;
-
-}
-
 
 .procedure-card{
     display: flex;
@@ -32,14 +26,4 @@
     justify-content: space-around;
     flex-wrap: wrap;
 
-}
-.div-card{
-    display: flex;
-    flex: 2;
-    z-index: 1;
-    
-    font-family: poppins;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
 }

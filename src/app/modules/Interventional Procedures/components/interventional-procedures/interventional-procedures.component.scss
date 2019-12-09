@@ -3,6 +3,7 @@
 
 .interventional-container-background{ 
     background-color: #D92A2A;
+    height: auto;
 
 }
 .center-content{
@@ -24,8 +25,6 @@
     display: flex;
 }
 
-
-
 .width-wide{
     width: 137%;
     margin-left: -19%;;
@@ -35,14 +34,13 @@
     height: 25px;
     background-color: #FFFFFF;
 }
-.procedure-card{
+.procedure-card {
+
     @include flexbox;
     @include flex-direction(row);
     @include flex(1);
     @include justify-content(flex-start);
     @include flex-wrap(wrap);
-    
-
 }
 .proc-card{
     display: flex;

@@ -10,13 +10,18 @@
     padding: 1em;
     flex: 1;
     box-shadow: 0px 0px 6px #00000029;
-    @include fluid-type(height, 600px, 1900px, 250px, 350px);
-    @include fluid-type(width, 600px, 1900px, 210px, 300px);
+  
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
+}
+
+.int-width-height{
+
+     @include fluid-type(height, 600px, 1900px, 250px, 400px);
+     @include fluid-type(width, 600px, 1900px, 210px, 400px);
 }
 
 .div-header{

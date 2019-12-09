@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -6,8 +6,11 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './contactus.component.html',
   styleUrls: ['./contactus.component.scss']
 })
+
+
 export class ContactusComponent implements OnInit {
   profileForm: any;
+  @Input() mobileview: any;
 
   
   constructor( private fb: FormBuilder) { }

@@ -1,6 +1,7 @@
 @import '../../../../../mixin.scss';
 
 
+
   
   .container{
     background-color: #fbfbfb;
@@ -43,8 +44,8 @@ opacity: 1;
 }
 .img{
   
-  @include fluid-type(width, 300px, 700px, 45%, 65%);
-  @include fluid-type(height, 300px, 700px, 45%, 65%);
+  @include fluid-type(width, 300px, 700px, 45%, 55%);
+  @include fluid-type(height, 300px, 700px, 45%, 55%);
   display: flex;
   align-items: center;
 }
@@ -53,9 +54,9 @@ opacity: 1;
     background-color: #D60F1B;
     border-radius: 59px;
     border: none;
-    @include fluid-type(font-size, 300px, 700px, 16px, 20px);
-    @include fluid-type(height, 300px, 600px, 35px, 37px);
-    @include fluid-type(width, 300px, 600px, 100px, 120px);
+    @include fluid-type(font-size, 300px, 700px, 18px, 24px);
+    @include fluid-type(height, 400px, 600px, 38px, 40px);
+    @include fluid-type(width, 400px, 600px, 120px, 140px);
     color: white;
     
 }
