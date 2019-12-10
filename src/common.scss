@@ -4,7 +4,7 @@
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(space-between); 
-    padding: 5% 8%;
+    padding: 2% 8%;
     @include fluid-type(height, 300px, 1920px, 100vh, 100vh);
     //height: auto;
     //@include fluid-type(height, 300px, 1920px, 468px, 900px);
@@ -23,7 +23,7 @@
 
 
 .padder{
-    padding: 5% 8%;
+    padding: 0% 8%;
 } 
 
 .mobile-view::-webkit-scrollbar { 
@@ -32,7 +32,7 @@
 
 .intro-content{
     display: flex;
-    flex:2;
+    flex:1;
     z-index: 1;
     flex-direction: column;
     justify-content: center;
@@ -51,7 +51,7 @@
     @include flexbox;
     @include flex(1);
     text-align: left;
-    @include fluid-type(font-size, 300px, 1920px, 25px, 70px);
+    @include fluid-type(font-size, 300px, 1920px, 20px, 70px);
     margin-bottom: 0.5em;
     line-height: 1.2;
     font-family: poppins-bold;
@@ -75,7 +75,7 @@
 }
 .div-card{
     @include flexbox;
-    @include flex(0.9);
+    @include flex(1);
     font-family: poppins-medium;
     margin-top: 5%;
     @include flex-wrap(wrap);
@@ -122,14 +122,20 @@
             @include flex-direction(column);
             @include justify-content(center); 
             font-family: poppins-regular;
+            flex: 1;
+            
             margin-top: 10px;
             line-height: 1.4;
             font-size: 1.1em;
+            @include fluid-type(font-size, 600px, 1400px, 1.3em, 1.8em);
             margin-bottom: 1em;  
             letter-spacing: 0;
             opacity: 1;
         
         } 
+        .half-desc{
+            width: 50%;
+        }
 
         .no-margin{
             margin: 0;
@@ -177,7 +183,7 @@
             width: auto;
             padding-left: 1em;
             padding-right: 1em;
-            @include fluid-type(height, 400px, 1920px, 2em, 4em);
+            @include fluid-type(height, 400px, 1920px, 2em, 2.2em);
             // @include fluid-type(width, 400px, 1920px, 6em, 14em);
             color: #D92A2A;
     
@@ -190,6 +196,6 @@
             width: auto;
             padding-left: 1em;
             padding-right: 1em;
-            @include fluid-type(height, 400px, 1920px, 2em, 4em);
+            @include fluid-type(height, 400px, 1920px, 2em, 2.2em);
 
     }    

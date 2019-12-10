@@ -28,12 +28,13 @@
 <app-consultation></app-consultation>
 <app-makeappointment id="apointment" ></app-makeappointment>
 <app-interventional-procedures [AnimationCard]="ServiceCard" [mobileview]="mobileview"></app-interventional-procedures>
-<app-healthy-blog [mobileview]="mobileview"></app-healthy-blog>
+<app-healthy-blog id="getHealthy" [mobileview]="mobileview"></app-healthy-blog>
 <app-contactus id="contact_us"  [mobileview]="mobileview"></app-contactus>
 <app-address [mobileview]="mobileview" ></app-address>
 
 <!--<app-footer class="footer"></app-footer>-->
 <app-header id="header" (valueClick)="getvalue($event)" ></app-header>
+<app-footer class="address-bar" [mobileview]="mobileview"></app-footer>
 </div>
 
 

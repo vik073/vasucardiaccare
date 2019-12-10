@@ -5,7 +5,6 @@
     display: flex;
     flex-direction: row;
     background-color: #D92A2A;
-    padding-right: 3%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
@@ -44,6 +43,7 @@ flex: 1;
     -webkit-box-align: center;
     line-height: 23px;
     -webkit-box-flex: 1;
+    align-items: flex-start;
     flex: 1;
     padding-top: 10%;
 
@@ -58,14 +58,17 @@ flex: 1;
         opacity: 1;
     }
 }
+.description{
+    justify-content: flex-start;
+}
 
 .ad-header{
-    flex: 0.2;
+    flex: 0.5;
 }
 .map-area{
-    margin-top: 50px;
-    @include fluid-type(width, 300px, 1920px, 300px, 600px);
-    @include fluid-type(height, 300px, 1920px, 350px, 650px);
+    
+    @include fluid-type(width, 300px, 1920px, 300px, 700px);
+    @include fluid-type(height, 300px, 1920px, 350px, 750px);
     
     //height: 100%;
     

@@ -5,6 +5,7 @@ import { FormBuilder } from '@angular/forms';
 import { DateTimeAdapter } from 'ng-pick-datetime';
 import { formatDate } from '@angular/common';
 import { ViewfinderService } from 'src/app/shared/viewfinder.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bookappointment',
@@ -45,7 +46,7 @@ export class BookappointmentComponent implements OnInit  {
     
   profileForm: FormGroup;
   mobileview: unknown;
-  constructor( private fb: FormBuilder, private service: ViewfinderService ) { 
+  constructor( private fb: FormBuilder, private service: ViewfinderService , private route: Router) { 
 
   }
 
@@ -79,6 +80,12 @@ export class BookappointmentComponent implements OnInit  {
   }
 
   getvalue(e){
+    
+    debugger
+    this.route.navigateByUrl('home')
+    // console.log(e , "clicked me")
+    // let el = document.getElementById(e);
+    //           el.scrollIntoView();
   }
 
   public setRow(_index: number) {
@@ -86,7 +93,6 @@ export class BookappointmentComponent implements OnInit  {
   }
 
   public setService(_index: number) {
-    debugger
     this.selectedIndexj = _index;
   }
 

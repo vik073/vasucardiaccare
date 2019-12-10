@@ -1,16 +1,16 @@
 <div class="background" [ngClass]="!mobileview?'container':'mobile-container'" >
     <div [ngClass]="!mobileview?'intro-content':'mobile-intro-content'">
       <div [ngClass]="!mobileview?'header':'header mobile-red-header'">Make an <br> appointment</div>
-      <div  [ngClass]="!mobileview?'black description':'mobile-description'">
+      <div  [ngClass]="!mobileview?'black description half-desc':'mobile-description'">
           Get instant access to world-class cardiac care.
           </div>
           
-          <div  [ngClass]="!mobileview?'description':'mobile-description'">
+          <div  [ngClass]="!mobileview?' red description half-desc':'mobile-description'">
               If you are having an emergency, please call 102 or our emergency unit at +91 9347 830 894 | 0877 -2272666 immediately.
               </div>
     </div>
-         <div *ngIf="!mobileview" class="div-card" >
-  <app-procedure-card class="procedure-card" *ngFor="let item of BookingArray1 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-procedure-card>
+         <div *ngIf="!mobileview" class="div-card " >
+  <app-procedure-card class="procedure-card flex" *ngFor="let item of BookingArray1 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-procedure-card>
   </div>
 
   <div *ngIf="mobileview"  class="mobile-view">

@@ -4,7 +4,7 @@
     </div>
     <div class="mobile-red-header header"  *ngIf="mobileview" >Advancing <br> the  Frontiers of <br> healthcare
     </div>
-    <div class="black description">
+    <div class="black description " [ngClass]="!mobileview?'half-desc':' '">
       With an inherent emphasis on overall clinical excellence VCC strives for utmost patient satisfaction through its modern approach to healthcare. </div>
       </div>
 <div class="div-card"  *ngIf="!mobileview">

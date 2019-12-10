@@ -1,6 +1,10 @@
 @import '../../../../../mixin.scss';
 @import '../../../../../common.scss';
 
+.main-container{
+    width: 100vw;
+    margin-top: 74px
+}
 .background{
     background-color:#F1F1F1;
     height: auto;
@@ -135,10 +139,13 @@
 .heading{
     font-family: poppins-bold;
     @include fluid-type(font-size, 700px, 1920px, 25px, 30px);
-    margin-top: 6%;
+    margin-top: 5%;
     height: 40px;
     margin-bottom: .5%;
     color: #D92A2A;
+}
+.extra-pad{
+    margin-top: 8%;
 }
 .timing-set{
      background: white;
@@ -174,6 +181,7 @@
 .date-selector{
     display: flex;
     flex-wrap: wrap;
+ 
     flex-direction: row;
     /* height: 100px; */
     flex: 0.5;
@@ -181,6 +189,7 @@
 }
 .date-picker{
     display: flex;
+    flex: 1.5;
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: hidden;
@@ -205,12 +214,13 @@
 }
 .time-panel{
     display: flex;
-    @include fluid-type(width, 300px, 1920px, 232px, 780px);
+    //@include fluid-type(width, 300px, 1920px, 232px, 280px);
+    
     flex-wrap: wrap;
     background-color: white;
     flex-direction: column;
     /* height: 100px; */
-    flex: 0.9;
+    flex: 1;
 }
 
 .input-form{
@@ -250,7 +260,6 @@
 
 .address-bar{
     width: 139%;
-    margin-left: -19.5%;
 }
 
 
@@ -278,10 +287,20 @@
     color: #FFFFFF;
     height: 50px;
 }
+.margin-left{
+    margin-left: 10%;
 
-.header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
-    @include fluid-type(width, 300px, 1920px, 232px, 580px);
+}
+
+.desktop-header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
+    @include fluid-type(width, 500px, 1920px, 232px, 680px);
     @include fluid-type(height, 300px, 1920px, 232px, 510px);
+    background: transparent;
+    position: unset;
+}
+.mobile-header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
+    // @include fluid-type(width, 500px, 1920px, 232px, 680px);
+    // @include fluid-type(height, 300px, 1920px, 232px, 510px);
     background: transparent;
     position: unset;
 }

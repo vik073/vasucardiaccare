@@ -35,6 +35,10 @@
     }
 
 }
+
+.mobile-container{
+
+}
 .ad-bar{ 
     display: flex;
     flex-direction: column;
@@ -43,10 +47,12 @@
 .content1{
     font-family: poppins-regular;
     font-size: 14px;
+    margin: 20px;
     color:  rgb(240, 240, 240);
     text-align: center;
 }
 .content{
     width: 31%;
+    margin: 20px;
     text-align: center;
 }

@@ -1,7 +1,8 @@
 <div class="main-container">
-    <app-header class="set-header"></app-header>
 
+    <app-header id="header" (valueClick)="getvalue($event)" ></app-header>
 <div class="container background" >
+    
   
   <div  id="bookapointment"  [ngClass]="!mobileview?'intro-content':'mobile-intro-content'">
     <div class="header mobile-red-header" *ngIf="mobileview">Book an <br> appointment</div>
@@ -20,15 +21,15 @@
 </div>
   </div>
 
-<div class="heading" [ngClass]="!mobileview?'':'center-header'"> SELECT DATE & TIME </div>
+<div class="heading extra-pad" [ngClass]="!mobileview?'':'center-header'"> SELECT DATE & TIME </div>
 <div class="date-picker" [ngClass]="!mobileview?'desktop-card':'mobile-card'">
   
   
-  <owl-date-time-inline [ngClass]="!mobileview?'':'center-header'" class=" header-bl, position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl" [min]="min"  
+  <owl-date-time-inline [ngClass]="!mobileview?'desktop-header-bl':'mobile-header-bl center-header'" class=" header-bl, position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl" [min]="min"  
   
   [pickerType]="'calendar'"  [(ngModel)]="dateTimeRange" ></owl-date-time-inline>
 
-  <div class="time-panel" [ngClass]="!mobileview?'':'center-header'">
+  <div class="time-panel" [ngClass]="!mobileview?'margin-left':'center-header'">
   <div class="black-header">TIME</div>
   <div class="time-selector" >
   <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>
@@ -58,8 +59,11 @@
       <div class="submit-btn"><button class="btn" [ngClass]="(profileForm.valid)?'enabled mobile-btn':'disabled mobile-btn'" type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
     </form>
   </div>
-  <app-address class="address-bar" [mobileview]="mobileview"></app-address>
+  
 </div>
+<app-address class="address-bar" [mobileview]="mobileview"></app-address>
+<app-footer class="address-bar" [mobileview]="mobileview"></app-footer>
+
 </div>
  
 
