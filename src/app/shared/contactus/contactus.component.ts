@@ -11,6 +11,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class ContactusComponent implements OnInit {
   profileForm: any;
   @Input() mobileview: any;
+  @Input() halfview : any;
 
   
   constructor( private fb: FormBuilder) { }

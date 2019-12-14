@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex: 1;
+    color: #f1f1f1;
+    flex-direction: column;
+}
+.div-1{
+    display: flex;
+    flex: 1;
+    font-family: Poppins-bold;
+    background: #D92A2A;
+    flex-direction: column;
+}
+.red{
+    color: #D92A2A;
+}
+.div-2{
+    display: flex;
+    flex: 1;
+    font-family: Poppins;
+    color: black;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.docdetails{
+    flex: 1;
+}
+.doc-image{
+    flex: 1;
+}
+.background-white{
+    background-color: #f1f1f1;
+
+}
+.background-black{
+    background-color: black;
+    color: #f1f1f1;
+
+}

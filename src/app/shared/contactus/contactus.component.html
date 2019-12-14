@@ -1,7 +1,7 @@
-<div class="container background" [ngClass]="!mobileview?'container':' mobile-container'">
+<div class="container background" [ngClass]="!halfview?'':'height-auto'" [ngClass]="!mobileview?'container':' mobile-container'">
 
-  <div class="header white " [ngClass]="!mobileview?'':'mobile-red-header'">CONTACT US :</div>
-  <div class="input-form">
+  <div   *ngIf="!halfview" class="header white " [ngClass]="!mobileview?'':'mobile-red-header'">CONTACT US :</div>
+  <div  *ngIf="!halfview" class="input-form">
       <form [formGroup]="profileForm"  (ngSubmit)="onSubmit()"> 
     
         <div class="input-data" [ngClass]="!mobileview?'':'align-center mobile-input'">

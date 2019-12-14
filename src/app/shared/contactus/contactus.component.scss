@@ -5,6 +5,9 @@
     background-color: #D92A2A;
     width: auto;
 }
+.height-auto{
+    height: auto;
+}
 .input-form{
     @include flexbox;
     @include flex-direction(column);

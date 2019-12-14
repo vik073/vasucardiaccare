@@ -5,7 +5,7 @@
     @include flex-direction(column);
     @include justify-content(space-between); 
     padding: 2% 8%;
-    @include fluid-type(height, 300px, 1920px, 100vh, 100vh);
+    // @include fluid-type(height, 300px, 1920px, 100vh, 100vh);
     //height: auto;
     //@include fluid-type(height, 300px, 1920px, 468px, 900px);
 }

@@ -11,8 +11,6 @@ import { InterventionalProceduresComponent } from './modules/Interventional Proc
 import { ProcedureCardComponent } from './modules/Interventional Procedures/components/procedure-card/procedure-card.component';
 import { HealthyBlogComponent } from './modules/blog/Components/healthy-blog/healthy-blog.component';
 import { BlogCardComponent } from './modules/blog/Components/blog-card/blog-card.component';
-import { ConsultationComponent } from './modules/consultation&test/components/consultation/consultation.component';
-import { ServicesCardComponent } from './modules/consultation&test/components/services-card/services-card.component';
 import { HeartAnimationComponent } from './modules/animations/heart-animation/heart-animation.component';
 import { MakeappointmentComponent } from './modules/Interventional Procedures/components/makeappointment/makeappointment.component';
 import { AddressComponent } from './modules/address/address/address.component';
@@ -27,6 +25,10 @@ import { TimepickerComponent } from './modules/appointmentpage/components/timepi
 import { OwlFormFieldModule, OwlInputModule } from 'owl-ng';
 import { MobilecardComponent } from './modules/Interventional Procedures/components/mobilecard/mobilecard.component';
 import { ContactusComponent } from './shared/contactus/contactus.component';
+import { BlogpageComponent } from './modules/blog/Components/blogpage/blogpage.component';
+import { BlogdetailComponent } from './modules/blog/Components/blogdetail/blogdetail.component';
+import { FAQComponent } from './modules/homepage/faq/faq.component';
+import { DoctordetailComponent } from './modules/homepage/doctordetail/doctordetail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +40,6 @@ import { ContactusComponent } from './shared/contactus/contactus.component';
     ProcedureCardComponent,
     HealthyBlogComponent,
     BlogCardComponent,
-    ConsultationComponent,
-    ServicesCardComponent,
     HeartAnimationComponent,
     MakeappointmentComponent,
     AddressComponent,
@@ -47,7 +47,11 @@ import { ContactusComponent } from './shared/contactus/contactus.component';
     BookappointmentComponent,
     TimepickerComponent,
     MobilecardComponent,
-    ContactusComponent
+    ContactusComponent,
+    BlogpageComponent,
+    BlogdetailComponent,
+    FAQComponent,
+    DoctordetailComponent
   ],
   imports: [
     BrowserModule,

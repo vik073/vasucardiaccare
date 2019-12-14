@@ -5,7 +5,7 @@
     background-color: #fbfbfb;
     display: flex;
     margin: 0.4em;
-    @include fluid-type(height, 600px, 1500px, 18em, 25em);
+    height: auto;
     margin-left: 0.4em;
     padding: 1em;
     flex: 1;
@@ -28,6 +28,7 @@
 text-align: center;
 @include fluid-type(font-size, 600px, 1500px, 1em, 1.4em);
 letter-spacing: 0;
+flex: 0.1;
 width: 100%;
 font-family: poppins-bold;
 color: #D60F1B;
@@ -38,12 +39,13 @@ opacity: 1;
     width: 100%;
     @include flexbox();
     font-family: poppins-regular;
-    text-align: center;
+    text-align: left;
+    line-height: 1.2;
     flex: 1;
-    align-items: center;
+    align-items: flex-start;
     color: #000000;
     justify-content: center;
-    @include fluid-type(font-size, 600px, 1500px, .7em, 1em);
+    @include fluid-type(font-size, 800px, 1350px, .6em, 0.9em);
 
 
 }

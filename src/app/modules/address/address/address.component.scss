@@ -59,7 +59,22 @@ flex: 1;
     }
 }
 .description{
+    display: flex;
     justify-content: flex-start;
+    font-size: 1em;
+}
+.img{
+    margin-right: 20px;
+}
+.flex-center{
+    justify-content: center;
+}
+
+
+.icons{
+    height: 20px;
+    display: flex;
+    flex-direction: row;
 }
 
 .ad-header{

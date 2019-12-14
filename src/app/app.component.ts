@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){
 
-    debugger
     this.onResize();
     this.viewfinder.getMobileStatus().subscribe( isMobile =>{
       if(isMobile){
