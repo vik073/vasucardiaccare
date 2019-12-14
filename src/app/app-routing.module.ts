@@ -5,27 +5,28 @@ import { BookappointmentComponent } from './modules/appointmentpage/components/b
 import { ContactusComponent } from './shared/contactus/contactus.component';
 import { BlogpageComponent } from './modules/blog/Components/blogpage/blogpage.component';
 import { DoctordetailComponent } from './modules/homepage/doctordetail/doctordetail.component';
+import { FAQComponent } from './modules/homepage/faq/faq.component';
 const routes: Routes = [
 
   {
     path: '',
+    component: FAQComponent,
+    pathMatch: 'full',
+  },
+  {
+
+    path: 'blog',
     component: BlogpageComponent,
     pathMatch: 'full',
   },
-  // {
-
-  //   path: 'blog',
-  //   component: BlogpageComponent,
-  //   pathMatch: '',
-  // },
   {
     path: 'home',
     component: HomeComponent,
     pathMatch: 'full',
   },
   {
-    path: 'contactus',
-    component: ContactusComponent,
+    path: 'doctor',
+    component: DoctordetailComponent,
     pathMatch: 'full',
   },
   {

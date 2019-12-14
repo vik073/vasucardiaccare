@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewfinderService } from 'src/app/shared/viewfinder.service';
 
 @Component({
   selector: 'app-faq',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FAQComponent implements OnInit {
 
-  constructor() { }
+  halfview:any = true;
+  mobileview;
+  constructor( private service: ViewfinderService) { }
 
   ngOnInit() {
+    this.service.checkWidth()
+    this.service.isMobile.subscribe( x =>{
+
+      this.mobileview = x;
+    });
   }
+
 
 }

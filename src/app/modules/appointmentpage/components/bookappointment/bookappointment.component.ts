@@ -67,11 +67,7 @@ export class BookappointmentComponent implements OnInit  {
       age: ['' , Validators.required],
     });
   }
-  // ngOnChanges(){
-  //   this.timeArray = [
-      
-  //      ];
-  // }
+
 
   onSubmit(){
 
@@ -79,14 +75,14 @@ export class BookappointmentComponent implements OnInit  {
     var t = this.dateTimeRange;
   }
 
-  getvalue(e){
+  // getvalue(e){
     
-    debugger
-    this.route.navigateByUrl('home')
-    // console.log(e , "clicked me")
-    // let el = document.getElementById(e);
-    //           el.scrollIntoView();
-  }
+  //   debugger
+  //   this.route.navigateByUrl('home')
+  //   // console.log(e , "clicked me")
+  //   // let el = document.getElementById(e);
+  //   //           el.scrollIntoView();
+  // }
 
   public setRow(_index: number) {
     this.selectedIndex = _index;

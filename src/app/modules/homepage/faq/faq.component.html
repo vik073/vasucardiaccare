@@ -1,6 +1,6 @@
 <div class="container">
   <div class="head-image">
-  <h1 class="h1">Lorem ipsum dolor sit <br> amet no sea consetetur</h1>
+  <h1 class="h1" style="font-size: 3em; color: #ffffff;">Lorem ipsum dolor sit <br> amet no sea consetetur</h1>
     <img class="img" src="../../../../../assets/images/Eat Well.jpg">
   </div>
   <div class="desc">
@@ -24,4 +24,8 @@
       invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et<br>
        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
       </div>
+      <app-contactus id="contact_us"  [mobileview]="mobileview" [halfview] ="halfview"></app-contactus>
+<app-address [mobileview]="mobileview" ></app-address>
+<app-header id="header" (valueClick)="getvalue($event)" ></app-header>
+<app-footer class="address-bar" [mobileview]="true"></app-footer>
 </div>

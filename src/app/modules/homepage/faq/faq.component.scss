@@ -1,15 +1,24 @@
 .container{
     font-family: Poppins;
     display: flex;
-    width: 100vw;
-    padding: 0% 10%;
+    padding-top: 7em;
+    background: #D92A2A;
     height: 100vh;
     flex-direction: column;
 }
 .h1{
-    color: red;
+    color: #D92A2A;
+    
 }
 .head-image{
     display: flex;
+    padding: 0 8%;
+    
+    background: #D92A2A;
+    justify-content: space-between;
     flex-direction: row;
+}
+.desc{
+    padding: 0 8%;
+    background: white;
 }
