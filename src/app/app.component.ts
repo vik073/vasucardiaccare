@@ -33,8 +33,6 @@ export class AppComponent implements OnInit {
   // }
 
   onResize() {
-    console.log('hello')
-    debugger
     this.viewfinder.checkWidth();
     var width = window.innerWidth;
       if (width <= 900) {

@@ -188,11 +188,11 @@
             background-color: #F1F1F1;
             border-radius: 50px;
             border: none;
-            @include fluid-type(font-size, 400px, 1920px, 1.5em, 2.5em);
+            @include fluid-type(font-size, 400px, 1920px, 1.2em, 2em);
             width: auto;
             padding-left: 1em;
             padding-right: 1em;
-            @include fluid-type(height, 400px, 1920px, 2em, 2.2em);
+            @include fluid-type(height, 400px, 1920px, 1.8em, 2em);
             // @include fluid-type(width, 400px, 1920px, 6em, 14em);
             color: #D92A2A;
     

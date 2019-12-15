@@ -11,7 +11,7 @@ export class BlogpageComponent implements OnInit {
 
   showData: string;
   halfview:any = true;
-  mobileview;
+  mobileview: any;
   constructor( private service: ViewfinderService , private router: Router) { }
 
   ngOnInit() {

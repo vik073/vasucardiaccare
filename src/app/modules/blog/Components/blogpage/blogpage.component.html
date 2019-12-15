@@ -6,7 +6,7 @@
       <div class="header">
           <h1 style="font-family: poppins-bold;">Get Healthy</h1>
             </div>
-  <div class="card-2 white">
+  <div class="card-2 white" [ngClass]="!mobileview?'desktop-row':'mobile-card-2'">
     <div class="card-2-1" style="padding: 0% 8%;">
       <h1 class="bold"  style="font-size: 4em;">Prevention  <br>is key</h1>
       <h4 style="margin: 0;">Learn more about how to live<br> a healthier lifestyle. You’ll find help here.</h4>
@@ -19,7 +19,7 @@
       </div>
 
   </div>
-  <div class="card-1 padding-bar-d">
+  <div class="card-1 padding-bar-d" [ngClass]="!mobileview?'':'align-center'">
       <h1 class="bold"  style="font-size: 4em;
       line-height: 1.4;" >Make healthy <br>lifestyle choices.</h1>
       <h4 style="padding-bottom: 10%;">Many risk factors for heart disease and stroke are in your power to control.<br> Explore our heart-healthy tips on diet, exercise, stress and more.</h4>
@@ -386,18 +386,18 @@
               </div>
   </div>
   <div class="blog-maps">
-      <span class="card-2 pad"><div class="card-2-12">
+      <span class="card-2 pad" [ngClass]="!mobileview?'desktop-row':'mobile-card-2'"><div class="card-2-12">
           <img style="width: 90%" src="../../../../../assets/images/Eat Well.jpg">
   
       </div>
-      <div class="card-2-1 spacer"> 
+      <div class="card-2-1 spacer" [ngClass]="!mobileview?'':'align-center'"> 
           <h3 class="card-header">EAT WELL</h3>
           <p>Learn how heart-healthy choices can help <br>lower your risk of heart disease and stroke<br> whether eating at home or dining out.</p>
           <h4 (click)= "changecontent('eatwell')">Read More ></h4>
           </div></span>
 
-          <span class="card-2 pad">
-          <div class="card-2-1 spacer"> 
+          <span class="card-2 pad" [ngClass]="!mobileview?'desktop-row':'mobile-card-2-rev'">
+          <div class="card-2-1 spacer" [ngClass]="!mobileview?'':'align-center'"> 
               <h3 class="card-header">GET MOVING</h3>
           <p>Learn the benefits of healthy activity, and <br> get tips on adding more exercise into<br>
              your daily routine.</p>
@@ -410,19 +410,19 @@
               </div>
             </span>
 
-              <span class="card-2 pad"><div class="card-2-12">
+              <span class="card-2 pad" [ngClass]="!mobileview?'desktop-row':'mobile-card-2'"><div class="card-2-12">
                   <img  style="width: 90%" src="../../../../../assets/images/Maintain weight.jpg">
                  
           
               </div>
-              <div class="card-2-1 spacer"> 
+              <div class="card-2-1 spacer" [ngClass]="!mobileview?'':'align-center'"> 
                   <h3 class="card-header">MAINTAIN HEALTY WEIGHT</h3>
           <p>Learn the basic principles of a healthy <br>weight and waistline — and why it matters.</p>
           <h4 (click)= "changecontent('healthyweight')">Read More ></h4>
                   </div></span>
 
-                  <span class="card-2 pad">
-                      <div class="card-2-1 spacer"> 
+                  <span class="card-2 pad" [ngClass]="!mobileview?'desktop-row':'mobile-card-2-rev'">
+                      <div class="card-2-1 spacer" [ngClass]="!mobileview?'':'align-center'"> 
                           <h3 class="card-header">GET MOVING</h3>
                       <p>Learn the benefits of healthy activity, and <br> get tips on adding more exercise into<br>
                          your daily routine.</p>

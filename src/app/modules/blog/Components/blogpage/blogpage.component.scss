@@ -68,6 +68,9 @@
     .white{
         background: white;
     }
+    .align-center{
+        text-align: center;
+    }
     .full-card{
         flex: 2;
         display: flex;
@@ -76,8 +79,6 @@
             display: flex;
             flex: 1;
             margin-bottom: 30px;
-            flex-wrap: wrap;
-            flex-direction: row;
             .card-2-1{
                 display: flex;
                 flex-direction: column;
@@ -132,6 +133,15 @@
 .small-head{
     font-size: 2em;
     margin:0;
+}
+.mobile-card-2{
+    flex-direction: column;
+}
+.mobile-card-2-rev{
+    flex-direction: column-reverse;
+}
+.desktop-row{
+    flex-direction: row;
 }
 
 // #contact_us{

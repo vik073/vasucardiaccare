@@ -171,7 +171,7 @@
     background: black;
     color: white;
     font-size: 18px;
-    height: 40px;
+    height: 57px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -288,6 +288,7 @@
 .header-bl::ng-deep.owl-dt-calendar-control{
     background: black;
     color: #FFFFFF;
+    padding: 29px;
     height: 50px;
 }
 .margin-left{
@@ -304,8 +305,18 @@
 .mobile-header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
     // @include fluid-type(width, 500px, 1920px, 232px, 680px);
     // @include fluid-type(height, 300px, 1920px, 232px, 510px);
+    width: 350px;
+    pointer-events: auto;
+    box-shadow: none;
+    background: white;
+    padding-bottom: 32px;
+    margin-bottom: 3%;
     background: transparent;
     position: unset;
+}
+.header-bl::ng-deep.owl-dt-calendar-table .owl-dt-calendar-cell-content{
+    font-family: poppins;
+    font-size: 1em;
 }
 .header-bl::ng-deep.owl-dt-inline-container{
     display: block;
