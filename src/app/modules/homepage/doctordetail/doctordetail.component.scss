@@ -1,22 +1,41 @@
-.container{
+@import '../../../../mixin.scss';
+@import '../../../../common.scss';
+
+.container-d{
     display: flex;
     flex: 1;
     color: #f1f1f1;
+    overflow-y: hidden;
     flex-direction: column;
+}
+.img{
+
 }
 .div-1{
     display: flex;
     flex: 1;
+    padding: 8% 12%;
     font-family: Poppins-bold;
     background: #D92A2A;
     flex-direction: column;
 }
+
+
+h1{
+    font-family: poppins-bold;
+    font-size: 2.8em;
+}
 .red{
     color: #D92A2A;
+}
+.bold{
+    font-family: poppins-bold;
 }
 .div-2{
     display: flex;
     flex: 1;
+    background-color: #ffffff;
+        padding-left:  12%;
     font-family: Poppins;
     color: black;
     justify-content: space-evenly;
@@ -25,11 +44,15 @@
 .docdetails{
     flex: 1;
 }
+.img{
+    width: 100%;
+margin-bottom: -8px;
+}
 .doc-image{
     flex: 1;
 }
 .background-white{
-    background-color: #f1f1f1;
+    background-color: #ffffff;
 
 }
 .background-black{

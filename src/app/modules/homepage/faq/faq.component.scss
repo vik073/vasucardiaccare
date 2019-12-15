@@ -7,6 +7,7 @@
     flex-direction: column;
 }
 .h1{
+    font-size: 2.3em;
     color: #D92A2A;
     
 }
@@ -21,4 +22,12 @@
 .desc{
     padding: 0 8%;
     background: white;
+}
+hr{
+    height: 1px;
+    background: black;
+}
+p{
+    font-size: 1.3em;
+    font-family: poppins-regular;
 }

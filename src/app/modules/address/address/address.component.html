@@ -1,4 +1,4 @@
-<div  >
+<div  [ngClass]="!mobileview?'main-container':'col-d'">
   <div class=" padder" [ngClass]="!mobileview?'container':'col-d'" >
   
   <div class="content" [ngClass]="!mobileview?'':'full-width'">
@@ -51,5 +51,5 @@
   </div>
   
 </div>
-<!-- <app-footer class="footer"></app-footer> -->
+<app-footer class="footer"></app-footer>
 </div>

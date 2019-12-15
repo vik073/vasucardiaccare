@@ -14,6 +14,11 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'faq',
+    component: FAQComponent,
+    pathMatch: 'full',
+  },
+  {
 
     path: 'blog',
     component: BlogpageComponent,

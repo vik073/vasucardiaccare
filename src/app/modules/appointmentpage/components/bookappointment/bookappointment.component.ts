@@ -51,9 +51,10 @@ export class BookappointmentComponent implements OnInit  {
   }
 
   ngOnInit() {
+    // let el = document.getElementById('bookapointment');
+    // el.scrollIntoView();
     this.service.checkWidth()
     this.service.isMobile.subscribe( x =>{
-
       this.mobileview = x;
     });
 

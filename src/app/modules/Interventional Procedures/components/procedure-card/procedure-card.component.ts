@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-procedure-card',
@@ -10,7 +11,7 @@ export class ProcedureCardComponent implements OnInit {
   @Input() cardData: any;
   @Input() LoadAnimationCard: any;
   img: any;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
     this.img = this.cardData.img;
@@ -18,6 +19,8 @@ export class ProcedureCardComponent implements OnInit {
 
   creadtedb( obj){
     console.log(obj)
+    this.router.navigateByUrl['bookappointment'];
+
   }
 
 }

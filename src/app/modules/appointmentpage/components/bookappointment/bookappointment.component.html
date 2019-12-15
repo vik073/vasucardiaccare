@@ -1,9 +1,12 @@
-<div class="main-container">
+<div id="main-container" class="main-container">
 
-    <app-header id="header" (valueClick)="getvalue($event)" ></app-header>
+<app-header id="header" (valueClick)="getvalue($event)" ></app-header>
 <div class="container background" >
     
-  
+  <br>
+  <br>
+  <br>
+  <br>
   <div  id="bookapointment"  [ngClass]="!mobileview?'intro-content':'mobile-intro-content'">
     <div class="header mobile-red-header" *ngIf="mobileview">Book an <br> appointment</div>
     <div class="header" *ngIf="!mobileview" >Book an  appointment</div>
@@ -25,7 +28,7 @@
 <div class="date-picker" [ngClass]="!mobileview?'desktop-card':'mobile-card'">
   
   
-  <owl-date-time-inline [ngClass]="!mobileview?'desktop-header-bl':'mobile-header-bl center-header'" class=" header-bl, position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl" [min]="min"  
+  <owl-date-time-inline  [hideOtherMonths] = "true" [ngClass]="!mobileview?'desktop-header-bl':'mobile-header-bl center-header'" class=" header-bl, position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl" [min]="min"  
   
   [pickerType]="'calendar'"  [(ngModel)]="dateTimeRange" ></owl-date-time-inline>
 
@@ -62,7 +65,6 @@
   
 </div>
 <app-address class="address-bar" [mobileview]="mobileview"></app-address>
-<app-footer class="address-bar" [mobileview]="mobileview"></app-footer>
 
 </div>
  

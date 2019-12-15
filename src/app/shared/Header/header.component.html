@@ -1,13 +1,13 @@
 <div class="container">
-  <div class="logo" (click)="getValue('home')">
+  <div class="logo" routerLink="/home">
     <img src="../../../assets/images/Group 6 (1).svg" >
   </div>
     <div class="right-bar">
-      <div class="nav-option" (click)="getValue('apointment')" >Appointment</div>
+      <div class="nav-option" routerLink="/bookappointment" >Appointment</div>
       <div class="nav-option" (click)="getValue('services')"> Services</div>
-      <div class="nav-option" (click)="getValue('about')">About</div>
-      <div class="nav-option"(click)="getValue('getHealthy')" >Get Healthy</div>
-      <!-- <div class="nav-option" (click)="getValue(timeArray)">FAQ</div> -->
+      <div class="nav-option" routerLink="/doctor">About</div>
+      <div class="nav-option" routerLink="/blog" >Get Healthy</div>
+      <div class="nav-option" routerLink="/faq">FAQ</div>
       <div class="nav-option" (click)="getValue('contact_us')">Contact Us</div>
     </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewfinderService } from 'src/app/shared/viewfinder.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blogpage',
@@ -11,7 +12,7 @@ export class BlogpageComponent implements OnInit {
   showData: string;
   halfview:any = true;
   mobileview;
-  constructor( private service: ViewfinderService) { }
+  constructor( private service: ViewfinderService , private router: Router) { }
 
   ngOnInit() {
     this.showData = "mainpage";
@@ -26,6 +27,11 @@ export class BlogpageComponent implements OnInit {
     debugger
     this.showData = data;
 
+  }
+  getvalue(event){
+    if(event == 'gethealthy'){
+      this.router.navigateByUrl['blog'];
+    }
   }
 
 }

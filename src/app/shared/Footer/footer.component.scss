@@ -9,7 +9,7 @@
     -webkit-box-pack: justify;
     justify-content: space-between;
     background-color: #D92A2A;
-    @include fluid-type(height, 400px, 1920px, 200px,78px);
+   // @include fluid-type(height, 400px, 1920px, 200px,78px);
     z-index: 1000;
     opacity: 1;
 
@@ -55,4 +55,9 @@
     width: 31%;
     margin: 20px;
     text-align: center;
+}
+p{
+    color: #FFFFFF;
+    text-align: center;
+    font-family: poppins;
 }

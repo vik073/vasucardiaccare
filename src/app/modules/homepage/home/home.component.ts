@@ -40,7 +40,6 @@ ngOnInit(){
     
 }
 getvalue(e){
-  console.log(e , "clicked me")
   let el = document.getElementById(e);
             el.scrollIntoView();
 }

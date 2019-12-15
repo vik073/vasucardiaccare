@@ -3,8 +3,11 @@
 
 .main-container{
     width: 100vw;
-    margin-top: 74px
+    height: 100vh;
 }
+// #header{
+//     position: fixed;
+// }
 .background{
     background-color:#F1F1F1;
     height: auto;
@@ -214,6 +217,7 @@
 }
 .time-panel{
     display: flex;
+    max-width: 680px;
     //@include fluid-type(width, 300px, 1920px, 232px, 280px);
     
     flex-wrap: wrap;
@@ -293,8 +297,8 @@
 }
 
 .desktop-header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
-    @include fluid-type(width, 500px, 1920px, 232px, 680px);
-    @include fluid-type(height, 300px, 1920px, 232px, 510px);
+    @include fluid-type(width, 700px, 1920px, 340px, 680px);
+    @include fluid-type(height, 700px, 1920px, 360px, 570px);
     background: transparent;
     position: unset;
 }
