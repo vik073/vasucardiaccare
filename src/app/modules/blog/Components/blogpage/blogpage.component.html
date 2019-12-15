@@ -1,4 +1,4 @@
-<div class="container">
+<div id="containe" class="container">
 
   <div class="full-card">
 
@@ -401,6 +401,7 @@
               <h3 class="card-header">GET MOVING</h3>
           <p>Learn the benefits of healthy activity, and <br> get tips on adding more exercise into<br>
              your daily routine.</p>
+             
           <h4 class="read-more" (click)= "changecontent('physicalactivity')">Read More ></h4>
               </div>
               <div class="card-2-12">
@@ -437,7 +438,7 @@
       
 </div>
 <div class="foot-card">
-    <app-header id="header" (valueClick)="getvalue($event)" ></app-header>
+    <!-- <app-header id="header" (valueClick)="getvalue($event)" ></app-header> -->
     <app-contactus id="contact_us"  [mobileview]="mobileview" [halfview] ="halfview"></app-contactus>
     <app-address id="address" [mobileview]="mobileview" ></app-address>
 </div>

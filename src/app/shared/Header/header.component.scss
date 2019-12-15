@@ -54,9 +54,11 @@
 
         .nav-option{
 
-                @include fluid-type(font-size, 200px, 1920px, 7px,28px);
+          transition: all .4s ease-in-out; 
+            outline: none;
+            @include fluid-type(font-size, 200px, 1920px, 7px,28px);
 
-text-decoration: none;
+            text-decoration: none;
             font-family: Helvetica;
             letter-spacing: 0;
             font-weight: 100;
@@ -65,4 +67,8 @@ text-decoration: none;
         }
     }
 
+    .nav-option:hover{
+            
+      transform: scale(1.3);
+  }
 }

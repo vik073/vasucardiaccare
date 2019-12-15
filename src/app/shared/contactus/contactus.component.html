@@ -29,7 +29,7 @@
 
   </div>
   <div class="submit-btn"  [ngClass]="!mobileview?'':'align-center'">
-      <button class="mobile-btn-red" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Book Appointment</button>
+      <button class="mobile-btn-red"  routerLink="/bookappointment" >Book Appointment</button>
   </div>
   <hr class="line">
 </div>
