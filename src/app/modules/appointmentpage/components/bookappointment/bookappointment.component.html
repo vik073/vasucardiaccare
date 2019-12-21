@@ -19,7 +19,7 @@
       <div [ngClass]="!mobileview?'service-list':'mobile-service-list full-width'" >
   <div class="heading" > SELECT SERVICE </div>
   <div   [ngClass]="!mobileview?'Service-cards':'mobile-card full-width' " > 
-    <div  [ngClass]="!mobileview?'Service-card':'mobile-Service-card full-width' " *ngFor= " let item of serviceArray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': selectedIndexj === j}">{{item}}</div>
+    <div   *ngFor= " let item of serviceArray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': selectedIndexj === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</div>
   </div>
 </div>
   </div>
@@ -101,10 +101,14 @@
 
          
       <div class="submit-btn">
-        <button class="btn" [ngClass]="(contactForm.valid)?'enabled mobile-btn':'disabled mobile-btn'"  type="submit" >Confirm</button></div>
-        <div style="font-family: poppins-regular;" *ngIf="">
-            Age is not valid .
-        </div>
+        <div style="text-align: center;">
+        <button class="btn" [ngClass]="(contactForm.valid)?'enabled mobile-btn':'disabled mobile-btn'" [disabled]="!contactForm.valid" type="submit" >Confirm</button>
+        <p style="font-family: poppins-regular;" *ngIf="valid">
+           please select all the fields
+      </p>
+    </div>
+      </div>
+        
     </form>
   </div>
   
