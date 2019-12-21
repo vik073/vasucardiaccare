@@ -49,17 +49,62 @@
     <input  [(ngModel)]="mobileNumber" id="mobileNumber" name="mobileNumber" placeholder="Phone Number">
     <input  [(ngModel)]="age" id="age" name="age" placeholder="Age"> -->
 
-    <form [formGroup]="profileForm" class="profile-form" (ngSubmit)="onSubmit()"> 
+    <form [formGroup]="contactForm" class="profile-form" (ngSubmit)="onSubmit()"> 
   
       
-          <input class="text-box txt " type="text" formControlName="fullName" placeholder="Full Name" required>
-          
+        <div class="text-div">
+            <input class="text-box" type="text" formControlName="fullName" placeholder="Full Name" required>
+            <div 
+                 class="alert alert-danger">
+
+                 <div style="font-family: poppins-regular;" *ngIf=" f.fullName.invalid && f.fullName.errors.required && (f.fullName.dirty || f.fullName.touched)">
+                    Name is required.
+                </div>
+                </div>
+            </div>
+            <div class="text-div">
+                <input class="text-box" type="text" formControlName="mobileNumber" placeholder="phone number" required>
+                <div 
+                class="alert alert-danger">
         
-          <input  class="text-box" type="text" formControlName="mobileNumber" placeholder="Phone Number" required>
+                <div style="font-family: poppins-regular;" *ngIf=" f.mobileNumber.invalid && f.mobileNumber.errors.required && (f.mobileNumber.dirty || f.mobileNumber.touched)">
+                   phone number is required.
+               </div>
+               <br>
+               <div style="font-family: poppins-regular;" *ngIf=" f.mobileNumber.invalid && f.mobileNumber.errors.pattern && (f.mobileNumber.dirty || f.mobileNumber.touched)">
+                   Enter valid 10 digit phone number 
+               </div>
+               <br>
+               <div style="font-family: poppins-regular;" *ngIf=" f.mobileNumber.invalid && f.mobileNumber.errors.maxlength && (f.mobileNumber.dirty || f.mobileNumber.touched)">
+                   phone number is not valid .
+               </div>
+                    </div>
+                </div>
+                <div class="text-div">
+                    <input class="text-box" type="text" formControlName="age" placeholder="Age" required>
+                    <div 
+                         class="alert alert-danger">
         
-            <input  class="text-box" type="text" formControlName="age" placeholder="Age" required>
+                         <div style="font-family: poppins-regular;" *ngIf=" f.age.invalid && f.age.errors.required && (f.age.dirty || f.age.touched)">
+                            Age is required.
+                        </div>
+                        <br>
+                        <div style="font-family: poppins-regular;" *ngIf=" f.age.invalid && f.age.errors.pattern && (f.age.dirty || f.age.touched)">
+                            Enter valid age in number
+                        </div>
+                        <br>
+                        <div style="font-family: poppins-regular;" *ngIf=" f.age.invalid && f.age.errors.maxlength && (f.age.dirty || f.age.touched)">
+                            Age is not valid .
+                        </div>
+                        </div>
+                    </div>
+
          
-      <div class="submit-btn"><button class="btn" [ngClass]="(profileForm.valid)?'enabled mobile-btn':'disabled mobile-btn'" type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
+      <div class="submit-btn">
+        <button class="btn" [ngClass]="(contactForm.valid)?'enabled mobile-btn':'disabled mobile-btn'"  type="submit" >Confirm</button></div>
+        <div style="font-family: poppins-regular;" *ngIf="">
+            Age is not valid .
+        </div>
     </form>
   </div>
   

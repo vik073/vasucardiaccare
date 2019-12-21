@@ -1,23 +1,58 @@
 <div class="container background" [ngClass]="!halfview?'':'height-auto'" [ngClass]="!mobileview?'container':' mobile-container'">
 
-  <div   *ngIf="!halfview" class="header white " [ngClass]="!mobileview?'':'mobile-red-header'">CONTACT US :</div>
+  <div   *ngIf="!halfview" class="header white " [ngClass]="!mobileview?'':' align-t-center align-center mobile-red-header'">CONTACT US :</div>
   <div  *ngIf="!halfview" class="input-form">
       <form [formGroup]="profileForm"  (ngSubmit)="onSubmit()"> 
     
-        <div class="input-data" [ngClass]="!mobileview?'':'align-center mobile-input'">
-            <input class="text-box" type="text" formControlName="fullName" placeholder="Full Name" required>
+        <div class="input-data" [ngClass]="!mobileview?'':'align-center  mobile-input'">
+           
+            <div class="text-div">
+                <input class="text-box" type="text" formControlName="fullName" placeholder="Full Name" required>
+                <div 
+                     class="alert alert-danger">
+    
+                     <div style="font-family: poppins-regular;" *ngIf=" f.fullName.invalid && f.fullName.errors.required && (f.fullName.dirty || f.fullName.touched)">
+                        Mobile is required.
+                    </div>
+                    </div>
+                </div>
+                <div class="text-div">
+                    <input class="text-box" type="text" formControlName="mobileNumber" placeholder="phone number" required>
+                    <div 
+                    class="alert alert-danger">
             
-          
-            <input  class="text-box" type="text" formControlName="mobileNumber" placeholder="Phone Number" required>
-          
-           <input  class="text-box" type="text" formControlName="age" placeholder="Age" required>
-              <!-- <div class="submit-btn"><button class="btn " type="submit" [disabled]="!profileForm.valid">Confirm</button></div>
-  
-         -->
-         
-
-        <!-- <button type="submit" [disabled]="!profileForm.valid">Submit</button> -->
+                    <div style="font-family: poppins-regular;" *ngIf=" f.mobileNumber.invalid && f.mobileNumber.errors.required && (f.mobileNumber.dirty || f.mobileNumber.touched)">
+                       phone number is required.
+                   </div>
+                   <br>
+                   <div style="font-family: poppins-regular;" *ngIf=" f.mobileNumber.invalid && f.mobileNumber.errors.pattern && (f.mobileNumber.dirty || f.mobileNumber.touched)">
+                       Enter valid 10 digit phone number 
+                   </div>
+                   <br>
+                   <div style="font-family: poppins-regular;" *ngIf=" f.mobileNumber.invalid && f.mobileNumber.errors.maxlength && (f.mobileNumber.dirty || f.mobileNumber.touched)">
+                       phone number is not valid .
+                   </div>
+                        </div>
+                    </div>
+                    <div class="text-div">
+                        <input class="text-box" type="text" formControlName="age" placeholder="Age" required>
+                        <div 
+                             class="alert alert-danger">
+            
+                             <div style="font-family: poppins-regular;" *ngIf=" f.age.invalid && f.age.errors.required && (f.age.dirty || f.age.touched)">
+                                Age is required.
+                            </div>
+                            <br>
+                            <div style="font-family: poppins-regular;" *ngIf=" f.age.invalid && f.age.errors.pattern && (f.age.dirty || f.age.touched)">
+                                Enter valid age in number
+                            </div>
+                            <br>
+                            <div style="font-family: poppins-regular;" *ngIf=" f.age.invalid && f.age.errors.maxlength && (f.age.dirty || f.age.touched)">
+                                Age is not valid .
+                            </div>
+                            </div>
       </div>
+        </div>
       <div class="submit-btn" [ngClass]="!mobileview?'':'align-center'">
         <button class="mobile-btn-red" [ngClass]="(profileForm.valid)?'enabled':'disabled'" type="submit" [disabled]="!profileForm.valid">Confirm</button>
     </div>

@@ -9,6 +9,10 @@
     //height: auto;
     //@include fluid-type(height, 300px, 1920px, 468px, 900px);
 }
+.disabled{
+    cursor: no-drop;
+    background: grey;
+}
 
 .mobile-container{
     @include flexbox;

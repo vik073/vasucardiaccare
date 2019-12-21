@@ -29,6 +29,12 @@ import { BlogpageComponent } from './modules/blog/Components/blogpage/blogpage.c
 import { BlogdetailComponent } from './modules/blog/Components/blogdetail/blogdetail.component';
 import { FAQComponent } from './modules/homepage/faq/faq.component';
 import { DoctordetailComponent } from './modules/homepage/doctordetail/doctordetail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DialogComponent } from './modules/appointmentpage/dialog/dialog.component';
+import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from '@angular/material/dialog';
+import {MatFormFieldModule , MatButtonModule} from '@angular/material'
+import {MatInputModule} from '@angular/material/input'
+import { MatRippleModule } from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,13 +57,23 @@ import { DoctordetailComponent } from './modules/homepage/doctordetail/doctordet
     BlogpageComponent,
     BlogdetailComponent,
     FAQComponent,
-    DoctordetailComponent
+    DoctordetailComponent,
+    DialogComponent,
+  ],
+  entryComponents: [
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     SharedModule,
     OwlDateTimeModule,
+    HttpClientModule,
     FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule,
+    MatDialogModule,
     ReactiveFormsModule,
     OwlFormFieldModule, OwlInputModule,
     BrowserAnimationsModule,
@@ -69,7 +85,9 @@ import { DoctordetailComponent } from './modules/homepage/doctordetail/doctordet
       apiKey: 'AIzaSyC2Niewwi7sSyD6F9oEziR9Hm-vOwb0z4g'
     })
   ],
-  providers: [],
+  // providers: [
+  //   {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
+  // ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,7 +16,6 @@ export class TimepickerComponent implements OnInit {
 
   getValue(data){
     this.valueClick.emit(data)
-    debugger
   }
 
 }

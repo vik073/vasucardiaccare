@@ -16,6 +16,5 @@ export class HeaderComponent implements OnInit {
 
   getValue(data){
     this.valueClick.emit(data)
-    debugger
   }
 }

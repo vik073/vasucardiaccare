@@ -18,7 +18,6 @@ export class AppComponent implements OnInit {
     this.onResize();
     this.viewfinder.getMobileStatus().subscribe( isMobile =>{
       if(isMobile){
-        debugger
         console.log('Mobile device detected')
       }
       else{

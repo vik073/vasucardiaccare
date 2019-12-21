@@ -45,7 +45,6 @@ getvalue(e){
 }
 
      hello(e){
-        debugger
         
             let el = document.getElementById('hell');
             el.scrollIntoView();

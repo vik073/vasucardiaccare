@@ -24,7 +24,6 @@ export class BlogpageComponent implements OnInit {
   }
 
   changecontent(data){
-    debugger
     let el = document.getElementById('containe');
     el.scrollIntoView();
     this.showData = data;
