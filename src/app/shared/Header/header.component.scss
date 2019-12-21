@@ -98,6 +98,7 @@
 
     .logo{
         display: flex;
+        outline: none;
         transition: all .8s ease-in-out; 
         @include fluid-type(height, 200px, 1920px, 40px,78px);
         justify-content: center;
