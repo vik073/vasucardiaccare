@@ -14,7 +14,7 @@
 <div *ngIf ="mobileview" id = "header-c" class="container-mobile">
   <div class="logo-m" >
     
-    <img src="../../../assets/images/Group 6 (1).svg" routerLink="/home" >
+    <img style="outline: none;" src="../../../assets/images/Group 6 (1).svg"  (click) = "closenav()" routerLink="/home" >
     <img *ngIf ="show" src="../../../assets/Group 413.svg" (click) = "closenav()" >
     <img *ngIf ="!show" src="../../../assets/Group 4416.svg" (click) = "shownav()" >
  

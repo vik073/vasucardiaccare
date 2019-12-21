@@ -18,11 +18,11 @@ const routes: Routes = [
     component: HomeComponent,
     pathMatch: 'full',
   },
-  {
-    path: 'FAQ',
-    component: FAQComponent,
-    pathMatch: 'full',
-  },
+  // {
+  //   path: 'FAQ',
+  //   component: FAQComponent,
+  //   pathMatch: 'full',
+  // },
   {
 
     path: 'GetHealthy',
@@ -34,16 +34,16 @@ const routes: Routes = [
     component: HomeComponent,
     pathMatch: 'full',
   },
-  {
-    path: 'About',
-    component: DoctordetailComponent,
-    pathMatch: 'full',
-  },
-  {
-    path: 'ContactUs',
-    component: DoctordetailComponent,
-    pathMatch: 'full',
-  },
+  // {
+  //   path: 'About',
+  //   component: DoctordetailComponent,
+  //   pathMatch: 'full',
+  // },
+  // {
+  //   path: 'ContactUs',
+  //   component: DoctordetailComponent,
+  //   pathMatch: 'full',
+  // },
   {
     path: 'Appointment',
     component: BookappointmentComponent,

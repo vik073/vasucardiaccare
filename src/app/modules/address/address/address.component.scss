@@ -59,7 +59,7 @@ flex: 1;
 .description{
     display: flex;
     justify-content: flex-start;
-    font-size: 1.4em;
+    @include fluid-type(font-size, 700px, 1920px, 1em, 1.5em);
 }
 .img{
     margin-right: 20px;

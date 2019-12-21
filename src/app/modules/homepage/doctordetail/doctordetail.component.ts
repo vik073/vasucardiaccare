@@ -17,7 +17,7 @@ export class DoctordetailComponent implements OnInit {
   ngOnInit() {
     this.service.isMobile.subscribe( x =>{
 
-      this.mobileview = !x;
+      this.mobileview = x;
     });
     
   }

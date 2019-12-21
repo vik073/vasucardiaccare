@@ -46,6 +46,7 @@
     @include flexbox;
     align-items: center;
     text-align: center;
+    line-height: 1.5;
     @include flex-direction(column);
     @include justify-content(space-evenly);
     @include flex(0.8);
@@ -131,7 +132,7 @@
             margin-top: 10px;
             line-height: 1.4;
             font-size: 1.1em;
-            @include fluid-type(font-size, 600px, 1400px, 1.3em, 1.8em);
+            @include fluid-type(font-size, 600px, 1400px, 1em, 1.8em);
             margin-bottom: 1em;  
             letter-spacing: 0;
             opacity: 1;

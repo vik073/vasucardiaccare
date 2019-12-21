@@ -17,10 +17,6 @@ export class ProcedureCardComponent implements OnInit {
     this.img = this.cardData.img;
   }
 
-  creadtedb( obj){
-    console.log(obj)
-    this.router.navigateByUrl['bookappointment'];
-
-  }
+  
 
 }

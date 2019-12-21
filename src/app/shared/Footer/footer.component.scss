@@ -2,6 +2,7 @@
 @import '../../../common.scss';
 
   .container{
+      outline: none;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -18,6 +19,7 @@
     }
     .mob{
         font-family: poppins;
+        outline: none;
             letter-spacing: 0;
             font-weight: 100;
             color: #FFFFFF;
@@ -45,6 +47,7 @@
 
                 @include fluid-type(font-size, 200px, 1920px, 7px,28px);
 
+                outline: none;
 
             font-family: poppins;
             letter-spacing: 0;
