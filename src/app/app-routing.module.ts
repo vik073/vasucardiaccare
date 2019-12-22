@@ -10,18 +10,7 @@ const routes: Routes = [
 
   {
     path: '',
-    component: FAQComponent,
-    pathMatch: 'full',
-  },
-  {
-    path: 'faq',
-    component: FAQComponent,
-    pathMatch: 'full',
-  },
-  {
-
-    path: 'blog',
-    component: BlogpageComponent,
+    component: HomeComponent,
     pathMatch: 'full',
   },
   {
@@ -29,13 +18,34 @@ const routes: Routes = [
     component: HomeComponent,
     pathMatch: 'full',
   },
+  // {
+  //   path: 'FAQ',
+  //   component: FAQComponent,
+  //   pathMatch: 'full',
+  // },
   {
-    path: 'doctor',
-    component: DoctordetailComponent,
+
+    path: 'GetHealthy',
+    component: BlogpageComponent,
     pathMatch: 'full',
   },
   {
-    path: 'bookappointment',
+    path: 'Services',
+    component: HomeComponent,
+    pathMatch: 'full',
+  },
+  // {
+  //   path: 'About',
+  //   component: DoctordetailComponent,
+  //   pathMatch: 'full',
+  // },
+  // {
+  //   path: 'ContactUs',
+  //   component: DoctordetailComponent,
+  //   pathMatch: 'full',
+  // },
+  {
+    path: 'Appointment',
     component: BookappointmentComponent,
     pathMatch: 'full',
   }

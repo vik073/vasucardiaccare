@@ -1,13 +1,38 @@
-<div class="container">
+<div *ngIf ="!mobileview"  class="container">
   <div class="logo" routerLink="/home">
     <img src="../../../assets/images/Group 6 (1).svg" >
   </div>
     <div class="right-bar">
-      <div class="nav-option" routerLink="/bookappointment" >Appointment</div>
+      <div class="nav-option" routerLink="/Appointment" >Appointment</div>
       <div class="nav-option" (click)="getValue('services')"> Services</div>
-      <div class="nav-option" routerLink="/doctor">About</div>
-      <div class="nav-option" routerLink="/blog" >Get Healthy</div>
-      <div class="nav-option" routerLink="/faq">FAQ</div>
+      <div class="nav-option" routerLink="/About">About</div>
+      <div class="nav-option" routerLink="/GetHealthy" >Get Healthy</div>
+      <div class="nav-option" routerLink="/FAQ">FAQ</div>
       <div class="nav-option" (click)="getValue('contact_us')">Contact Us</div>
     </div>
 </div>
+<div *ngIf ="mobileview" id = "header-c" class="container-mobile">
+  <div class="logo-m" >
+    
+    <img style="outline: none;" src="../../../assets/images/Group 6 (1).svg"  (click) = "closenav()" routerLink="/home" >
+    <img *ngIf ="show" src="../../../assets/Group 413.svg" (click) = "closenav()" >
+    <img *ngIf ="!show" src="../../../assets/Group 4416.svg" (click) = "shownav()" >
+ 
+   
+  </div>
+    <div   id="nav" class="right-bar-m">
+      <div *ngIf ="show">      <h1  class="service-card" routerLink="/{{item}}" *ngFor= " let item of options let j = index;"  (click)="setService(j , item)" [ngClass]="{'highlight': selectedIndexj === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</h1>
+      
+        <p>20-3-126, Leela Mahal Circle  <br>
+          Near Reliance Digital, Tirumala <br>Bypass Road,
+          Tirupati <br>Andhra Pradesh 517501
+        <br>
+        <br>
+        +91 9347 830 894 | 0877 -2272666
+        </p>
+      </div>
+     
+
+    </div>
+</div>
+

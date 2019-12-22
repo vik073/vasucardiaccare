@@ -20,13 +20,13 @@
 
 .int-width-height{
 
-     @include fluid-type(height, 600px, 1900px, 250px, 400px);
+     @include fluid-type(height, 600px, 1900px, 250px, 500px);
     //  @include fluid-type(width, 600px, 1900px, 210px, 400px);
 }
 
 .div-header{
 text-align: center;
-@include fluid-type(font-size, 600px, 1500px, 1em, 1.4em);
+@include fluid-type(font-size, 600px, 1600px, 1em, 1.7em);
 letter-spacing: 0;
 flex: 0.1;
 width: 100%;
@@ -34,6 +34,17 @@ font-family: poppins-bold;
 color: #D60F1B;
 text-transform: uppercase;
 opacity: 1;
+}
+p{
+  width: 100%;
+    @include flexbox();
+    font-family: poppins-regular;
+    text-align: left;
+    line-height: 1.2;
+    align-items: flex-start;
+    color: #000000;
+    justify-content: center;
+    @include fluid-type(font-size, 700px, 1600px, 7.5px, 15px);
 }
 .div-description{
     width: 100%;
@@ -62,9 +73,8 @@ opacity: 1;
 
 }
 .img{
-  width: 8em;
-  height: 8em;
-  
+  @include fluid-type(height, 800px, 1920px, 10em, 13em);
+  @include fluid-type(width, 800px, 1920px, 10em, 13em);
   // @include fluid-type(width, 300px, 1920px, 40px, 180px);
   
   // @include fluid-type(height, 300px, 1920px, 40px, 180px);

@@ -7,16 +7,19 @@ import { ViewfinderService } from 'src/app/shared/viewfinder.service';
   styleUrls: ['./doctordetail.component.scss']
 })
 export class DoctordetailComponent implements OnInit {
-  mobileview: unknown;
+  mobileview: any;
+ 
 
-  constructor(private service:ViewfinderService) { }
+  constructor(private service:ViewfinderService) {
+   
+   }
 
   ngOnInit() {
-    this.service.checkWidth()
     this.service.isMobile.subscribe( x =>{
 
       this.mobileview = x;
     });
+    
   }
 
 }

@@ -14,10 +14,16 @@
    z-index: 1;
    background-position-x: right;
    background-size: contain;
-   background: url("../../../../assets/frontiers1.jpg");
+   
    background-repeat: no-repeat;
    background-color:white;
    height: auto;
+}
+.b-d-image{
+    background-image: url("../../../../assets/frontiers-final-3.jpg");
+}
+.b-m-image{
+    background-image: url("../../../../assets/frontiers1-mobile.jpg");
 }
 
 .procedure-card{

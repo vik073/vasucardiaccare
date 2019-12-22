@@ -5,8 +5,8 @@
       in an increasingly digital age.
       </h1>
     </div>
-  <div class="div-2 background-white" [ngClass]="!mobileview?'':'coloumn-rev'">
-    <div class="docdetails">
+  <div class="div-2 background-white" [ngClass]="{'coloumn-rev': mobileview }" >
+    <div class="docdetails" [ngClass]="!mobileview?'':' center'">
       <h1>I believe <br> that a hearty laugh <br> goes a long way…</h1>
       <h2 class="red bold">Dr. Vasudeva Chetty</h2>
       <h3>MD. | DM. | FACC. | REG. NO. : 57617</h3>
@@ -30,7 +30,7 @@
           <img class="img" src="../../../../assets/images/doc-2.jpg"> 
 
       </div>
-      <div class="docdetails right"> <h1>Personalization <br> in healthcare is something <br>I focus a lot on.</h1>
+      <div class="docdetails " [ngClass]="!mobileview?' right':'center'"> <h1>Personalization <br> in healthcare is something <br>I focus a lot on.</h1>
         <h3 class="bold red">Dr. Sushma Yaram</h3>
         <h2>MDS (PERIODONTIST) <br> REG. NO. : A5988</h2>
         <div class="submit-btn"  [ngClass]="!mobileview?'':'align-center'">

@@ -35,6 +35,8 @@ import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from '@angular/material/d
 import {MatFormFieldModule , MatButtonModule} from '@angular/material'
 import {MatInputModule} from '@angular/material/input'
 import { MatRippleModule } from '@angular/material/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +69,7 @@ import { MatRippleModule } from '@angular/material/core';
     BrowserModule,
     SharedModule,
     OwlDateTimeModule,
+    FontAwesomeModule,
     HttpClientModule,
     FormsModule,
     MatButtonModule,

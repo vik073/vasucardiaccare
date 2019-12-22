@@ -2,6 +2,7 @@
 @import '../../../common.scss';
 
   .container{
+      outline: none;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -16,17 +17,37 @@
     p{
         font-family: poppins-regular;
     }
+    .mob{
+        font-family: poppins;
+        outline: none;
+            letter-spacing: 0;
+            font-weight: 100;
+            color: #FFFFFF;
+            opacity: 1;
+        font-size: 30px;
+    padding-top: 20px;
+    }
+    .col{
+        flex-direction: column;
+    }
+    .highlight{
+        color: black;
+      }
+    .row{
+        flex-direction: row;
+    }
     .right-bar{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex: 1;
-        flex-direction: row;
+
 
         .nav-option{
 
                 @include fluid-type(font-size, 200px, 1920px, 7px,28px);
 
+                outline: none;
 
             font-family: poppins;
             letter-spacing: 0;

@@ -46,6 +46,7 @@
     @include flexbox;
     align-items: center;
     text-align: center;
+    line-height: 1.5;
     @include flex-direction(column);
     @include justify-content(space-evenly);
     @include flex(0.8);
@@ -131,7 +132,7 @@
             margin-top: 10px;
             line-height: 1.4;
             font-size: 1.1em;
-            @include fluid-type(font-size, 600px, 1400px, 1.3em, 1.8em);
+            @include fluid-type(font-size, 600px, 1400px, 1em, 1.8em);
             margin-bottom: 1em;  
             letter-spacing: 0;
             opacity: 1;
@@ -194,9 +195,10 @@
             border: none;
             @include fluid-type(font-size, 400px, 1920px, 1.2em, 2em);
             width: auto;
+            outline: none;
             padding-left: 1em;
             padding-right: 1em;
-            @include fluid-type(height, 400px, 1920px, 1.8em, 2em);
+            @include fluid-type(height, 800px, 1620px, 2.1em, 2.3em);
             // @include fluid-type(width, 400px, 1920px, 6em, 14em);
             color: #D92A2A;
     
@@ -205,10 +207,11 @@
         text-align: center;
             border-radius: 50px;
             border: none;
-            @include fluid-type(font-size, 400px, 1920px, 1.5em, 2.5em);
+            @include fluid-type(font-size, 400px, 1920px, 1.5em, 2.3em);
             width: auto;
             padding-left: 1em;
             padding-right: 1em;
-            @include fluid-type(height, 400px, 1920px, 2em, 2.2em);
+            outline: none;
+            @include fluid-type(height, 400px, 1920px, 2em, 2em);
 
     }    

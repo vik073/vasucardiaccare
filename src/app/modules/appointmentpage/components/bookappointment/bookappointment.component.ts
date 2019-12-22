@@ -37,14 +37,15 @@ export class BookappointmentComponent implements OnInit  {
   public month = new Date().getMonth();
   public hour = new Date().getHours();
   public minutes = new Date().getMinutes();
-  public invalidDateTime1 = new Date(2018, 5, 26, 20, 30);
+  
   public min = new Date(this.year , this.month, this.day+1, this.hour, this.minutes);
 
   // Max moment: April 25 2018, 20:30
   // public max = new Date(2019, 12, 28, 20, 30);
       public t = formatDate(new Date(), 'yyyy,MM,dd,hh,mm', 'en');
-  servicename: string;
-  bookingtime: string;
+  servicename: string = '';
+  bookingtime: string = '';
+  valid: boolean = false;
     
       profileForm() {
         return new FormGroup({
@@ -56,12 +57,14 @@ export class BookappointmentComponent implements OnInit  {
   contactForm: FormGroup;
   mobileview: any;
   constructor( public dialog:MatDialog, private fb: FormBuilder, private service: ViewfinderService , private route: Router , private emailservice:EmailService ) { 
+   this.mobileview = false;
+   
 
     this.contactForm = this.profileForm();
 
   }
   get f() 
-  { return this.contactForm.controls; }
+  { return this.contactForm.controls; }ß
   
 
   ngOnInit() {
@@ -72,7 +75,9 @@ export class BookappointmentComponent implements OnInit  {
 
 
     var t = formatDate(new Date(), 'yyyy,MM,dd,hh,mm', 'en');
-    
+    console.log(this.t , "hhh")
+    this.min = new Date();
+    this.min.setDate(this.min.getDate() - 1);
     console.log(this.min);
     
   }
@@ -90,10 +95,8 @@ export class BookappointmentComponent implements OnInit  {
 
 
   onSubmit(){
-    var d = this.f;
-    var t = this.dateTimeRange;
-    console.log(d , t)
-    if(this.f){
+    if( this.dateTimeRange != undefined && this.servicename!= '' && this.bookingtime != ''){
+      this.valid = false;
       var day = this.dateTimeRange.toDateString();
       this.emailservice.sendappointmentEmail(this.f.fullName.value , this.f.age.value, this.f.mobileNumber.value, this.servicename, day , this.bookingtime).subscribe(res=>{
         
@@ -101,6 +104,10 @@ export class BookappointmentComponent implements OnInit  {
         this.openDialog();
       }
       });
+    }
+    else{
+      this.valid = true;
+
     }
   }
 
@@ -116,9 +123,29 @@ export class BookappointmentComponent implements OnInit  {
 
   public setService(_index: number) {
     this.selectedIndexj = _index;
-    if(_index==0){
-      this.servicename = 'opd';
-    }
+    switch (_index) {
+      case 0:
+        this.servicename = 'OPD Consultation';
+          break;
+      case 1:
+        this.servicename = 'Dental Care';
+          break;
+      case 2:
+        this.servicename = 'Master Cardiac Check-up';
+          break;
+      case 3:
+        this.servicename = 'Lab Test';
+          break;
+      case 4:
+        this.servicename = 'Home Care Services';
+          break;
+      case 5:
+        this.servicename = 'Other Services';
+          break;
+      default:
+        this.servicename = ' ';
+          break;
+  }
   }
 
 }

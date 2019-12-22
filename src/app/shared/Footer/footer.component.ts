@@ -7,10 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  options= [
+    "Appointment" , "Services", "GetHealthy", "About", "FAQ", "ContactUs" 
+  
+  ]
   @Input() mobileview: any;
+  selectedIndexj: any;
   constructor() { }
 
   ngOnInit() {
+  }
+
+   setService(j , service){
+    this.selectedIndexj = j;
+    // await delay(300);
   }
 
 }

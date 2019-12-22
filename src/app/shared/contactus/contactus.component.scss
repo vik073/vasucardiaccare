@@ -20,6 +20,16 @@
 .lineheight{
     line-height: 1.2;
 }
+.disabled{
+    outline: none;
+    cursor: no-drop;
+   
+}
+.enabled{
+    outline: none;
+    cursor: pointer;
+   
+}
 
 .line{
     width: 100%;
