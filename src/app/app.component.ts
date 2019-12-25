@@ -24,9 +24,13 @@ export class AppComponent implements OnInit {
         console.log('Desktop detected')
       }
     });
-        
+       
+    
   } 
-
+  getvalue(e){
+    let el = document.getElementById(e);
+              el.scrollIntoView();
+  }
   // onclick(){
   //   // myTest();
   // }
