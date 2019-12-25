@@ -9,12 +9,14 @@
   <br>
   <div  id="bookapointment"  [ngClass]="!mobileview?'intro-content':'mobile-intro-content'">
     <div class="header mobile-red-header" *ngIf="mobileview">Book an <br> appointment</div>
-    <div class="header" *ngIf="!mobileview" >Book an  appointment</div>
-    <div  [ngClass]="!mobileview?'description':'mobile-description'">
-      Fill in the form below to request an appointment with us and our representative will get in touch with you shortly.</div>
-      <div [ngClass]="!mobileview?'description':'mobile-description'">
+    <div class="header flex-0" *ngIf="!mobileview" >Book an <br> Appointment</div>
+    <div>    <p  [ngClass]="!mobileview?'description':'mobile-description'">
+      Fill in the form below to request an appointment with us and our representative will get in touch with you shortly.</p>
+      <p [ngClass]="!mobileview?'description':'mobile-description'">
         If you are having an emergency, please call 102 or our emergency unit at +91 9347 830 894 | 0877 -2272666 immediately.  
-      </div>
+      </p>
+    </div>
+
   
       <div [ngClass]="!mobileview?'service-list':'mobile-service-list full-width'" >
   <div class="heading" > SELECT SERVICE </div>
@@ -35,25 +37,25 @@
   <div class="time-panel" [ngClass]="!mobileview?'margin-left':'center-header'">
   <div class="black-header">TIME</div>
   <div class="time-selector" >
-  <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>
+  <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;"  (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i , 'disable': item !=mintime}" [timeArray]="item" ></app-timepicker>
 </div>
 <!-- <div class="time-selector" >
   <app-timepicker class="timing-set " *ngFor= " let item of timeArray1 let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>
 </div> -->
 </div>
 </div>
-<div class="heading" [ngClass]="!mobileview?'':'center-header'"> Patient Details </div>
+<div class="heading" [ngClass]="!mobileview?'':'center-header'"> PATIENT DETAILS </div>
 
 <div class="input-form">
     <!-- <input  [(ngModel)]="fullName" id="fullName" name="fullName" placeholder="Full NAme">
     <input  [(ngModel)]="mobileNumber" id="mobileNumber" name="mobileNumber" placeholder="Phone Number">
     <input  [(ngModel)]="age" id="age" name="age" placeholder="Age"> -->
 
-    <form [formGroup]="contactForm" class="profile-form" (ngSubmit)="onSubmit()"> 
+    <form [formGroup]="contactForm" class="profile-form" (ngSubmit)="onSubmit()" [ngClass]="!mobileview?'':'full-w-n'"> 
   
       
-        <div class="text-div">
-            <input class="text-box" type="text" formControlName="fullName" placeholder="Full Name" required>
+        <div class="text-div" [ngClass]="!mobileview?'':'full-w'">
+            <input class="text-box" [ngClass]="!mobileview?'':'full-w-t'" type="text" formControlName="fullName" placeholder="Full Name" required>
             <div 
                  class="alert alert-danger">
 
@@ -63,25 +65,25 @@
                 </div>
             </div>
             <div class="text-div">
-                <input class="text-box" type="text" formControlName="mobileNumber" placeholder="phone number" required>
+                <input class="text-box" type="text" [ngClass]="!mobileview?'':'full-w-t'" formControlName="mobileNumber" placeholder="Phone Number" required>
                 <div 
                 class="alert alert-danger">
         
                 <div style="font-family: poppins-regular;" *ngIf=" f.mobileNumber.invalid && f.mobileNumber.errors.required && (f.mobileNumber.dirty || f.mobileNumber.touched)">
-                   phone number is required.
+                   Phone Number is required.
                </div>
                <br>
                <div style="font-family: poppins-regular;" *ngIf=" f.mobileNumber.invalid && f.mobileNumber.errors.pattern && (f.mobileNumber.dirty || f.mobileNumber.touched)">
-                   Enter valid 10 digit phone number 
+                   Enter valid 10 digit Phone Number 
                </div>
                <br>
                <div style="font-family: poppins-regular;" *ngIf=" f.mobileNumber.invalid && f.mobileNumber.errors.maxlength && (f.mobileNumber.dirty || f.mobileNumber.touched)">
-                   phone number is not valid .
+                   Phone number is not valid .
                </div>
                     </div>
                 </div>
                 <div class="text-div">
-                    <input class="text-box" type="text" formControlName="age" placeholder="Age" required>
+                    <input class="text-box" type="text" [ngClass]="!mobileview?'':'full-w-t'" formControlName="age" placeholder="Age" required>
                     <div 
                          class="alert alert-danger">
         
@@ -114,6 +116,7 @@
   
 </div>
 <img *ngIf ="mobileview" style="width: 100%;" src=" ../../../../../../../assets/images/bookappointment(1).svg">
+<app-contactus id="contact_us"  [mobileview]="mobileview"></app-contactus>
 <app-address class="address-bar" [mobileview]="mobileview"></app-address>
 
 </div>

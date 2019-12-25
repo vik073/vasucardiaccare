@@ -61,20 +61,28 @@ flex: 1;
 }
 .description{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
     @include fluid-type(font-size, 700px, 1920px, 1em, 1.5em);
 }
 .img{
+    height: 30px;
     margin-right: 50px;
 }
 .flex-center{
     justify-content: space-around;
+}
+.social{
+    height: 20px;
 }
 
 
 .icons{
     height: 20px;
     display: flex;
+    width: 76%;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 

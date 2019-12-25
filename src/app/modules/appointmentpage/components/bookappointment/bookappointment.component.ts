@@ -46,6 +46,7 @@ export class BookappointmentComponent implements OnInit  {
   servicename: string = '';
   bookingtime: string = '';
   valid: boolean = false;
+  mintime: number;
     
       profileForm() {
         return new FormGroup({
@@ -77,6 +78,8 @@ export class BookappointmentComponent implements OnInit  {
     var t = formatDate(new Date(), 'yyyy,MM,dd,hh,mm', 'en');
     console.log(this.t , "hhh")
     this.min = new Date();
+    this.mintime = this.min.getHours();
+    console.log(this.mintime , 'min ganta')
     this.min.setDate(this.min.getDate() - 1);
     console.log(this.min);
     
@@ -113,7 +116,6 @@ export class BookappointmentComponent implements OnInit  {
 
   getvalue(e){
     
-    debugger
     this.bookingtime = e;
   }
 

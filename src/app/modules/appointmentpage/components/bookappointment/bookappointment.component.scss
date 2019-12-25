@@ -12,20 +12,24 @@
     background-color:#F1F1F1;
     height: auto;
 }
+.flex-0{
+    flex: 0;
+}
 
 .intro-content{
+    height: 40vw;
     background-position-y: 13px;
     background-position-x: right;
     background-size: contain;
     background-repeat: no-repeat;
-    height: auto;
     margin-right: -8%;
-   background-image: url("../../../../../assets/images/bookappointment(1).svg");
+   background-image: url("../../../../../assets/images/appointmnet-01.svg");
     @include flexbox;
     @include flex-direction(column);
     @include flex(2);
     @include justify-content(center);
 } 
+
 .mobile-intro-content{
     height: auto;
     @include flexbox;
@@ -67,7 +71,6 @@
     align-items: center;
 }
 .date-picker{
-    margin-top: 20px;
     @include flexbox;
     @include flex-direction(row);
     @include flex(1);
@@ -97,12 +100,12 @@
 
 .Service-card {
     @include flexbox;
-     width: 40%;
-     height: 50px;
+    width: 47%;
+    height: 63px;
     @include align-items(center);
     @include justify-content(center);
     font-family: poppins;
-    @include fluid-type(font-size, 600px, 1920px, 12px, 16px);
+    @include fluid-type(font-size, 800px, 1920px, 14px, 23px);
     //@include fluid-type(height, 200px, 1920px, 40px, 70px);
    // @include fluid-type(width, 300px, 1920px, 60px, 320px);
 
@@ -132,8 +135,7 @@
    // @include fluid-type(width, 300px, 1920px, 60px, 320px);
 
     color: #D92A2A;
-    margin-top: 1%;
-    margin-bottom: 2%;
+    margin-top: 20px;
     //@include flex(1);
     background: #FFFFFF;
 
@@ -147,7 +149,7 @@
     color: #D92A2A;
 }
 .extra-pad{
-    margin-top: 8%;
+    margin-top: 70px;
 }
 .timing-set{
      background: white;
@@ -165,14 +167,17 @@
     cursor: no-drop;
     background: grey;
 }
+
+
+
+
 .black-header{
     background: black;
     color: white;
-    font-size: 18px;
+    font-size: 1.7em;
     background: black;
     color: white;
-    font-size: 18px;
-    height: 57px;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,8 +187,9 @@
     text-align: center;
 }
 .date-selector{
-    display: flex;
-    flex-wrap: wrap;
+    @include flexbox;
+   @include flex-wrap(wrap);
+ 
  
     flex-direction: row;
     /* height: 100px; */
@@ -191,10 +197,11 @@
 
 }
 .date-picker{
-    display: flex;
-    flex: 1.5;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @include flexbox;
+    @include flex(1);
+    margin-bottom: 2%;
+   @include flex-wrap(wrap);
+    @include justify-content(flex-start);
     overflow: hidden;
     
     /* height: 100px; */
@@ -202,29 +209,32 @@
 }
 
 .time-selector{
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
     @include flexbox;
+    @include flex(1);
+   @include flex-wrap(wrap);
+    @include flex-direction(row);
     //width: 40%;
     @include align-items(center);
     // @include justify-content(center);
     font-family: poppins-regular;
-    @include fluid-type(font-size, 300px, 1920px, 12px, 22px);
+    @include fluid-type(font-size, 300px, 1920px, 16px, 22px);
     color: #D92A2A;
-    flex-direction: row;
     /* height: 100px; */
 }
+.full-w{
+    width: 100%;
+}
+
 .time-panel{
-    display: flex;
+    @include flexbox;
+    @include flex(1);
+   @include flex-wrap(wrap);
+   @include flex-direction(column);
     max-width: 680px;
+    min-height: 349px;
+    margin-bottom: 30px;
     //@include fluid-type(width, 300px, 1920px, 232px, 280px);
-    
-    flex-wrap: wrap;
     background-color: white;
-    flex-direction: column;
-    /* height: 100px; */
-    flex: 1;
 }
 
 .input-form{
@@ -247,6 +257,7 @@
     background: #F1F1F1;
    color: #D92A2A;
    margin-top: 22px;
+   margin-bottom: 12px;
     border-bottom: 1px solid #D92A2A;
 }
 ::placeholder {
@@ -269,8 +280,8 @@
 
 .submit-btn{
     width: 100%;
-    display: flex;
-    justify-content: center;
+    @include flexbox;
+    @include justify-content(center);
     margin-top: 3%;
     margin-bottom: 14%;
 }
@@ -290,7 +301,8 @@
     background: black;
     color: #FFFFFF;
     padding: 29px;
-    height: 50px;
+    font-size: 1.7em;
+    height: 72px;
 }
 .margin-left{
     margin-left: 10%;
@@ -299,14 +311,15 @@
 
 .desktop-header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
     @include fluid-type(width, 700px, 1920px, 340px, 680px);
-    @include fluid-type(height, 700px, 1920px, 360px, 570px);
+    @include fluid-type(height, 900px, 1920px, 400px, 650px);
     background: transparent;
     position: unset;
 }
 .mobile-header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
-    // @include fluid-type(width, 500px, 1920px, 232px, 680px);
-    // @include fluid-type(height, 300px, 1920px, 232px, 510px);
+    @include fluid-type(width, 500px, 900px, 350px, 800px);
+    @include fluid-type(height, 500px, 900px, 400px, 710px);
     width: 350px;
+    height: 400px;
     pointer-events: auto;
     box-shadow: none;
     background: white;
@@ -336,7 +349,7 @@
     // flex: 1;
 }
 .header-color::ng-deep.owl-dt-calendar-table .owl-dt-calendar-header .owl-dt-weekdays th {
-    font-size: 0.9em;
+    @include fluid-type(font-size, 900px, 1920px, 16px, 20px);
     width: 3em;
     font-family: poppins-regular;
     font-weight: 400;
@@ -357,3 +370,15 @@
   .user-css-class.owl-form-field-focused  .owl-form-field-underline-graphic {
     stroke: #00897b;
   }
+  .disable{
+    opacity: 30%;
+}
+.full-w-n{
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+.full-w-t{
+    
+    width: 80%;
+}

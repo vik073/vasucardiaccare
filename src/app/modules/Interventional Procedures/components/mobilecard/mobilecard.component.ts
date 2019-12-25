@@ -24,7 +24,6 @@ export class MobilecardComponent implements OnInit {
         
   }
   getclickValue(e){
-    debugger
     
     const x = Math.abs(e.deltaX) > 40 ? (e.deltaX > 0 ? 'right' : 'left'):'';
     this.valueClick.emit(x);

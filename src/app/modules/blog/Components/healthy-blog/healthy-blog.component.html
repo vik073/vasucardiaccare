@@ -16,7 +16,7 @@
     </div>
    
   </div>
-  <span class="dot-flex" ><h1 class="dot"    *ngFor= " let item of dotarray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': index === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</h1>
+  <span *ngIf="mobileview" class="dot-flex" ><h1 class="dot"    *ngFor= " let item of dotarray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': index === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</h1>
   </span>
  
 </div>

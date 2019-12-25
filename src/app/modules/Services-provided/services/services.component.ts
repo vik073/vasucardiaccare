@@ -35,7 +35,7 @@ export class ServicesComponent implements OnInit {
   }
 
  getNext(e , t, d){
-   debugger
+
    if(e=='left' && this.index<this.BookingArray1.length-1){
 
      this.index = this.index+1;

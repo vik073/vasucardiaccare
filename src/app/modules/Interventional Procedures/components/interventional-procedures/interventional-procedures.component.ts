@@ -80,7 +80,7 @@ index:number = 0;
     
   }
   getNext(e , t, d){
-    debugger
+
     if(e=='left' && this.index<d.length-1){
  
       this.index = this.index+1;
