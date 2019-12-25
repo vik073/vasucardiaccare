@@ -40,7 +40,7 @@ export class ServicesComponent implements OnInit {
 
      this.index = this.index+1;
    }
-   else if (e=='right' && this.index<0) {
+   else if (e=='right' && this.index>0) {
      this.index = this.index-1;
      
    } else {
