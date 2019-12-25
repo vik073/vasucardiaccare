@@ -40,6 +40,18 @@ justify-content: space-evenly;
     flex-wrap: wrap;
 
 }
+.dot{
+    font-size: 3em; 
+    opacity: 30%;
+}
+.dot-flex{
+    display: flex;
+    flex-direction: row;
+}
+.highlight{
+    opacity: 100%;
+    color:  #D92A2A;
+}
 // .div-card{
 //     display: flex;
 //     flex: 2;

@@ -25,9 +25,31 @@ export class HealthyBlogComponent implements OnInit {
     { imgsrc : "../../../../../assets/images/Maintain weight.jpg" ,title: 'Get healthy\\', description: 'Learn the basic principles of a healthy weight and waistline — and why it matters.' , titledetail:'Maintain a healthy weight'},
     { imgsrc : "../../../../../assets/images/Manage stress.jpg" ,title: 'Get healthy\\', description: 'Learn to identify the things that are causing you stress so you can deal with them effectively.' , titledetail:'Manage your stress'},
   ];
+  index: any = 0;
+  dotarray =[
+    '.','.','.','.'
+  ]
   constructor() { }
 
   ngOnInit() {
   }
+  setService(j){
+    this.index = j;
+  }
+
+ getNext(e , d){
+   debugger
+   if(e=='left' && this.index<this.BlogArray.length){
+
+     this.index = this.index+1;
+   }
+   else if (e=='right' && this.index<this.BlogArray.length) {
+     this.index = this.index-1;
+     
+   } else {
+     this.index = this.index;
+     
+   }
+ }
 
 }

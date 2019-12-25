@@ -17,10 +17,10 @@
 
   <div *ngIf="mobileview"  class="mobile-view">
     
-      <app-mobilecard   [cardData]="BookingArray1[index]"  [LoadAnimationCard] = "LoadAnimationCArd"></app-mobilecard>
+      <app-mobilecard   [cardData]="BookingArray1[index]" (valueClick)= "getNext($event, BookingArray1)"  [LoadAnimationCard] = "LoadAnimationCArd"></app-mobilecard>
       
     </div>
-    <span class="dot-flex" ><h1    *ngFor= " let item of intdotarray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': index === j ,'dot':index != j, 'mobile-Service-card': mobileview } "> {{item}}</h1>
+    <span class="dot-flex" ><h1 class="dot"    *ngFor= " let item of intdotarray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': index === j } ">{{item}}</h1>
     </span>
 </div>
 

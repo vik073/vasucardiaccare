@@ -12,7 +12,11 @@
   <app-blog-card class="procedure-card" *ngFor="let item of BlogArray2 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-blog-card>
    </div>
    <div *ngIf="mobileview" class="mobile-view">
-      <app-blog-card   *ngFor="let item of BlogArray" [cardData]="item" [mobileview] = "mobileview" [LoadAnimationCard] = "LoadAnimationCArd" ></app-blog-card>
+      <app-blog-card  (valueClick)= "getNext($event, BlogArray)" [cardData]="BlogArray[index]" [mobileview] = "mobileview" [LoadAnimationCard] = "LoadAnimationCArd" ></app-blog-card>
     </div>
+   
   </div>
+  <span class="dot-flex" ><h1 class="dot"    *ngFor= " let item of dotarray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': index === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</h1>
+  </span>
+ 
 </div>

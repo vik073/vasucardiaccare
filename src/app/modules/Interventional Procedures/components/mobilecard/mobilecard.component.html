@@ -8,7 +8,7 @@
 </div>
 
 
-<div class="container"  *ngIf="LoadAnimationCard =='service-card'" [ngStyle]="{'background' : 'transparent', 'box-shadow': 'none' }" (click)="getclickValue(cardData)"> 
+<div class="container"  *ngIf="LoadAnimationCard =='service-card'" [ngStyle]="{'background' : 'transparent', 'box-shadow': 'none' }" (swipe)="getclickValue($event)"> 
     
     <img class="img" src={{cardData.imgsrc}}>
   

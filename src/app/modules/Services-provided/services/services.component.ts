@@ -16,7 +16,11 @@ export class ServicesComponent implements OnInit {
     { imgsrc : "../../../../../assets/images/Group 3664.svg" ,title: "AMBIENCE", description: 'An environment specially designed to inspirit a premium & pleasant experience'},
 
   ];
+  intdotarray =[
+    '.','.','.','.'
+  ]
   mobileview: unknown;
+  index: any= 0;
   constructor( private service : ViewfinderService) { }
 
   ngOnInit() {
@@ -26,5 +30,23 @@ export class ServicesComponent implements OnInit {
       this.mobileview = x;
     });
   }
+  setService(j){
+    this.index = j;
+  }
+
+ getNext(e , d){
+   debugger
+   if(e=='left' && this.index<this.BookingArray1.length){
+
+     this.index = this.index+1;
+   }
+   else if (e=='right' && this.index<this.BookingArray1.length) {
+     this.index = this.index-1;
+     
+   } else {
+     this.index = this.index;
+     
+   }
+ }
 
 }
