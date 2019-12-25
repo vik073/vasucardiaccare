@@ -17,9 +17,9 @@
 </div>
 
 <div *ngIf="mobileview"  class="mobile-view">
-    <app-mobilecard class="mobile-card"  [cardData]="mobileViewanimationsArray[index]"  (valueClick)="getNext($event, mobileViewanimationsArray)" [LoadAnimationCard] = "LoadAnimationCArd"></app-mobilecard>
+    <app-mobilecard class="mobile-card"  [cardData]="mobileViewanimationsArray[index]"  (valueClick)="getNext($event,index, mobileViewanimationsArray)" [LoadAnimationCard] = "LoadAnimationCArd"></app-mobilecard>
   </div>
-  <span class="dot-flex" ><h1 class="dot"    *ngFor= " let item of dotarray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': index === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</h1>
+  <span *ngIf="mobileview" class="dot-flex" ><h1 class="dot"    *ngFor= " let item of dotarray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': index === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</h1>
   </span>
 </div>
 
@@ -38,8 +38,8 @@
   </div>
 </div>
   <div  *ngIf="mobileview" class="mobile-view">
-      <app-mobilecard   [cardData]="mobileMyArrayType[index]" (valueClick)="getNext($event , mobileMyArrayType)" [LoadAnimationCard] = "LoadServiceCard" ></app-mobilecard>
+      <app-mobilecard   [cardData]="mobileMyArrayType[index]" (valueClick)="getNext($event, index , mobileMyArrayType)" [LoadAnimationCard] = "LoadServiceCard" ></app-mobilecard>
     </div>
-    <span class="dot-flex" ><h1 class="dot"    *ngFor= " let item of intdotarray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': index === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</h1>
+    <span *ngIf="mobileview" class="dot-flex" ><h1 class="dot"    *ngFor= " let item of intdotarray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': index === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</h1>
     </span>
   </div>

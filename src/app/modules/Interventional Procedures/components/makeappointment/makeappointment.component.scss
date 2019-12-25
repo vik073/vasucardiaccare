@@ -39,8 +39,9 @@
     opacity: 30%;
 }
 .dot-flex{
-    display: flex;
-    flex-direction: row;
+   @include flexbox;
+    @include flex-direction(row);
+
 }
 .highlight{
     opacity: 100%;

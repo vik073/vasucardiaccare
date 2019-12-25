@@ -20,8 +20,8 @@ box-shadow: 10px 10px 110px 20px rgba(0,0,0,0.19);
 box-shadow: 10px 10px 110px 20px rgba(0,0,0,0.19);
 ">
   <div class="logo-m" >
-    
-    <img style="outline: none;" src="../../../assets/images/Group 6 (1).svg"  (click) = "closenav()" routerLink="/home" >
+    <a href="/home">
+    <img style="outline: none; width: 104px;" src="../../../assets/images/Group 6 (1).svg"  (click) = "closenav()"></a>
     <img  class="margin" *ngIf ="show" src="../../../assets/Group 413.svg" (click) = "closenav()" >
     <img class="margin" *ngIf ="!show" src="../../../assets/Group 4416.svg" (click) = "shownav()" >
  

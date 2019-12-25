@@ -37,17 +37,17 @@ export class HealthyBlogComponent implements OnInit {
     this.index = j;
   }
 
- getNext(e , d){
+ getNext(e , t, d){
    debugger
-   if(e=='left' && this.index<this.BlogArray.length){
+   if(e=='left' && this.index<this.BlogArray.length-1){
 
      this.index = this.index+1;
    }
-   else if (e=='right' && this.index<this.BlogArray.length) {
+   else if (e=='right' && this.index>0) {
      this.index = this.index-1;
      
    } else {
-     this.index = this.index;
+     this.index = t;
      
    }
  }

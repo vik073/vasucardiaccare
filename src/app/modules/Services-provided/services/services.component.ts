@@ -34,17 +34,17 @@ export class ServicesComponent implements OnInit {
     this.index = j;
   }
 
- getNext(e , d){
+ getNext(e , t, d){
    debugger
-   if(e=='left' && this.index<this.BookingArray1.length){
+   if(e=='left' && this.index<this.BookingArray1.length-1){
 
      this.index = this.index+1;
    }
-   else if (e=='right' && this.index<this.BookingArray1.length) {
+   else if (e=='right' && this.index<0) {
      this.index = this.index-1;
      
    } else {
-     this.index = this.index;
+     this.index = t;
      
    }
  }

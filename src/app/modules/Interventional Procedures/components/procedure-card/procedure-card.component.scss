@@ -3,19 +3,19 @@
 
   .card-container{
     background-color: #fbfbfb;
-    display: flex;
+    @include flexbox;
+    @include flex(1);
+    @include flex-direction(column);
+    @include justify-content(space-evenly);
+    @include align-items(center);
+    @include flex-wrap(wrap);
     margin: 0.4em;
     height: auto;
     margin-left: 0.4em;
     padding: 1em;
     padding-bottom: 2em;
-    flex: 1;
     box-shadow: 0px 0px 6px #00000029;
-  
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+
 
 }
 
@@ -49,7 +49,8 @@ p{
     line-height: 1.2;
     align-items: flex-start;
     color: #000000;
-    justify-content: center;
+    @include justify-content(center);
+    @include align-items(flex-start);
     @include fluid-type(font-size, 700px, 1600px, 8.5px, 15px);
 }
 .div-description{
@@ -58,9 +59,9 @@ p{
     font-family: poppins-regular;
     text-align: center;
     line-height: 1.4;
-    align-items: flex-start;
+    @include align-items(flex-start);
     color: #000000;
-    justify-content: center;
+    @include justify-content(center);
     @include fluid-type(font-size, 700px, 1950px, 9.5px, 17px);
 
 
@@ -84,6 +85,5 @@ p{
   // @include fluid-type(width, 300px, 1920px, 40px, 180px);
   
   // @include fluid-type(height, 300px, 1920px, 40px, 180px);
-  
-  align-items: center;
+  @include align-items(center);
 }

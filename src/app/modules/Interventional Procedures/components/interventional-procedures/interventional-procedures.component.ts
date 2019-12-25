@@ -79,22 +79,19 @@ index:number = 0;
     // });
     
   }
-  getNext(e , d){
+  getNext(e , t, d){
     debugger
-    if(e=='left' && this.index<this.mobileViewanimationsArray.length){
-
+    if(e=='left' && this.index<d.length-1){
+ 
       this.index = this.index+1;
     }
-    else if (e=='right' && this.index<this.mobileViewanimationsArray.length) {
+    else if (e=='right' && this.index>0) {
       this.index = this.index-1;
       
     } else {
-      this.index = this.index;
+      this.index = t;
       
     }
-    
-    console.log('hello' , this.mobileMyArrayType.length)
-    debugger
   }
 
 }
