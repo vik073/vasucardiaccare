@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   ]
   show:boolean = false;
   @Output() valueClick = new EventEmitter()
+  
   selectedindex: any;
   selectedIndexj: any;
   mobileview: any;

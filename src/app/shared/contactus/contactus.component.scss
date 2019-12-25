@@ -34,6 +34,10 @@
 .line{
     width: 100%;
 }
+.error{
+    color: #F1F1F1;
+    font-family: poppins;
+}
 
 ::placeholder {
     color: #F1F1F1;;
@@ -79,6 +83,15 @@
     display: flex;
     align-items: center;
 }
+.b-margin{
+    margin-bottom: 100px;
+}
+.full-w{
+    width: 100%;
+}
+.full-w-n{
+    width: 78%;
+}
 
 .address-bar{
     width: 139%;
@@ -90,5 +103,25 @@
     outline: none;
     display: flex;
     margin-top: 3%;
-    margin-bottom: 6%;
+    margin-bottom: 8%;
+}
+
+.contact-btn{
+    text-align: center;
+    background-color: #F1F1F1;
+    border-radius: 50px;
+    border: none;
+    padding: 0 , 10px;
+    width: 7em;
+    letter-spacing: 1px;
+    @include fluid-type(font-size, 600px, 1920px, 1.1em, 1.9em);
+    
+    font-weight: 600;
+    width: auto;
+    outline: none;
+    /* padding-left: 1em; */
+    padding: 0 2em;
+    @include fluid-type(height, 300px, 1920px, 2.6em, 2.6em);
+    
+    color: #D92A2A;
 }

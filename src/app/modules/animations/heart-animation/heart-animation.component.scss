@@ -22,8 +22,8 @@
 html, body {
   background-color: #D92A2A;
   width: 100%;
-  height: 700px;
-  @include fluid-type(height, 700px, 1920px, 700px, 820px);
+  height: 100vh;
+
   margin: 0;
   padding: 0;
  

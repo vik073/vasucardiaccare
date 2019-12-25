@@ -50,15 +50,25 @@ mobileViewanimationsArray = [
   {  img: true ,imgsrc : "../../../../../assets/images/ECG.gif" ,title: "ECG", description: 'Know your heart rate' , option:'Consult'},
  
 ];
+dotarray =[
+  '.','.','.','.','.','.'
+]
+intdotarray =[
+  '.','.','.','.'
+]
 
 @Input() AnimationCard: string;
 @Input() mobileview: string;
+index:number = 0;
 // mobileview:any;
   constructor( private service: ViewfinderService) {
     // this.service.isMobile.subscribe( x => {
 
     //   this.mobileview = x;
     // });
+   }
+   setService(j){
+     this.index = j;
    }
 
   ngOnInit() {
@@ -68,6 +78,23 @@ mobileViewanimationsArray = [
     //   this.mobileview = x;
     // });
     
+  }
+  getNext(e , d){
+    debugger
+    if(e=='left' && this.index<this.mobileViewanimationsArray.length){
+
+      this.index = this.index+1;
+    }
+    else if (e=='right' && this.index<this.mobileViewanimationsArray.length) {
+      this.index = this.index-1;
+      
+    } else {
+      this.index = this.index;
+      
+    }
+    
+    console.log('hello' , this.mobileMyArrayType.length)
+    debugger
   }
 
 }

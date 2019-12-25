@@ -15,7 +15,11 @@ export class MakeappointmentComponent implements OnInit {
     { img: true , imgsrc : "../../../../../assets/images/Group 4508.svg" ,title: "Emergency case", description: 'Ring our medical helpline' , option:'Call Us'},
     { img: true , imgsrc : "../../../../../assets/images/Group 4515.svg" ,title: "Our doctors", description: 'Know Your Doctors' , option:'Doctors'},
   ];
+  intdotarray =[
+    '.','.','.'
+  ]
   mobileview: unknown;
+  index: any = 0;
   constructor(private service: ViewfinderService) { }
 
   ngOnInit() {
@@ -25,5 +29,24 @@ export class MakeappointmentComponent implements OnInit {
       this.mobileview = x;
     });
   }
+
+  setService(j){
+    this.index = j;
+  }
+
+ getNext(e , d){
+   debugger
+   if(e=='left' && this.index<this.BookingArray1.length){
+
+     this.index = this.index+1;
+   }
+   else if (e=='right' && this.index<this.BookingArray1.length) {
+     this.index = this.index-1;
+     
+   } else {
+     this.index = this.index;
+     
+   }
+ }
 
 }

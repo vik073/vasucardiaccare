@@ -36,6 +36,14 @@ import {MatFormFieldModule , MatButtonModule} from '@angular/material'
 import {MatInputModule} from '@angular/material/input'
 import { MatRippleModule } from '@angular/material/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import * as Hammer from 'hammerjs';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+
+export class MyHammerConfig extends HammerGestureConfig {
+  overrides = <any> {
+    swipe: { direction: Hammer.DIRECTION_ALL },
+  };
+}
 
 @NgModule({
   declarations: [
@@ -64,6 +72,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   ],
   entryComponents: [
     DialogComponent
+  ],
+  providers:[
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig,
+    }
   ],
   imports: [
     BrowserModule,

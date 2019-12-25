@@ -1,6 +1,6 @@
-<div  [ngClass]="!mobileview?'main-container':'col-d'">
+<div  [ngClass]="!mobileview?'main-container':''">
   <br><br>
-  <div class=" padder" [ngClass]="!mobileview?'container':'col-d'" >
+  <div class=" padder" [ngClass]="!mobileview?'container':''" >
   
   <div class="content" [ngClass]="!mobileview?'':'full-width'">
     <div class="header white ad-header" [ngClass]="!mobileview?'':'mobile-red-header full-width'"> Address</div>
@@ -11,9 +11,9 @@
       <br>
       <br>
       <div class="icons" [ngClass]="!mobileview?'':'flex-center'">
-      <img class="img"  src="../../../../assets/images/Group 4362.svg">
-      <img class="img" src="../../../../assets/images/Group 4361.svg">
-      <img class="img"  src="../../../../assets/images/twitter (1).svg">
+      <a href = "https://www.facebook.com/vasucardiaccare/ " ><img [ngClass]="!mobileview?'img':''"  src="../../../../assets/images/Group 4362.svg"></a>
+      <a href = "https://www.facebook.com/vasucardiaccare/ " ><img [ngClass]="!mobileview?'img':''" src="../../../../assets/images/Group 4361.svg"></a>
+      <a href = "https://twitter.com/VasuCardiacCare/ " ><img [ngClass]="!mobileview?'img':''"  src="../../../../assets/images/twitter (1).svg"></a>
     </div>
     </div>
   </div>

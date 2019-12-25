@@ -8,6 +8,7 @@
     height: auto;
     margin-left: 0.4em;
     padding: 1em;
+    padding-bottom: 2em;
     flex: 1;
     box-shadow: 0px 0px 6px #00000029;
   
@@ -35,6 +36,11 @@ color: #D60F1B;
 text-transform: uppercase;
 opacity: 1;
 }
+.size{
+  
+  @include fluid-type(font-size, 600px, 1600px, 13px, 20px);
+  text-align: center;
+}
 p{
   width: 100%;
     @include flexbox();
@@ -44,18 +50,18 @@ p{
     align-items: flex-start;
     color: #000000;
     justify-content: center;
-    @include fluid-type(font-size, 700px, 1600px, 7.5px, 15px);
+    @include fluid-type(font-size, 700px, 1600px, 8.5px, 15px);
 }
 .div-description{
     width: 100%;
     @include flexbox();
     font-family: poppins-regular;
-    text-align: left;
-    line-height: 1.2;
+    text-align: center;
+    line-height: 1.4;
     align-items: flex-start;
     color: #000000;
     justify-content: center;
-    @include fluid-type(font-size, 800px, 1350px, .7em, 0.9em);
+    @include fluid-type(font-size, 700px, 1950px, 9.5px, 17px);
 
 
 }
@@ -73,8 +79,8 @@ p{
 
 }
 .img{
-  @include fluid-type(height, 800px, 1920px, 10em, 13em);
-  @include fluid-type(width, 800px, 1920px, 10em, 13em);
+  @include fluid-type(height, 400px, 1620px, 7em, 13em);
+  @include fluid-type(width, 400px, 1620px, 7em, 13em);
   // @include fluid-type(width, 300px, 1920px, 40px, 180px);
   
   // @include fluid-type(height, 300px, 1920px, 40px, 180px);

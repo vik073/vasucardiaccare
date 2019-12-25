@@ -25,7 +25,18 @@
     display: flex;
     flex: 1;
 }
-
+.dot{
+    font-size: 3em; 
+    opacity: 30%;
+}
+.dot-flex{
+    display: flex;
+    flex-direction: row;
+}
+.highlight{
+    opacity: 100%;
+    color: #FFFFFF;
+}
 .width-wide{
     width: 137%;
     margin-left: -19%;;

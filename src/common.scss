@@ -4,7 +4,7 @@
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(space-between); 
-    padding: 2% 8%;
+    padding: 5% 8%;
     // @include fluid-type(height, 300px, 1920px, 100vh, 100vh);
     //height: auto;
     //@include fluid-type(height, 300px, 1920px, 468px, 900px);
@@ -82,7 +82,7 @@
     @include flexbox;
     @include flex(1);
     font-family: poppins-medium;
-    margin-top: 5%;
+    // margin-top: 5%;
     @include flex-wrap(wrap);
     @include flex-direction(row);
     @include justify-content(flex-start);
@@ -139,7 +139,7 @@
         
         } 
         .half-desc{
-            width: 50%;
+            width: 75%;
         }
 
         .no-margin{
@@ -159,10 +159,10 @@
             border-radius: 59px;
             border: none;
             outline: none;
-            
-            font-size: 1.1rem;
-            @include fluid-type(height, 300px, 1920px, 18px, 50px);
-            @include fluid-type(width, 300px, 1920px, 60px, 160px);
+            letter-spacing: 1px;;
+            font-size: 19.5px;
+            @include fluid-type(height, 300px, 1920px, 25px, 50px);
+            @include fluid-type(width, 300px, 1920px, 80px, 160px);
             color: white;
             
         }
@@ -198,7 +198,7 @@
             outline: none;
             padding-left: 1em;
             padding-right: 1em;
-            @include fluid-type(height, 800px, 1620px, 2.1em, 2.3em);
+            @include fluid-type(height, 800px, 1620px, 2em, 2.1em);
             // @include fluid-type(width, 400px, 1920px, 6em, 14em);
             color: #D92A2A;
     

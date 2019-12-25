@@ -6,6 +6,7 @@
     flex-direction: row;
     background-color: #D92A2A;
     flex-direction: row;
+    margin-bottom: 100px;
 
 }
 .col-d{
@@ -21,6 +22,8 @@
 
 
 .img-animation{
+    width: 100%;
+    margin-top: 50px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -62,10 +65,10 @@ flex: 1;
     @include fluid-type(font-size, 700px, 1920px, 1em, 1.5em);
 }
 .img{
-    margin-right: 20px;
+    margin-right: 50px;
 }
 .flex-center{
-    justify-content: center;
+    justify-content: space-around;
 }
 
 
@@ -80,7 +83,7 @@ flex: 1;
 }
 .map-area{
     
-    @include fluid-type(width, 300px, 1920px, 300px, 600px);
+    width: 100%;
     @include fluid-type(height, 300px, 1920px, 350px, 650px);
     
     //height: 100%;

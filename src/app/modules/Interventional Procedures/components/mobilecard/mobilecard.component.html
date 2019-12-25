@@ -1,13 +1,14 @@
-<div class="container" *ngIf="LoadAnimationCard =='animation-card'">
+<div class="container" *ngIf="LoadAnimationCard =='animation-card'" (swipe)="getclickValue($event)">
     
-       <img  class="img" src={{cardData.imgsrc}}>        
+  <img  class="img" src={{cardData.imgsrc}}>        
     
   <div class="header">{{cardData.title}}</div>
   <div class="description">{{cardData.description}}</div>
   <div class="btn-mobile"><button class="btn-mobile" [routerLink]="['/Appointment']">{{cardData.option}}</button></div>
 </div>
 
-<div class="container"  *ngIf="LoadAnimationCard =='service-card'" [ngStyle]="{'background' : 'transparent', 'box-shadow': 'none' }">
+
+<div class="container"  *ngIf="LoadAnimationCard =='service-card'" [ngStyle]="{'background' : 'transparent', 'box-shadow': 'none' }" (click)="getclickValue(cardData)"> 
     
     <img class="img" src={{cardData.imgsrc}}>
   
@@ -15,7 +16,7 @@
   <div class="header">{{cardData.title}}</div>
   <div class="description">{{cardData.description}}</div>
   </div>
-  <div  class="container" *ngIf="LoadAnimationCard =='interventual-card'">
+  <div  class="container" *ngIf="LoadAnimationCard =='interventual-card'" (swipe)="getclickValue($event)">
       <div class="header">{{cardData.title}}</div>
       <div class="description">{{cardData.description}}</div>
       <div class="btn-mobile"><button class="btn-mobile" [routerLink]="['/Appointment']">{{cardData.option}}</button></div>

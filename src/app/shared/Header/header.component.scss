@@ -22,6 +22,7 @@
   }
   .service-card{
     outline: none;
+    margin-bottom: 30px;
     font-size: 30px;
     flex: 1;
   }
@@ -33,6 +34,17 @@
   .highlight{
     color: black;
   }
+  .margin{
+    padding-right: 20px;
+  }
+  a{
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .display{
+    display: flex;
+    flex-direction: column;
+  }
   .container-mobile{
     display: flex;
     width: 100vw;
@@ -42,6 +54,7 @@
     -webkit-box-pack: justify;
     justify-content: space-between;
     top: 0px;
+    height: 75px;
     background-color: #D92A2A;
     padding: 0.7% 0px;
     line-height: 1.5;
@@ -54,7 +67,7 @@
     display: flex;
     outline: none;
         transition: all .8s ease-in-out; 
-        @include fluid-type(height, 200px, 1920px, 35px,78px);
+        @include fluid-type(height, 600px, 1920px, 50px,78px);
         justify-content: space-between;
         padding: 2% 2%;
         -webkit-box-flex: .5;
@@ -91,7 +104,7 @@
     top: 0px;
     background-color: #D92A2A;
     padding: 0.7% 0px;
-    height: 75px;
+    height: 90px;
     z-index: 1010;
     position: fixed;
     opacity: 1;

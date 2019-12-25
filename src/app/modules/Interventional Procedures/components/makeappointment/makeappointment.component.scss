@@ -20,9 +20,12 @@
 .flex{
     flex: 1
 }
+.highlight{
+    opacity: 1;
+}
 .mobile-description {
     width:100%;
-    margin-top: 14px;
+    margin-top: 4px;
     margin-bottom: 12px;
     @include justify-content(center);
     font-family: poppins-regular;
@@ -32,12 +35,27 @@
     opacity: 1;
 
 }
-
+.dot{
+    font-size: 3em; 
+    color: #D92A2A;
+    opacity: 30%;
+}
+.dot-flex{
+    display: flex;
+    flex-direction: row;
+}
+.font-m{
+    font-size: 0.8em;
+    margin-bottom: 40px;
+}
+.font{
+    font-size: 1.3em;
+}
 
 .div-card{
     @include flexbox;
     @include flex-direction(row);
-    margin-top: 5%;
+    // margin-top: 5%;
     @include justify-content(space-between);
     @include flex-wrap(nowrap);
     font-family: poppins;

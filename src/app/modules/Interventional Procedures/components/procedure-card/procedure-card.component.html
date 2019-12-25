@@ -2,13 +2,14 @@
     
        <img   *ngIf="img" class="img padding-style" src={{cardData.imgsrc}}>
              
-    
+    <div>
   <div class="div-header padding-style">{{cardData.title}}
 
     <br>
-    <p class=" padding-style">{{cardData.description}}</p>
-
   </div>
+    <p class="size">{{cardData.description}}</p>
+  </div>
+  
   <div class="btn "><button  [routerLink]="['/Appointment']" class="btn" >{{cardData.option}}</button></div>
 </div>
 

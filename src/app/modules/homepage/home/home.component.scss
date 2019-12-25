@@ -2,6 +2,7 @@
   .container{
     background-color: #D92A2A;
     width: 100vw;
+    height: 100vh;
 }
 
 .canvas{
@@ -12,6 +13,7 @@
     flex: 1;
 }
 .canvas-container{
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -24,7 +26,7 @@
     flex: 1;
     position: absolute;
     z-index: 100;
-    top: 310px;
+    top: 540px;
     // @include fluid-type(top, 600px, 1920px, 80px, 305px);
     justify-content: center;
     align-items: center;
@@ -37,7 +39,7 @@
 .main-text{
     display: flex;
     @include fluid-type(font-size, 200px, 1800px, 40px, 100px);
-    width: 58%;
+    
     font-family: poppins-extrabold;
     color: white;
     text-align: center;
@@ -51,6 +53,7 @@
     padding-top: 18px;
     padding-bottom: 21px;
     color: white;
+    z-index: 100;
     text-align: center;
     width: 55%;
     height: 56px;
@@ -68,7 +71,16 @@
 .about-container{
     height: 100px;
 }
+.book-appointment:hover{
+            
+    transform: scale(1.05);
+    
+    
+}
+
+    
 .book-appointment{
+    transition: all .2s ease-in-out; 
     border: none;
     outline: none;
     padding: 8px;
@@ -78,9 +90,12 @@
     letter-spacing: 0;
     background-color: #FFFFFF;
     color: #D92A2A;
-    @include fluid-type(width, 200px, 1920px, 100px, 299px);
-    @include fluid-type(height, 200px, 1920px, 30px, 70px);
-    @include fluid-type(font-size, 500px, 1920px, 9px, 26px);
+    @include fluid-type(width, 600px, 1920px, 100px, 299px);
+    @include fluid-type(height, 600px, 1920px, 45px, 70px);
+    @include fluid-type(font-size, 500px, 1920px, 16px, 26px);
+    width: auto;
+    padding: 0 20px;
+   
     text-align: center;
     opacity: 0.87;
 }

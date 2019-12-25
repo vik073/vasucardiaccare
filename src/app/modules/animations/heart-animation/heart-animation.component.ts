@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-heart-animation',
   templateUrl: './heart-animation.component.html',
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeartAnimationComponent implements OnInit {
 
+  data : any;
   constructor() { }
 
   ngOnInit() {
+    
   }
+  
 
 
 }

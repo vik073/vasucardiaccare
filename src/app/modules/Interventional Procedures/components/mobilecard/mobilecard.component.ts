@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-mobilecard',
@@ -9,9 +9,29 @@ export class MobilecardComponent implements OnInit {
 
   @Input() cardData: any;
   @Input() LoadAnimationCard: any;
+  @Output() valueClick = new EventEmitter()
+
   constructor() { }
 
   ngOnInit() {
   }
+  getValue(data){
+    
+   
+    let el = document.getElementById(data);
+            el.scrollIntoView();
+            
+        
+  }
+  getclickValue(e){
+    debugger
+    
+    const x = Math.abs(e.deltaX) > 40 ? (e.deltaX > 0 ? 'right' : 'left'):'';
+    this.valueClick.emit(x);
+   console.log(x)
+            
+        
+  }
+
 
 }
