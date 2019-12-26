@@ -37,7 +37,7 @@
   <div class="time-panel" [ngClass]="!mobileview?'margin-left':'center-header'">
   <div class="black-header">TIME</div>
   <div class="time-selector" >
-  <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;"  (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i , 'disable': item !=mintime}" [timeArray]="item" ></app-timepicker>
+  <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;"  (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i , 'disable':  'lessThan(item)' }" [timeArray]="item" ></app-timepicker>
 </div>
 <!-- <div class="time-selector" >
   <app-timepicker class="timing-set " *ngFor= " let item of timeArray1 let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>

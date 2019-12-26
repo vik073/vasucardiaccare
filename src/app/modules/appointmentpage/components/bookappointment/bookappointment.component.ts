@@ -19,7 +19,7 @@ export class BookappointmentComponent implements OnInit  {
 
   public selectedMoment = new Date();
   
- 
+ hide:boolean;
   timeArray = [
     "8:00","9:00" , "10:00", "11:00", "12:00","13:00", "14:00", "15:00", "16:00",
     "16:00", "17:00", "18:00", "19:00", "20:00","21:00"
@@ -75,6 +75,7 @@ export class BookappointmentComponent implements OnInit  {
     });
 
 
+  
     var t = formatDate(new Date(), 'yyyy,MM,dd,hh,mm', 'en');
     console.log(this.t , "hhh")
     this.min = new Date();
@@ -95,6 +96,16 @@ export class BookappointmentComponent implements OnInit  {
     });
   }
   
+  lessThan(e){
+    debugger
+    if(e >this.mintime){
+      return true;
+    }
+    else{
+      return false;
+    }
+
+  }
 
 
   onSubmit(){

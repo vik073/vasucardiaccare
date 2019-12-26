@@ -12,10 +12,10 @@
 
 <div style="height: 100vh;" class="touchhbar" >
  
-  <app-heart-animation style="height: 100vh;"></app-heart-animation>
+  <app-heart-animation [mobileview]="mobileview" style="height: 100vh;"></app-heart-animation>
     
   <div  id="hell" class="text" [ngClass]="!mobileview?'':'mob-cont'">
-     <div  *ngIf="!mobileview" class="main-text">WE KEEP YOUR <br> HEART IN SHAPE </div>
+     <div style="margin-top: 31px;" *ngIf="!mobileview" class="main-text">WE KEEP YOUR <br> HEART IN SHAPE </div>
      <div *ngIf="mobileview" class="main-text-m">WE KEEP YOUR  HEART IN SHAPE </div>
   <div [ngClass]="!mobileview?'':'width-m'" class="description-text"> <div class="sub-text">VCC is dedicated to making big impacts through prevention </div>
     <div class="sub-text"> treatment and awareness about cardiac health. </div></div> 
