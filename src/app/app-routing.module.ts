@@ -29,6 +29,7 @@ const routes: Routes = [
     component: BlogpageComponent,
     pathMatch: 'full',
   },
+  { path: 'GetHealthy/:id', component: BlogpageComponent , pathMatch: 'full' },
   {
     path: 'Services',
     component: HomeComponent,

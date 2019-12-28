@@ -4,7 +4,7 @@
   <br>
   <br>
           <div class="right-bar" [ngClass] = "!mobileview?'row':'col'">
-            <div  routerLink="/{{item}}" *ngFor= " let item of options let j = index;"  (click)="setService(j , item)" [ngClass]="{'highlight': selectedIndexj === j ,'nav-option':!mobileview , 'mob': mobileview } ">{{item}}</div>
+            <div style="cursor: pointer;"  routerLink="/{{item}}" *ngFor= " let item of options let j = index;"  (click)="setService(j , item)" [ngClass]="{'highlight': selectedIndexj === j ,'nav-option':!mobileview , 'mob': mobileview } ">{{item}}</div>
       
             <!-- <div [ngClass] = "!mobileview?'nav-option':'mob'">Appointment</div>
             <div [ngClass] = "!mobileview?'nav-option':'mob'">Services</div>

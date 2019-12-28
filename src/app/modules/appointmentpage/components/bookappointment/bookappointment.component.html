@@ -21,7 +21,7 @@
       <div [ngClass]="!mobileview?'service-list':'mobile-service-list full-width'" >
   <div class="heading" > SELECT SERVICE </div>
   <div   [ngClass]="!mobileview?'Service-cards':'mobile-card full-width' " > 
-    <div   *ngFor= " let item of serviceArray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': selectedIndexj === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</div>
+    <div style="cursor: pointer;"  *ngFor= " let item of serviceArray let j = index;"  (click)="setService(j)" [ngClass]="{'highlight': selectedIndexj === j ,'Service-card':!mobileview , 'mobile-Service-card': mobileview } ">{{item}}</div>
   </div>
 </div>
   </div>

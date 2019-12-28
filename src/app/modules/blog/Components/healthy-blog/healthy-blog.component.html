@@ -4,15 +4,16 @@
     <div class="black description" [ngClass]="!mobileview?'half-desc':'full-width'">
         8 in 10 cases of premature heart disease and stroke cases are preventable through healthy lifestyle behaviours. Learn more about how to live a healthier lifestyle. You’ll find help here. </div>
     </div>
+    <a [routerLink]="['/GetHealthy', '1']"> hello</a>
     <div class="card-data">
 <div  *ngIf="!mobileview" class="div-card" >
-<app-blog-card class="procedure-card" *ngFor="let item of BlogArray1 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-blog-card>
+<app-blog-card class="procedure-card" [routerLink]="['/GetHealthy', item.index]" *ngFor="let item of BlogArray1 let j = index; " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-blog-card>
 </div>
 <div  *ngIf="!mobileview" class="div-card" >
-  <app-blog-card class="procedure-card" *ngFor="let item of BlogArray2 " [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-blog-card>
+  <app-blog-card class="procedure-card" [routerLink]="['/GetHealthy',item.index]" *ngFor="let item of BlogArray2 let t = index;" [cardData]="item"  [LoadAnimationCard] = "LoadAnimationCArd"></app-blog-card>
    </div>
    <div *ngIf="mobileview" class="mobile-view">
-      <app-blog-card  (valueClick)= "getNext($event,index, BlogArray)" [cardData]="BlogArray[index]" [mobileview] = "mobileview" [LoadAnimationCard] = "LoadAnimationCArd" ></app-blog-card>
+      <app-blog-card  (valueClick)= "getNext($event,index, BlogArray)" [routerLink]="['/GetHealthy', index]" [cardData]="BlogArray[index]" [mobileview] = "mobileview" [LoadAnimationCard] = "LoadAnimationCArd" ></app-blog-card>
     </div>
    
   </div>

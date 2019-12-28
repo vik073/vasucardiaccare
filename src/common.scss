@@ -158,6 +158,7 @@
             background-color: #D60F1B;
             border-radius: 59px;
             border: none;
+            cursor: pointer;
             outline: none;
             letter-spacing: 1px;;
             font-size: 19.5px;
@@ -193,6 +194,7 @@
             background-color: #F1F1F1;
             border-radius: 50px;
             border: none;
+            cursor: pointer;
             @include fluid-type(font-size, 400px, 1920px, 1.2em, 2em);
             width: auto;
             outline: none;
@@ -209,6 +211,7 @@
             border: none;
             @include fluid-type(font-size, 400px, 1920px, 1.5em, 2.3em);
             width: auto;
+            cursor: pointer;
             padding-left: 1em;
             padding-right: 1em;
             outline: none;

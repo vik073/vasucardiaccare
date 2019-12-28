@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewfinderService } from 'src/app/shared/viewfinder.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-blogpage',
@@ -12,17 +12,40 @@ export class BlogpageComponent implements OnInit {
   showData: string;
   halfview:any = true;
   mobileview: any;
-  constructor( private service: ViewfinderService , private router: Router) { }
+  heroes$: any;
+  blog: any;
+  constructor( private service: ViewfinderService , private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.showData = "mainpage";
+    window.scrollTo(0, 0)
+    debugger
+    this.blog = this.route.snapshot.params.id;
+       // this.order = params.order;
+       // console.log(this.order); 
+       switch(this.blog) {
+        case '1':
+          this.showData = 'eatwell';
+          break;
+        case '2':
+          this.showData = 'physicalactivity';
+          break;
+          case '3':
+            this.showData = 'healthyweight';
+            break;
+          case '4':
+            this.showData = 'stresshandle';
+            break;
+        default:
+          this.showData = 'mainpage';
+      }
+   // this.showData = "mainpage";
     this.service.checkWidth()
     this.service.isMobile.subscribe( x =>{
 
       this.mobileview = x;
     });
+ 
   }
-
   changecontent(data){
     let el = document.getElementById('containe');
     el.scrollIntoView();
