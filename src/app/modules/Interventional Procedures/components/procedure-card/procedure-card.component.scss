@@ -51,7 +51,7 @@ p{
     color: #000000;
     @include justify-content(center);
     @include align-items(flex-start);
-    @include fluid-type(font-size, 700px, 1600px, 8.5px, 15px);
+    @include fluid-type(font-size, 700px, 1600px, 8.5px, 16px);
 }
 .div-description{
     width: 100%;
@@ -62,7 +62,7 @@ p{
     @include align-items(flex-start);
     color: #000000;
     @include justify-content(center);
-    @include fluid-type(font-size, 700px, 1950px, 9.5px, 17px);
+    @include fluid-type(font-size, 700px, 1950px, 9.5px, 16px);
 
 
 }
