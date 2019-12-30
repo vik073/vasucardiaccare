@@ -4,7 +4,7 @@
 
   <div class="container-change" *ngIf="showData =='mainpage'">
       <div class="header">
-          <h1 style="font-family: poppins-bold;">Get Healthy</h1>
+          <h1 class="title" style="font-family: poppins-bold;">Get Healthy</h1>
             </div>
   <div class="card-2 white" [ngClass]="!mobileview?'desktop-row':'mobile-card-2'">
     <div class="card-2-1" style="padding: 0% 8%;">
@@ -25,18 +25,23 @@
   </div>
   <div class="card-1 padding-bar-d" [ngClass]="!mobileview?'':'align-center'">
       <h1 *ngIf ="!mobileview" class="bold"  style="font-size: 4em;
-      line-height: 1.4;" >Make healthy <br>lifestyle choices.</h1>
-      <h1 *ngIf ="mobileview" class="bold"  style="font-size: 2em; text-align: center;">Make healthy <br>lifestyle choices.</h1>
-      <h4 [ngClass]="{'small': mobileview }" style="padding-bottom: 10%;">Many risk factors for heart disease and stroke are in your power to control.<br> Explore our heart-healthy tips on diet, exercise, stress and more.</h4>
+      line-height: 1.4;     line-height: 1.2;
+    padding: 5% 0 0 0;" >Make healthy <br>lifestyle choices.</h1>
+      <h1 *ngIf ="mobileview" class="bold"  style="font-size: 2em; text-align: center; padding-top: 22px;">Make healthy <br>lifestyle choices.</h1>
+      <h4 [ngClass]="{'small': mobileview }" style="padding-bottom: 5%;">Many risk factors for heart disease and stroke are in your power to control.<br> Explore our heart-healthy tips on diet, exercise, stress and more.</h4>
 
   </div>
 </div>
 <div class="container-change" *ngIf="showData =='eatwell'">
     <div class="header">
-        <h1 style="font-size: 1.3em; font-family: poppins-bold">Get Healthy / EAT WELL</h1>
+        <h1 *ngIf ="!mobileview" style=" font-size: 2em;
+        margin-top: 88px; line-height:1.2; font-family: poppins-bold">Get Healthy / EAT WELL</h1>
+        <h1 *ngIf ="mobileview" style="font-size: 1.3em; line-height:1.2; font-family: poppins-bold">Get Healthy / <br>    EAT WELL</h1>
           </div>
     <div class="card-1">
-        <img class="img-eat" src="../../../../../assets/images/eating.jpg">
+        <img  *ngIf ="!mobileview" class="img-eat" src="../../../../../assets/images/eating.jpg">
+        <img *ngIf ="mobileview" class="img-eat" src="../../../../../assets/mobile-images/eat-well-mobile cover.jpg">
+        
     </div>
     <div class="padding-bar">
       <p>Eating a healthy, balanced diet is one of the most important things you can <br>
@@ -50,13 +55,13 @@
              • controlling your blood sugar.
             </p> 
             <br>
-        <h2>  What does a healthy, balanced diet look like?</h2>
+        <h2 [ngClass]="{'small-h2': mobileview }" >  What does a healthy, balanced diet look like?</h2>
         <p>Our dietician recommends eating a variety of healthy foods each day.<br>
            This includes eating plant-based foods more often and choosing <br>
            highly-processed or ultra-processed foods less often.</p>
            <br>
            <div style="text-align: center">
-           <img style="width: 40%;" src="../../../../../assets/images/healthy-diet.jpg">
+           <img   [ngClass]="!mobileview?'width-desk':'full-w'"  src="../../../../../assets/images/healthy-diet.jpg">
           </div>
         <h2>  1. Eating lots of vegetables and fruit </h2>
         <p> • This is one of the most important diet habits. Vegetables and fruit are packed with <br>
@@ -132,15 +137,20 @@
        unhealthy food choices. Keep easy-to-eat healthy snacks in your purse <br>
        or bag for emergencies.</p></div>
 
-       <h1 [ngClass]="{'small': mobileview }"   ><span [ngClass]="{'small': mobileview }"  style="color: red; font-size: 1.6em; font-family: poppins-bold">Life .</span>  We don’t want you to miss it.</h1>
+       <h1 [ngClass]="{'small': mobileview }"  class=" padd" ><span [ngClass]="{'small': mobileview }"  style="color: red; font-size: 1.6em; font-family: poppins-bold">Life .</span>  We don’t want you to miss it.</h1>
       </div>
   </div>
   <div class="container-change" *ngIf="showData =='physicalactivity'">
       <div class="header">
-          <h1 style="font-size: 1.3em; font-family: poppins-bold">Get Healthy / GET MOVING</h1>
+
+          <h1 *ngIf ="!mobileview" style=" font-size: 2em;
+        margin-top: 88px; line-height:1.2; font-family: poppins-bold">Get Healthy / GET MOVING</h1>
+        <h1 *ngIf ="mobileview" style="font-size: 1.3em; line-height:1.2; font-family: poppins-bold">Get Healthy / <br>GET MOVING</h1>
             </div>
       <div class="card-1">
-          <img class="img-eat" src="../../../../../assets/images/stay.jpg">
+          <img *ngIf ="!mobileview" class="img-eat" src="../../../../../assets/images/stay.jpg">
+          <img *ngIf ="mobileview" class="img-eat" src="../../../../../assets/mobile-images/get-moving-mobile cover.jpg">
+          
       </div>
       <div class="padding-bar" >
        <h2>The benefits of physical activity</h2>
@@ -193,17 +203,20 @@
                          first to discuss what is right for you.
                          </p>
       
-                         <h1 [ngClass]="{'small': mobileview }"   ><span [ngClass]="{'small': mobileview }"  style="color: red; font-size: 1.6em; font-family: poppins-bold">Life .</span>  We don’t want you to miss it.</h1>
+                         <h1 [ngClass]="{'small': mobileview }" class=" padd"  ><span [ngClass]="{'small': mobileview }"  style="color: red; font-size: 1.6em; font-family: poppins-bold">Life .</span>  We don’t want you to miss it.</h1>
    
       </div>
       </div>
       <div class="container-change" *ngIf="showData =='healthyweight'">
           <div class="header">
-              <h1 style="font-size: 1.3em; font-family: poppins-bold">Get Healthy / MAINTAIN A HEALTHY WEIGHT</h1>
+            <h1 *ngIf ="!mobileview" style=" font-size: 2em;
+            margin-top: 88px; line-height:1.2; font-family: poppins-bold">Get Healthy / MAINTAIN A HEALTHY WEIGHT</h1>
+            <h1 *ngIf ="mobileview" style="font-size: 1.3em; line-height:1.2; font-family: poppins-bold">Get Healthy / <br> MAINTAIN A HEALTHY WEIGHT</h1>
                 </div>
           
           <div class="card-1">
-              <img class="img-eat" src="../../../../../assets/images/weight.jpg">
+              <img *ngIf ="!mobileview" class="img-eat" src="../../../../../assets/images/weight.jpg">
+              <img *ngIf ="mobileview" class="img-eat" src="../../../../../assets/mobile-images/maintain-weight-mobile-cover.jpg">
           </div>
           <div class="padding-bar" >
            <h2>Achieving and maintaining a healthy weight</h2>
@@ -273,17 +286,21 @@
                        of high blood pressure, high [blood] cholesterol, heart disease and type-2 diabetes.<br>
                         The best way to find out if your waistline is increasing your risk of heart disease is to <br>
                         measure it. Learn more about Healthy weight and waists.</p>
-                        <h1 [ngClass]="{'small': mobileview }"   ><span [ngClass]="{'small': mobileview }"  style="color: red; font-size: 1.6em; font-family: poppins-bold">Life .</span>  We don’t want you to miss it.</h1>
+                        <h1 [ngClass]="{'small': mobileview }" class=" padd"  ><span [ngClass]="{'small': mobileview }"  style="color: red; font-size: 1.6em; font-family: poppins-bold">Life .</span>  We don’t want you to miss it.</h1>
    
           </div>
           </div>
 
           <div class="container-change" *ngIf="showData =='stresshandle'">
               <div class="header">
-                  <h1 style="font-size: 1.3em; font-family: poppins-bold">Get Healthy / MANAGE YOUR STRESS</h1>
+                <h1 *ngIf ="!mobileview" style=" font-size: 2em;
+                margin-top: 88px; line-height:1.2; font-family: poppins-bold">Get Healthy / MANAGE YOUR STRESS</h1>
+                <h1 *ngIf ="mobileview" style="font-size: 1.3em; line-height:1.2; font-family: poppins-bold">Get Healthy / <br>MANAGE YOUR STRESS</h1>
+                
                     </div>
               <div class="card-1">
-                  <img class="img-eat" src="../../../../../assets/images/stress.jpg">
+                  <img *ngIf ="!mobileview" class="img-eat" src="../../../../../assets/images/stress.jpg">
+                  <img *ngIf ="mobileview" class="img-eat" src="../../../../../assets/mobile-images/stress mobile cover.jpg">
               </div>
               <div class="padding-bar">
                <h2>Recognizing and handling stress</h2>
@@ -380,25 +397,26 @@
                                       • Make sure you have time for fun by doing things that you enjoy with your family <br>
                                       and friends. Change the way you think and act. <br>
                                       • Do only one task at a time instead of multitasking.<br>
-                                       • Set goals you know are reachable to avoid feelings of frustration and failure.<br>
+                                      • Set goals you know are reachable to avoid feelings of frustration and failure.<br>
                                         • Decide what it is important for you to do and don’t try to do more.<br>
                                          • Learn to say no and get other people to help.<br>
                                           • Talk about your needs and emotions. Let yourself cry.<br>
                                            • Don’t get upset about things you cannot control. Let them go.
              </p>
-             <h1 [ngClass]="{'small': mobileview }"   ><span [ngClass]="{'small': mobileview }"  style="color: red; font-size: 1.6em; font-family: poppins-bold">Life .</span>  We don’t want you to miss it.</h1>
+             <h1 [ngClass]="{'small': mobileview }"  class=" padd"  ><span [ngClass]="{'small': mobileview }"  style="color: red; font-size: 1.6em; font-family: poppins-bold">Life .</span>  We don’t want you to miss it.</h1>
    
               </div>
   </div>
-  <div class="blog-maps">
+  <div class="blog-maps" style="padding-top: 100px;">
       <span class="card-2 pad" [ngClass]="!mobileview?'desktop-row':'mobile-card-2'"><div class="card-2-12">
-          <img style="width: 95%" src = "../../../../../assets/Eat-Well.jpg">
+          <img *ngIf ="!mobileview" style="width: 95%" src = "../../../../../assets/Eat-Well.jpg">
+          <img *ngIf ="mobileview" class="img-eat" src="../../../../../assets/mobile-images/Eat Well@2x.jpg">
   
       </div>
       <div class="card-2-1 spacer" [ngClass]="!mobileview?'':'align-center'"> 
           <h3 class="card-header">EAT WELL</h3>
           <p>Learn how heart-healthy choices can help <br>lower your risk of heart disease and stroke<br> whether eating at home or dining out.</p>
-          <h4 (click)= "changecontent('eatwell')">Read More ></h4>
+          <h4  class="red-color" (click)= "changecontent('eatwell')">Read More ></h4>
           </div></span>
 
           <span class="card-2 pad" [ngClass]="!mobileview?'desktop-row':'mobile-card-2-rev'">
@@ -407,23 +425,24 @@
           <p>Learn the benefits of healthy activity, and <br> get tips on adding more exercise into<br>
              your daily routine.</p>
              
-          <h4 class="read-more" (click)= "changecontent('physicalactivity')">Read More ></h4>
+          <h4 class="read-more red-color"  (click)= "changecontent('physicalactivity')">Read More ></h4>
               </div>
               <div class="card-2-12">
-                  <img style="width: 95%" src="../../../../../assets/get-moving.jpg">
+                  <img *ngIf ="!mobileview" style="width: 95%" src="../../../../../assets/get-moving.jpg">
+                  <img *ngIf ="mobileview" class="img-eat" src="../../../../../assets/mobile-images/get-moving@2x.jpg">
           
               </div>
             </span>
 
               <span class="card-2 pad" [ngClass]="!mobileview?'desktop-row':'mobile-card-2'"><div class="card-2-12">
-                  <img  style="width: 95%" src="../../../../../assets/body-weight.jpg">
-                 
+                  <img *ngIf ="!mobileview" style="width: 95%" src="../../../../../assets/body-weight.jpg">
+                  <img *ngIf ="mobileview" class="img-eat" src="../../../../../assets/mobile-images/body weight 2@2x.jpg">
           
               </div>
               <div class="card-2-1 spacer" [ngClass]="!mobileview?'':'align-center'"> 
                   <h3 class="card-header">MAINTAIN HEALTY WEIGHT</h3>
           <p>Learn the basic principles of a healthy <br>weight and waistline — and why it matters.</p>
-          <h4 (click)= "changecontent('healthyweight')">Read More ></h4>
+          <h4 class="red-color"  (click)= "changecontent('healthyweight')">Read More ></h4>
                   </div></span>
 
                   <span class="card-2 pad" [ngClass]="!mobileview?'desktop-row':'mobile-card-2-rev'">
@@ -431,11 +450,11 @@
                           <h3 class="card-header">GET MOVING</h3>
                       <p>Learn the benefits of healthy activity, and <br> get tips on adding more exercise into<br>
                          your daily routine.</p>
-                      <h4  (click)= "changecontent('stresshandle')">Read More ></h4>
+                      <h4 class="red-color"  (click)= "changecontent('stresshandle')">Read More ></h4>
                           </div>
                           <div class="card-2-12">
-                              <img style="width: 95%" class="img" src="../../../../../assets/stress.jpg">
-                      
+                              <img  *ngIf ="!mobileview" style="width: 95%" class="img" src="../../../../../assets/stress.jpg">
+                              <img  *ngIf ="mobileview"  class="img" src="../../../../../assets/mobile-images/stress copy@2x.jpg">
                           </div>
                         </span>
   
@@ -445,7 +464,7 @@
 <div class="foot-card">
     <!-- <app-header id="header" (valueClick)="getvalue($event)" ></app-header> -->
     <app-contactus id="contact_us"  [mobileview]="mobileview" ></app-contactus>
-    <app-address id="address" [mobileview]="mobileview" ></app-address>
+    <app-address style="background-color:#D92A2A;" id="address" [mobileview]="mobileview" ></app-address>
 </div>
 </div>
 

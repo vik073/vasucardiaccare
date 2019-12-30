@@ -316,10 +316,9 @@
     position: unset;
 }
 .mobile-header-bl::ng-deep.owl-dt-inline-container, .owl-dt-popup-container{
-    @include fluid-type(width, 500px, 900px, 350px, 800px);
-    @include fluid-type(height, 500px, 900px, 400px, 710px);
-    width: 350px;
-    height: 400px;
+    @include fluid-type(width, 500px, 900px, 300px, 800px);
+    @include fluid-type(height, 500px, 900px, 370px, 710px);
+ 
     pointer-events: auto;
     box-shadow: none;
     background: white;
