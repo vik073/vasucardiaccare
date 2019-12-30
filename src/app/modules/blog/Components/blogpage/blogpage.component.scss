@@ -52,13 +52,16 @@
         line-height: 1.4;
         @include fluid-type(font-size, 600px, 1620px, 1.3em, 1.8em);
     }
+
     .full-w{
         width: 100%;
     }
+
     .width-desk{
         width: 40%;
     }
-    p { 
+    p 
+    { 
         font-family: poppins-regular;
         // font-size: 1.3em;
         margin-top: 0px;

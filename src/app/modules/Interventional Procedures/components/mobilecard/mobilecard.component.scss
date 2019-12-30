@@ -57,7 +57,7 @@ opacity: 1;
     border: none;
     @include fluid-type(font-size, 300px, 700px, 18px, 24px);
     @include fluid-type(height, 400px, 600px, 38px, 40px);
-    @include fluid-type(width, 400px, 600px, 120px, 140px);
+    @include fluid-type(width, 400px, 600px, 140px, 140px);
     color: white;
     
 }
