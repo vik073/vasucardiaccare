@@ -23,26 +23,55 @@
         @include fluid-type(font-size, 700px, 1620px, 1.4em, 2.5em);
         margin-bottom: 0;
     }
+    .right-head{
+        padding-top: 0px;
+    margin-top: 0px;
+    line-height: 1.6;
+    }
+    h1{
+        line-height: 1;
+        font-family: poppins;
+        @include fluid-type(font-size, 700px, 1620px, 1.4em, 3.5em);
+
+    }
+    .padd{
+        padding-bottom: 60px;
+    }
+    .red-color{
+        color: #D92A2A;
+    }
     h2{
-        font-size: 2.5em;
+      
+        @include fluid-type(font-size, 600px, 1620px, 1.2em, 2.5em);
+        line-height: 1.2;
+        margin-bottom: 10px;
         font-family: poppins;
     }
     h4 {
         margin-bottom: 0;
-        @include fluid-type(font-size, 600px, 1620px, 1.4em, 2em);
+        line-height: 1.4;
+        @include fluid-type(font-size, 600px, 1620px, 1.3em, 1.8em);
+    }
+    .full-w{
+        width: 100%;
+    }
+    .width-desk{
+        width: 40%;
     }
     p { 
         font-family: poppins-regular;
         // font-size: 1.3em;
-        @include fluid-type(font-size, 600px, 1620px, 1em, 1.6em);
+        margin-top: 0px;
+        @include fluid-type(font-size, 600px, 1620px, 0.9em, 1.6em);
         // font-family: poppins;
         // font-size: 1.3em;
      }
     .header{
         flex: 1;
-        padding-top: 5%;
+        padding-top: 100px;
+        padding-bottom: 30px;
         display: flex;
-        font-size: 2.4em;
+        @include fluid-type(font-size, 600px, 1620px, 1.7em, 2.4em);
         padding-left: 10%;
         background:#D92A2A;
         font-family: Poppins;
@@ -56,6 +85,10 @@
         // height: 20em;
 
     }
+    .title{
+        font-size: 2.5em;
+        margin: 3% 0 2% 0px;
+    }
     .container-change{
         line-height: 2;
         background: #ffffff;
@@ -65,7 +98,7 @@
     }
     .small{
         text-align: center;
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .img-eat{
         width: 100%
@@ -74,7 +107,7 @@
         background: white;
     }
     .align-center{
-        text-align: center;
+       // text-align: center;
     }
     .full-card{
         flex: 2;
