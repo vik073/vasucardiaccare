@@ -32,12 +32,12 @@
   
   <owl-date-time-inline  [hideOtherMonths] = "true" [ngClass]="!mobileview?'desktop-header-bl':'mobile-header-bl center-header'" class=" header-bl, position-fix, user-css-class , position-fix, arrow-hide , header-color , header-bl" [min]="min"  
   
-  [pickerType]="'calendar'"  [(ngModel)]="dateTimeRange" ></owl-date-time-inline>
+  [pickerType]="'calendar'" (ngModelChange)="getdateValue($event)"  [(ngModel)]="dateTimeRange" ></owl-date-time-inline>
 
   <div class="time-panel" [ngClass]="!mobileview?'margin-left':'center-header'">
   <div class="black-header">TIME</div>
   <div class="time-selector" >
-  <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;"  (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i , 'disable':  'lessThan(item)' }" [timeArray]="item" ></app-timepicker>
+  <app-timepicker class="timing-set " *ngFor= " let item of timeArray let i = index;"  (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i , 'disable':  'dateTimeRange.toDateString()' }" [timeArray]="item" ></app-timepicker>
 </div>
 <!-- <div class="time-selector" >
   <app-timepicker class="timing-set " *ngFor= " let item of timeArray1 let i = index;" (click)="setRow(i)" (valueClick)="getvalue($event)"  [ngClass]="{'highlight': selectedIndex === i}" [timeArray]="item" ></app-timepicker>

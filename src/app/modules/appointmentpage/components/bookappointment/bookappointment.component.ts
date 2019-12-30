@@ -1,4 +1,4 @@
-import { Component, OnInit , OnChanges} from '@angular/core';
+import { Component, OnInit , OnChanges, SimpleChanges} from '@angular/core';
 import { FormGroup, FormControl, AbstractControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
@@ -42,7 +42,7 @@ export class BookappointmentComponent implements OnInit  {
 
   // Max moment: April 25 2018, 20:30
   // public max = new Date(2019, 12, 28, 20, 30);
-      public t = formatDate(new Date(), 'yyyy,MM,dd,hh,mm', 'en');
+  public t = formatDate(new Date(), 'yyyy,MM,dd,hh,mm', 'en');
   servicename: string = '';
   bookingtime: string = '';
   valid: boolean = false;
@@ -74,17 +74,25 @@ export class BookappointmentComponent implements OnInit  {
       this.mobileview = x;
     });
 
-
-  
     var t = formatDate(new Date(), 'yyyy,MM,dd,hh,mm', 'en');
     console.log(this.t , "hhh")
     this.min = new Date();
     this.mintime = this.min.getHours();
-    console.log(this.mintime , 'min ganta')
-    this.min.setDate(this.min.getDate() - 1);
+    console.log(this.mintime - 1, 'min ganta')
+    this.min.setDate(this.min.getDate()- 1);
     console.log(this.min);
     
   }
+
+  getdateValue(e){
+    if(e.getDay() <= this.min.getDay() && e.getHours() > 9){
+
+      this.mintime = e.getHours();
+    }
+    
+
+  }
+
   revert() {
     this.contactForm.reset();
   }
@@ -107,7 +115,6 @@ export class BookappointmentComponent implements OnInit  {
 
   }
 
-
   onSubmit(){
     if( this.dateTimeRange != undefined && this.servicename!= '' && this.bookingtime != ''){
       this.valid = false;
@@ -116,6 +123,7 @@ export class BookappointmentComponent implements OnInit  {
         
       if(res){
         this.openDialog();
+        this.revert();
       }
       });
     }
