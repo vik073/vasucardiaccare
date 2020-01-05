@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   AnimatedCard = true;
   ServiceCard = false;
   mobileview: unknown;
+  heartSize: unknown;
   constructor( private service: ViewfinderService , private route: ActivatedRoute) { }
 
 ngOnInit(){
@@ -36,6 +37,10 @@ ngOnInit(){
     this.service.isMobile.subscribe( x =>{
 
       this.mobileview = x;
+    });
+    this.service.heartSize.subscribe( x =>{
+
+      this.heartSize = x;
     });
     
 }

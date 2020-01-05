@@ -12,7 +12,7 @@
 
 <div style="height: 100vh;" class="touchhbar" >
  
-  <app-heart-animation [mobileview]="mobileview" style="height: 100vh;"></app-heart-animation>
+  <app-heart-animation [mobileview]="mobileview" [heartSize] ="heartSize" style="height: 100vh;"></app-heart-animation>
     
   <div  id="hell" class="text" [ngClass]="!mobileview?'':'mob-cont'">
      <div style="margin-top: 31px;" *ngIf="!mobileview" class="main-text">WE KEEP YOUR <br> HEART IN SHAPE </div>

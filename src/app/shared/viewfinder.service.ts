@@ -7,6 +7,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 export class ViewfinderService {
 
   public isMobile = new Subject();
+  public heartSize = new Subject();
   public screenWidth: string;
 
 
@@ -27,12 +28,15 @@ export class ViewfinderService {
       if (width <= 900) {
           this.screenWidth = 'sm';
           this.isMobile.next(true);
-      } else if (width > 900 && width <= 992) {
+          this.heartSize.next('mob');
+      } else if (width > 900 && width <= 1500) {
           this.screenWidth = 'md';
           this.isMobile.next(false);
+          this.heartSize.next('lap');
       } else {
           this.screenWidth = 'lg';
           this.isMobile.next(false);
+          this.heartSize.next('desk');
       }
   }
 }

@@ -10,6 +10,7 @@ export class HeartAnimationComponent implements OnInit {
 
   data : any;
   @Input() mobileview:any;
+  @Input() heartSize:any;
   constructor() { }
 
   ngOnInit() {

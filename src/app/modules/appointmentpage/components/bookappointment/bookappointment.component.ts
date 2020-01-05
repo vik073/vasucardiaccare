@@ -27,8 +27,8 @@ export class BookappointmentComponent implements OnInit  {
    
      serviceArray = [
        "OPD Consultation" , "Dental Care", "Master Cardiac Check-up", "Lab Test", "Home Care Services", "Other Services"
-
      ]
+
   selectedIndex: number;
   selectedIndexj: number;
   dateTimeRange: any;
@@ -85,6 +85,8 @@ export class BookappointmentComponent implements OnInit  {
   }
 
   getdateValue(e){
+
+    console.log(e.getDay())
     if(e.getDay() <= this.min.getDay() && e.getHours() > 9){
 
       this.mintime = e.getHours();
