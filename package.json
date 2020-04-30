@@ -36,7 +36,7 @@
     "googlemaps": "^1.12.0",
     "httpclient": "^0.1.0",
     "i": "^0.3.6",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng-pick-datetime": "^7.0.0",
     "owl-ng": "^1.0.0-beta.19",
     "rxjs": "~6.3.3",
